@@ -1,0 +1,160 @@
+.heroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    min-height: calc(100vh - 60px);
+    height: auto;
+    overflow: visible;
+    padding: 0 16px;
+    position: relative;
+    top: 0;
+    padding-top: 121px;
+}
+
+.heroContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: calc(100vh - 120px);
+    position: relative;
+    z-index: 1;
+}
+
+.heroText {
+    flex: 1.5;
+    text-align: center;
+    padding: 1.5em;
+    color: var(--foreground);
+    z-index: 2;
+    position: relative;
+    max-width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('/images/kod.png') repeat-y left top;
+    background-size: 100% 100%;
+}
+
+.heroTitle {
+    font-size: 75px;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.heroSubtitle {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.heroQuote {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.heroButton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #b00202;
+    color: var(--foreground);
+    text-decoration: none;
+    -webkit-clip-path: polygon(7% 0%, 92% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 35%);
+    clip-path: polygon(7% 0%, 92% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 35%);
+    font-size: clamp(1em, 2vw, 1.2em);
+    z-index: 3;
+}
+
+.heroMask {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    overflow: visible;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.heroMaskImage {
+    width: 110%;
+    height: 80vh;
+    object-fit: cover;
+    position: absolute;
+    top: -400px;
+    right: -20%;
+    z-index: 1;
+}
+
+.heroCode {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background: url('/images/kod.png') repeat-y left top;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    z-index: 0;
+    top: -15px;
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        min-height: calc(100vh - 50px);
+        padding-top: 70px;
+    }
+    .heroContent {
+        flex-direction: column;
+        min-height: auto;
+        text-align: center;
+    }
+    .heroText {
+        flex: 1;
+        max-width: 100%;
+        padding: 16px;
+    }
+    .heroTitle {
+        font-size: 40px;
+    }
+    .heroSubtitle {
+        font-size: 25px;
+    }
+    .heroQuote {
+        font-size: 16px;
+    }
+    .heroButton {
+        padding: 10px 20px;
+        font-size: clamp(0.9em, 4vw, 1em);
+    }
+    .heroCode {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 120%;
+        height: 100vh;
+        background: url('/images/kod.png') repeat;
+        background-size: cover;
+        z-index: -1;
+        top: -250px;
+    }
+    .heroMask {
+        display: none !important;
+    }
+    .heroMaskImage {
+        display: none !important;
+    }
+}
