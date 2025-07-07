@@ -17,10 +17,10 @@ html, body {
   width: 100%;
   height: 121px;
   z-index: 1000;
-  opacity: 0.93;
+  opacity: 0.8;
 }
 
-#navbar .container {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,14 +35,15 @@ html, body {
   align-items: center;
   width: 120px;
   height: 67px;
-  margin-left: 0; /* Притискаємо до лівого краю */
-  padding-left: 0; /* Прибираємо відступ, щоб максимально притиснути */
+  margin-left: 0; 
+  padding-left: 0; 
 }
 
 .logo-icon {
   height: 79px;
   width: 120px;
-  margin-right: 0; /* Прибираємо зайве зміщення праворуч */
+  margin-right: 0; 
+  cursor: pointer;
 }
 
 .menu-burger {
@@ -87,16 +88,16 @@ html, body {
 @media (max-width: 768px) {
   #navbar {
     height: 70px;
-    padding: 10px 0; /* Прибираємо горизонтальний падінг для максимального притискання */
+    padding: 10px 0; 
   }
 
   #navbar .container {
-    padding: 0; /* Прибираємо всі падінги контейнера */
+    padding: 0;
   }
 
   .logo {
-    margin-left: 0; /* Притискаємо логотип до лівого краю */
-    padding-left: 0; /* Прибираємо відступ для максимального притискання */
+    margin-left: 0; 
+    padding-left: 0;
   }
 
   .logo-icon {

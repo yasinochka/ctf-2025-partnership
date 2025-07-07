@@ -1,0 +1,62 @@
+.aboutSection{
+    padding: 100px 80px;
+    color: #fff;
+    text-align: center;
+    background-color: var(--background);
+    overflow: visible;
+}
+
+.aboutContent{
+    max-width: 1440px;
+    margin: 100px auto;
+}
+
+.container{
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textFrame {
+  position:relative;
+  left:15px;
+  width: 51%;
+  padding:35px;
+  background-image: url('/images/aboutSection.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.justText h1{
+    position: relative;
+    bottom:40px;
+    right: 140px;
+    font-size: 44px;
+}
+
+.justText p{
+    font-size: 18px;
+    position: relative;
+    text-align: left;
+    bottom:10px;
+    margin-bottom: 20px;
+    width: 80%;
+
+}
+
+.photoFrame{
+    position: relative;
+    top:50px;
+    right: 25px;
+    background-image: url('/images/photoOnFrame.png');
+    background-repeat: no-repeat;
+    background-size: 340px 240px; 
+    background-position: 90px 80px; 
+    overflow: hidden;
+}
+
+.highlightRed{
+    color:#a80505 ;
+    font-weight:bold ;
+}
+

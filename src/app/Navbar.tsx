@@ -1,5 +1,5 @@
 'use client';
-import './Navbar.css'; // Перевірте шлях
+import './Navbar.css';
 import { useState } from 'react';
 
 export default function Navbar() {
