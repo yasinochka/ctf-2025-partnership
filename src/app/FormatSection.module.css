@@ -1,0 +1,7 @@
+.formatSection{
+    padding:10px 80px;
+    color: #fff;
+    text-align: center;
+    background-color: var(--background);
+    overflow: visible;
+}

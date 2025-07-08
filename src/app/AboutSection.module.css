@@ -4,6 +4,7 @@
     text-align: center;
     background-color: var(--background);
     overflow: visible;
+
 }
 
 .aboutContent{
@@ -46,13 +47,14 @@
 
 .photoFrame{
     position: relative;
-    top:50px;
+    top:42px;
     right: 25px;
     background-image: url('/images/photoOnFrame.png');
     background-repeat: no-repeat;
     background-size: 340px 240px; 
     background-position: 90px 80px; 
     overflow: hidden;
+    position: relative;
 }
 
 .highlightRed{
@@ -60,3 +62,12 @@
     font-weight:bold ;
 }
 
+.scroll-section {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+.hidden {
+  opacity: 0 !important;
+  background-color: red !important;
+}
