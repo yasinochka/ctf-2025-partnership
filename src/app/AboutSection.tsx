@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 const AboutSection = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Тривалість анімації в мілісекундах
+      duration: 800, // Тривалість анімації в мілісекундах
       once: false,    // Анімація повторюється при повторному вході в зону видимості
     });
   }, []);

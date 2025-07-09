@@ -1,7 +1,66 @@
 .formatSection{
-    padding:10px 80px;
+    padding: 40px 80px;
     color: #fff;
     text-align: center;
     background-color: var(--background);
     overflow: visible;
+}
+
+.formatContent{
+    max-width: 1440px;
+}
+
+.formatContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.fingerprintFrame {
+    position: relative;
+    bottom: 270px;
+    right:40px; 
+    margin: 20px 0; 
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.frame{
+    position: relative;
+    right:260px;
+    align-items: center;
+    padding: 35px;
+    background-image: url('/images/frame.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; 
+    min-width: 0;
+}
+
+.fingerprintImage {
+    transition: transform 0.3s ease; 
+}
+.fingerprintFrame:hover .fingerprintImage {
+    transform: scale(1.1); 
+}
+.frame h1 {
+    position: relative;
+    font-size: 44px;
+    bottom:30px;
+}
+
+.frame p{
+    position: relative;
+    left:20px;
+    bottom:4px;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 80px;
+    margin-left: 50px;
+    line-height: 1.5;
+}
+
+.highlightRed {
+    color: #a80505;
+    font-weight: bold;
 }
