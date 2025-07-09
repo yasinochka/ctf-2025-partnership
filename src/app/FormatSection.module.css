@@ -1,13 +1,25 @@
-.formatSection{
+.fullBackground {
+    background-image: url('/images/backgroundFormat.png');
+    background-repeat: no-repeat;
+    background-size: auto 200vh; /* Висота двох секцій (100vh кожна) */
+    background-position: right top;
+    min-height: 200vh; /* Забезпечує висоту двох секцій */
+}
+
+.formatSection {
     padding: 40px 80px;
     color: #fff;
     text-align: center;
-    background-color: var(--background);
+    background-color: transparent;
     overflow: visible;
+    position: relative;
+    min-height: 100vh;
 }
 
 .formatContent{
     max-width: 1440px;
+    position: relative;
+    z-index: 1;
 }
 
 .formatContainer{

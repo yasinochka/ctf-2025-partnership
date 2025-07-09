@@ -35,7 +35,7 @@ const AboutSection = () => {
           <div 
             className={styles.photoFrame} 
             data-aos="fade-up"           // Анімація для photoFrame
-            data-aos-delay="400"         // Затримка для photoFrame
+            data-aos-delay="450"         // Затримка для photoFrame
           >
             <Image
               src="/images/AboutSectionPhoto.png"
