@@ -1,23 +1,17 @@
-.fullBackground {
-    background-image: url('/images/backgroundFormat.png');
-    background-repeat: no-repeat;
-    background-size: auto 200vh; /* Висота двох секцій (100vh кожна) */
-    background-position: right top;
-    min-height: 200vh; /* Забезпечує висоту двох секцій */
-}
-
 .formatSection {
     padding: 40px 80px;
     color: #fff;
     text-align: center;
-    background-color: transparent;
     overflow: visible;
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
+    overflow:visible;
+    background: transparent;
 }
 
 .formatContent{
     max-width: 1440px;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
 }
@@ -26,11 +20,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin: 20px 20px;
 }
 
 .fingerprintFrame {
     position: relative;
-    bottom: 270px;
+    bottom: 180px;
     right:40px; 
     margin: 20px 0; 
     z-index: 0;
@@ -39,7 +34,8 @@
 
 .frame{
     position: relative;
-    right:260px;
+    top:50px;
+    right:180px;
     align-items: center;
     padding: 35px;
     background-image: url('/images/frame.png');
@@ -58,7 +54,7 @@
 .frame h1 {
     position: relative;
     font-size: 44px;
-    bottom:30px;
+    bottom:59px;
 }
 
 .frame p{

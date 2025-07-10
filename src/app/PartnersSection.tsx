@@ -65,7 +65,7 @@ const PartnersSection: React.FC = () => {
             className={styles.logo}
           />
           <Image
-            src="/images/partner9.png"
+            src="/images/partner9.png" // Заміни на реальний шлях до логотипу партнера
             alt="Partner 9"
             width={150}
             height={100}

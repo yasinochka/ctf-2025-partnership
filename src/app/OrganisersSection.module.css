@@ -82,7 +82,7 @@
 
 .radarContainer {
   position: absolute;
-  bottom: 10px; /* Регулюйте це значення, щоб відповідало референсу */
+  bottom: 10px; 
   right: 52%;
   transform: translateX(-50%);
   z-index: 0;

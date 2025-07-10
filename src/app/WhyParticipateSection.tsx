@@ -5,72 +5,34 @@ import Image from 'next/image';
 const WhyParticipateSection: React.FC = () => {
   return (
     <section className={styles.whyparticipateSection}>
-        <div className={styles.content}>
-            <div className={styles.container}>
-                <div className={styles.text}>
-                    <h1>Чому варто брати участь у CTF-змаганнях? </h1>
-                    
-                </div>
-                <div className={styles.redFrame}>
-                    <Image
+      <div className={styles.content}>
+        <div className={styles.container}>
+          <div className={styles.text}>
+            <h1>Чому варто брати участь у CTF-змаганнях?</h1>
+          </div>
+          <div className={styles.redFrame}>
+            <Image
               src="/images/redFrame.png" 
               alt="Frame design"
-              width={1030}
-              height={1000}
+              width={2400}
+              height={1360}
               className={styles.redframeImage}
             />
-                </div>
-                <div className={styles.rectangles}>
-                    <Image
-              src="/images/rectangle.png" 
-              alt="rectangle design"
-              width={200}
-              height={100}
-              className={styles.rectanglesImage}
-            />
-
-             <Image
-              src="/images/rectangle.png" 
-              alt="rectangle design"
-              width={200}
-              height={100}
-              className={styles.rectanglesImage}
-            />
-
-             <Image
-              src="/images/rectangle.png" 
-              alt="rectangle design"
-              width={200}
-              height={100}
-              className={styles.rectanglesImage}
-            />
-
-             <Image
-              src="/images/rectangle.png" 
-              alt="rectangle design"
-              width={200}
-              height={100}
-              className={styles.rectanglesImage}
-            />
-
-             <Image
-              src="/images/rectangle.png" 
-              alt="rectangle design"
-              width={200}
-              height={100}
-              className={styles.rectanglesImage}
-            />
-
-             <Image
-              src="/images/rectangle.png" 
-              alt="rectangle design"
-              width={200}
-              height={100}
-              className={styles.rectanglesImage}
-            />
-                </div>
-            </div>
+          </div>
+          <div className={styles.rectangles}>
+            {Array.from({ length: 6 }).map((_, index) => (
+              <Image
+                key={index}
+                src="/images/rectangle.png" 
+                alt="Rectangle design"
+                width={399}
+                height={170}
+                className={styles.rectanglesImage}
+              />
+            ))}
+          </div>
         </div>
+      </div>
     </section>
   );
 };

@@ -23,6 +23,7 @@
   left:15px;
   width: 51%;
   padding:35px;
+  top:40px;
   background-image: url('/images/aboutSection.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,12 +48,8 @@
 
 .photoFrame{
     position: relative;
-    top:42px;
+    top:15px;
     right: 25px;
-    background-image: url('/images/photoOnFrame.png');
-    background-repeat: no-repeat;
-    background-size: 340px 240px; 
-    background-position: 90px 80px; 
     overflow: hidden;
     position: relative;
 }

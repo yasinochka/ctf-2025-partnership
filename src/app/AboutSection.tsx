@@ -41,10 +41,10 @@ const AboutSection = () => {
               src="/images/AboutSectionPhoto.png"
               alt="Photo frame"
               width={600}
-              height={500}
+              height={380}
               className={styles.imageRight}
               data-aos="fade-up"
-              data-aos-delay="450"        // Додаткова затримка для зображення всередині
+              data-aos-delay="450"
             />
           </div>
         </div>

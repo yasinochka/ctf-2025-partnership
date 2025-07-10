@@ -1,7 +1,7 @@
 'use client';
 import styles from './HeroSection.module.css';
 const heroImage: string = '/images/bigmask.png';
-const calendarIcon: string = '/images/Group 950 (1).png'; // Шлях до вашого зображення
+const calendarIcon: string = '/images/Group 950 (1).png';
 const HeroSection: React.FC = () => {
     return (
         <section className={styles.heroSection}>
