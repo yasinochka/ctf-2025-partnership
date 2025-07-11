@@ -1,68 +1,59 @@
-.statsSection {
-  padding: 40px 80px;
-  position: relative;
+
+.statsSection{
+    position:relative;
+    padding:100px 0;
+    min-height: 500px;
+    overflow: visible;
+    scroll-margin-top: 150px;
 }
 
-.statsBack {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+.content{
+    position: absolute;
+    bottom: 50px;
+    right:30%;
 }
-
-.content {
-  max-width: 1440px;
-  position: relative;
-  z-index: 1;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 40px;
+.container{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 .statsImg {
-  margin-bottom: 10px;
-}
-
-.title {
-  font-size: 44px;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  bottom:300px;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  position: relative;  
+  bottom:420px;
 }
 
 .statsItems {
+  position: absolute;
+  top:0%;
+  left:52%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  gap: 30px;
-}
-
-.statItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 160px;
+  text-align: center;
 }
 
 .statIcon {
   margin-bottom: 10px;
 }
 
+.statsBack{
+    position: relative;
+    bottom:390px;
+}
+
+.title{
+    position: absolute;
+    bottom: 650px;
+    right:200px;
+    font-size: 39px;
+}
+
 .statItem span {
   font-size: 18px;
   color: #fff;
+  font-weight: 600;
 }

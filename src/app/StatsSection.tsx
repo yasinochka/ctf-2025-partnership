@@ -1,15 +1,15 @@
 'use client';
-import styles from './FormatSection.module.css';
+import styles from './StatsSection.module.css';
 import Image from 'next/image';
 
 const StatsSection: React.FC = () => {
   return (
-    <section className={styles.statsSection}>
+    <section className={styles.statsSection} id="stats">
         <Image
       src="/images/statsBack.png"
       alt="StatsBack"
-      width={250}
-      height={590}
+      width={230}
+      height={670}
       className={styles.statsBack}
     />
       <div className={styles.content}>
@@ -25,7 +25,7 @@ const StatsSection: React.FC = () => {
             <div className={styles.statsItems}>
                 <div className={styles.statItem}>
               <Image
-                src="/images/instagram.png" // Приклад іконки
+                src="/images/instagram.png"
                 alt="Instagram Followers"
                 width={50}
                 height={50}
@@ -35,7 +35,7 @@ const StatsSection: React.FC = () => {
             </div>
             <div className={styles.statItem}>
               <Image
-                src="/images/telegram.png" // Приклад іконки
+                src="/images/telegram.png"
                 alt="Tg Followers"
                 width={50}
                 height={50}
@@ -45,7 +45,7 @@ const StatsSection: React.FC = () => {
             </div>
             <div className={styles.statItem}>
               <Image
-                src="/images/linkedin.png" // Приклад іконки
+                src="/images/linkedin.png" 
                 alt="LinkedIn Followers"
                 width={50}
                 height={50}
@@ -55,7 +55,7 @@ const StatsSection: React.FC = () => {
             </div>
             <div className={styles.statItem}>
               <Image
-                src="/images/facebook.png" // Приклад іконки
+                src="/images/facebook.png"
                 alt="Facebook Followers"
                 width={50}
                 height={50}

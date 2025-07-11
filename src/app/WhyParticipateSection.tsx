@@ -15,7 +15,7 @@ const WhyParticipateSection: React.FC = () => {
               src="/images/redFrame.png" 
               alt="Frame design"
               width={2400}
-              height={1360}
+              height={1060}
               className={styles.redframeImage}
             />
           </div>
