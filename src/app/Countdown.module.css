@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Miniver&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Petrona:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Tektur:wght@400..900&display=swap');
+.CountdownSection {
+    padding: 80px 200px;
+    text-align: center;
+}
+
+.content {
+    max-width: 1400px;
+}
+
+.text {
+    position: relative;
+    padding:30px;
+    background-color: #181818;
+    max-width: 700px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #363636;
+    margin: 0 auto;
+}
+
+.title1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight:400 ;
+}
+
+.title2 {
+    font-family: 'Tektur' ;
+    font-size: 27px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-weight:350 ;
+    color: #E30613;
+    letter-spacing: 1px;
+}
+
+.notTitle{
+    font-size: 15px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-weight:450 ;
+    letter-spacing: 1px;
+    max-width:700px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.countdownItem {
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #FEF2F3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.count {
+    display: block;
+    font-size: 40px;
+    color: #E30613;
+    font-family: 'Tektur';
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.label {
+    display: block;
+    font-size: 16px;   
+}
+
+.labels{
+    display: flex;
+    position: relative;
+    text-align: center;
+    flex-direction: row;
+    padding:10px;
+    gap:61px;
+    left:127px;
+    margin: 7px;
+}
+.highlightRed{
+    color: #d90404;
+}

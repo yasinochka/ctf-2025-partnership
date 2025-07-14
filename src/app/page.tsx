@@ -7,6 +7,7 @@ import OrganisersSection from './OrganisersSection';
 import StatsSection from './StatsSection';
 import SwiperSection from './SwiperSection';
 import PortraitSection from './PortraitSection';
+import CountdownSection from './CountdownSection';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <StatsSection/>
       <SwiperSection/>
       <PortraitSection/>
+      <CountdownSection/>
       <PartnersSection/>
       <OrganisersSection/>
     </>
