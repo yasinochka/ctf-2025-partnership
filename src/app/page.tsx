@@ -5,6 +5,7 @@ import WhyParticipateSection from './WhyParticipateSection';
 import PartnersSection from './PartnersSection';
 import OrganisersSection from './OrganisersSection';
 import StatsSection from './StatsSection';
+import SwiperSection from './SwiperSection';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <WhyParticipateSection />
       </div>
       <StatsSection/>
+      <SwiperSection/>
       <PartnersSection/>
       <OrganisersSection/>
     </>
