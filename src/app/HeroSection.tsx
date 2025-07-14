@@ -11,12 +11,12 @@ const HeroSection: React.FC = () => {
                     <h1 className={styles.heroTitle}>Best Capture The Flag</h1>
                     <div className={styles.heroSubtitleContainer}>
                         <img src={calendarIcon} alt="Календар" className={styles.calendarIcon} />
-                        <p className={styles.heroSubtitle}>22-23 листопада</p>
+                        <p className={styles.heroSubtitle}>22 листопада</p>
                     </div>
                     <a href="#partner" className={styles.heroButton}>Стати партнером</a>
                 </div>
                 <div className={styles.heroMask}>
-                    <img src={heroImage} alt="Фон героїв" className={styles.heroMaskImage} />
+                    <img src={heroImage} alt="Фон чела" className={styles.heroMaskImage} />
                 </div>
                 <div className={styles.heroCode}></div>
             </div>

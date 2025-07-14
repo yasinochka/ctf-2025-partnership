@@ -66,9 +66,19 @@
     margin-bottom: 80px;
     margin-left: 50px;
     line-height: 1.5;
+    letter-spacing:1px;
+    font-weight: 300;
 }
 
 .highlightRed {
-    color: #a80505;
-    font-weight: bold;
+  color: #a80505;
+  font-weight: 700;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.highlightRed:hover {
+  transform: scale(1.1);
+  color: #d90404;
 }

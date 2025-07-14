@@ -31,7 +31,7 @@ const StatsSection: React.FC = () => {
                   height={50}
                   className={styles.statIcon}
                 />
-                <span>3400+ followers</span>
+                <span>3550+ followers</span>
               </div>
               <div className={styles.statItem}>
                 <Image
@@ -51,7 +51,7 @@ const StatsSection: React.FC = () => {
                   height={50}
                   className={styles.statIcon}
                 />
-                <span>800+ followers</span>
+                <span>750+ followers</span>
               </div>
             </div>
           </div>

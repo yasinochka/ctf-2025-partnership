@@ -62,12 +62,12 @@
 
 .statsItems {
   position: absolute;
-  top:400px;
+  top:360px;
   left: 55%;
   transform: translateX(-50%); 
   display: flex;
   justify-content: center;
-  gap: 270px;
+  gap: 250px;
 }
 
 .statItem {

@@ -1,0 +1,108 @@
+.portraitSection{
+    padding:80px 100px;
+    width:1440px;
+    height:auto;
+}
+
+.content{
+    margin:50px 90px;
+}
+
+.TextContainer{
+    position: relative;
+}
+.title{
+    position: absolute;
+    top: -55px;
+    left: 0; 
+    text-transform: uppercase ;
+    font-size: 30px;
+}
+
+.underTitle{
+    position: relative;
+    max-width: 525px;
+    background-color: #181818;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #363636;
+
+}
+.goalList{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 90px;
+    padding-left: 30px;
+}
+
+.universities{
+    position: relative;
+    margin-top:20px;
+    max-width: 250px;
+    max-height: 300px;
+    background-color: #181818;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #363636;
+
+}
+
+
+.title2{
+   margin-top:10px;
+   margin-left:10px;
+   font-size: 20px;
+}
+
+.goalList2{
+    padding-top:25px;
+    padding-bottom:63px;
+    padding-left: 14px;
+    list-style-type: none;
+    font-weight: 350;
+}
+
+.universityWrapper{
+    display: flex;
+    align-items: flex-start;
+    
+}
+.leftDiv{
+    position: absolute;
+    top:-245px;
+    left:400px;
+    text-align: left;
+}
+
+.title3{
+    position: absolute;
+    bottom:185px;
+    left:80px;
+    font-size: 20px;
+    max-width: 300px;
+    font-weight: 300;
+}
+
+.goalList3{
+    position: absolute;
+    list-style-type: none;
+    font-weight: 350;
+    bottom:49px;
+    left:80px;
+    
+}
+.goalList3 li{
+    margin-bottom: 7px;
+}
+
+.goalList4{
+    position: absolute;
+    list-style-type: none;
+    font-weight: 350;
+    bottom:49px;
+    left:420px;
+}
+
+.goalList4 li{
+    margin-bottom: 7px;
+}

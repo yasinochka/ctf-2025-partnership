@@ -1,8 +1,5 @@
 .aboutSection {
-  padding-top: 13rem;
-  padding-bottom: 9rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding: 9rem 8rem;
   color: #fff;
   background-color: var(--background);
   overflow: hidden;

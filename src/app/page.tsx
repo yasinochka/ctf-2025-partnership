@@ -6,6 +6,7 @@ import PartnersSection from './PartnersSection';
 import OrganisersSection from './OrganisersSection';
 import StatsSection from './StatsSection';
 import SwiperSection from './SwiperSection';
+import PortraitSection from './PortraitSection';
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       </div>
       <StatsSection/>
       <SwiperSection/>
+      <PortraitSection/>
       <PartnersSection/>
       <OrganisersSection/>
     </>

@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     max-width: 1440px;
     min-height: calc(100vh - 120px);
     position: relative;
@@ -28,19 +28,17 @@
 
 .heroText {
     flex: 1.5;
-    text-align: center;
+    text-align: left;
     padding: 1.5em;
-    color: var(--foreground);
     z-index: 2;
     position: relative;
     max-width: 45%;
     height: 170%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     background-size: 100% 100%;
-    top: 20px;
     margin-top: -30px; 
     margin-left:70px;
 }
@@ -49,7 +47,6 @@
     font-family: 'Orbitron'; 
     font-size: 55px;
     font-weight: 450;
-    margin-bottom: 0.5em;
     line-height: 1.1;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -58,36 +55,40 @@
 
 .heroQuote {
     font-family: 'Barlow', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    margin-bottom: 38px;
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 30px;
     position: relative;
 }
 
 .heroSubtitleContainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 .calendarIcon {
+    position: relative;
     width: 30px; 
     height: auto;
     margin-right: 17px; 
     padding-bottom:15px;
+    top: 27px;
 }
 
 .heroSubtitle {
+    position: relative;
+    top:20px;
     font-size: 40px;
     font-weight: 400;
-    margin-bottom: 0.5em;
+    margin-bottom: 0px;
     line-height: 1.1;
-    font-weight: 200 !important;
-    font-family: 'Barlow', sans-serif !important;
+    font-weight: 200 ;
+    font-family: 'Barlow', sans-serif ;
 }
 
 .heroButton {
     display: inline-block;
+    margin-top:60px;
     padding: 8px 12px;
     background-color: transparent;
     color: var(--foreground);
@@ -141,31 +142,31 @@
     overflow: visible;
     height: auto;
     width: 100%;
+    opacity: 0.7;
 }
 
 .heroMaskImage {
+    margin-right:100px;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     object-fit: cover;
     position: absolute;
-    top: -450px;
+    top: -550px;
     right: -20%;
-    z-index: 1;
+    z-index: 3000;
 }
 
 .heroCode {
     position: absolute;
     left: 0;
-    top: 0;
-    width: 65%;
-    height: 130%;
+    width: 57.4%;
+    height: 120%;
     background: url('/images/kod.png') repeat-y left top;
     background-size: 100% 100%;
-    background-position: -30px 0;
     z-index: 0;
-    top: -60px;
-    right:60px;
+    top: -150px;
     overflow: visible;
+    opacity:0.8;
 }
 
 
