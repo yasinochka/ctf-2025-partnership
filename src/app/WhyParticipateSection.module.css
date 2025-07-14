@@ -59,10 +59,10 @@
   align-self: start;
   position: absolute;
   top: 20%; 
-  left: 50%; /* Центруємо по горизонталі */
-  transform: translate(-50%, -50%); /* Корекція для точного центру */
-  width: 80%; /* Зменшуємо ширину, щоб вміститися всередині */
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 80%; 
   margin-top: -490px;
-  padding: 40px 0; /* Додаємо відступи зверху і знизу всередині .rectangles */
-  box-sizing: border-box; /* Включає padding у розмір */
+  padding: 40px 0; 
+  box-sizing: border-box; 
 }

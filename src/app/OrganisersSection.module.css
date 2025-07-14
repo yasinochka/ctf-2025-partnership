@@ -33,9 +33,9 @@
 }
 
 .highlightedText {
-  font-size: 25px; /* Збільшений шрифт для "BEST Lviv" */
-  font-weight: 600; /* Жирний шрифт для виділення */
-  margin-bottom: 30px; /* Відступ перед основним текстом */
+  font-size: 25px; 
+  font-weight: 600;
+  margin-bottom: 30px; 
   position: relative;
   top:18px;
   right: 185px;
@@ -97,41 +97,41 @@
   display: flex;
   justify-content: space-around;
   width: 300px;
-  flex-direction: column; /* Зміни на вертикальне розташування для тексту під цифрами */
-  align-items: center; /* Центрування елементів */
+  flex-direction: column; 
+  align-items: center;
 }
 
 .statGroup {
   display: flex;
-  justify-content: space-around; /* Розподіл перших двох елементів у рядок */
+  justify-content: space-around; 
   width: 100%;
   gap: 80px;
 }
 
 .statColumn {
   display: flex;
-  flex-direction: column; /* Вертикальне розміщення 29 і 36 */
-  align-items: center; /* Центрування колонок */
+  flex-direction: column; 
+  align-items: center; 
   margin-bottom: 20px;
 }
 
 .statColumn > :not(:first-child) {
-  margin-top: 60px; /* Вертикальний відступ між 29 і 36, еквівалентний горизонтальному gap */
+  margin-top: 60px; 
 }
 
 .statItem {
   font-size: 32px;
   font-weight: 500;
-  color: #ff0000; /* Червоне забарвлення цифр */
+  color: #ff0000;
   text-align: center;
 }
 
 .statText {
-  display: block; /* Робимо текст окремим блоком під цифрою */
+  display: block; 
   font-size: 0.8em;
   font-weight: normal;
-  color: #fff; /* Текст залишається білим */
-  margin-top: 5px; /* Відступ між цифрою і текстом */
+  color: #fff; 
+  margin-top: 5px; 
 }
 
 .textContainer {

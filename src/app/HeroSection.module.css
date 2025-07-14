@@ -46,7 +46,7 @@
 }
 
 .heroTitle {
-    font-family: 'Orbitron'; /* Застосування шрифту */
+    font-family: 'Orbitron'; 
     font-size: 55px;
     font-weight: 450;
     margin-bottom: 0.5em;
@@ -71,7 +71,7 @@
 }
 
 .calendarIcon {
-    width: 30px; /* Налаштуйте розмір іконки за потребою */
+    width: 30px; 
     height: auto;
     margin-right: 17px; 
     padding-bottom:15px;
@@ -222,5 +222,4 @@
 .heroMaskImage {
     display: none !important;
 }
-
 }

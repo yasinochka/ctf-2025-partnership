@@ -22,7 +22,6 @@ const WhyParticipateSection: React.FC = () => {
           <div className={styles.rectangles}>
             {Array.from({ length: 6 }).map((_, index) => (
               <Image
-                key={index}
                 src="/images/rectangle.png" 
                 alt="Rectangle design"
                 width={399}
