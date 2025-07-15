@@ -2,7 +2,7 @@
   position: relative;
   padding: 50px 0;
   overflow: visible;
-  scroll-margin-top: 150px;
+  scroll-margin-top: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@
 
 .title {
   position: relative;
-  bottom: 285px;
+  bottom: 288px;
   left: 45px;
   font-size: 35px;
   color: #fff;

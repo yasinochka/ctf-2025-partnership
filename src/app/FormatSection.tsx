@@ -17,11 +17,11 @@ const FormatSection: React.FC = () => {
             />
           </div>
           <div className={styles.frame}>
-            <h1>Формат змагань - <span className={styles.highlightRed}>Jeopardy</span></h1>
-            <p>
-              Цьогоріч <span className={styles.highlightRed}>BEST CTF</span> знову проводиться у форматі Jeopardy. Принцип змагань полягає тому, що студенти вирішують завдання, виборюючи “прапорці”, які приносять командам бали. За відведений час змагань учасники намагаються розв’язати якомога більше задач поділених на категорії: Web, Crypto, Reversing, Exploitation, борючись за місце в рейтингу.
-            </p>
-          </div>
+            <h1>Формат змагань - <span className={`${styles.highlightRed} ${styles.jeopardyFont}`}>Jeopardy</span></h1>
+                <p>
+                Цьогоріч <span className={styles.highlightRed}>BEST CTF</span> знову проводиться у форматі Jeopardy. Принцип змагань полягає тому, що студенти вирішують завдання, виборюючи “прапорці”, які приносять командам бали. За відведений час змагань учасники намагаються розв’язати якомога більше задач поділених на категорії: Web, Crypto, Reversing, Exploitation, борючись за місце в рейтингу.
+                </p>
+            </div>
         </div>
       </div>
     </section>

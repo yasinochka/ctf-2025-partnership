@@ -1,0 +1,129 @@
+.contactsSection{
+    padding:80px 0;
+      scroll-margin-top: 20px;
+}
+
+.content{
+    max-width: 2000px;
+    margin: 0 80px;
+}
+
+.container{
+    position: relative;
+}
+
+.title{
+    font-size:40px;
+    font-weight: 550;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.contactsFrames{
+    display: flex;
+    flex-direction: row;
+    gap:70px;
+}
+.Dima {
+    position: relative; 
+}
+.Text{
+    position:absolute;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    top:385px;
+    right:10px;
+}
+
+.NameSurname{
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.WhoIs{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.MailWrapper{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    margin-left:80px;
+    margin-bottom:10px;
+}
+
+.mail{
+    margin:5px;
+}
+
+.PhoneWrapper{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    margin-left:120px;
+    margin-bottom:10px;
+}
+
+.phone{
+    margin:5px;
+}
+
+.Yulya{
+    position:relative;
+}
+
+.Vika{
+    position:relative;
+}
+
+.underEverything{
+    position: relative;
+    margin-top:120px;
+    margin-bottom:300px;
+    text-align: center;
+    align-items: center;
+}
+
+.textUnder{
+    position: absolute;
+    margin-bottom:20px;
+    max-width: 400px;
+    font-size: 18px;
+    font-weight: 300;
+    left:400px;
+    font-weight: 200;
+}
+
+.buttonUnder{
+    position: absolute;
+    top:70px;
+    right:805px;
+}
+
+.textOnButton{
+    position: absolute;
+    max-width: 500px;
+    padding:10px 40px;
+    background-color: #A6141C;
+    border: 2px solid #850202;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.textOnButton:hover {
+    transform: scale(1.05);
+}
+
+.highlightRed {
+  color: #a80505;
+  font-weight: 700;
+  padding: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.highlightRed:hover {
+  transform: scale(1.1);
+  color: #d90404;
+}

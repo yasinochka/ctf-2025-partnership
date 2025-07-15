@@ -41,8 +41,8 @@ const OrganisersSection: React.FC = () => {
     <Image
       src="/images/radar.png"
       alt="Red Radar"
-      width={500}
-      height={1100}
+      width={400}
+      height={900}
       className={styles.radar}
     />
   </div>
