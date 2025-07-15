@@ -9,6 +9,7 @@ import SwiperSection from './SwiperSection';
 import PortraitSection from './PortraitSection';
 import CountdownSection from './CountdownSection';
 import ContactsSection from './ContactsSection';
+import BottomSection from './BottomSection';
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
       <PartnersSection/>
       <OrganisersSection/>
       <ContactsSection/>
+      <BottomSection/>
     </>
   );
 }

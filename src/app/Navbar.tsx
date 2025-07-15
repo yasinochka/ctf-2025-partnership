@@ -26,7 +26,6 @@ export default function Navbar() {
         <div className={`menu-burger ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <span></span>
           <span></span>
-          <span></span>
         </div>
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <li><a href="#about" onClick={(e) => { e.preventDefault(); handleNavClick('about'); }}>Про нас</a></li>

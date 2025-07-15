@@ -109,16 +109,6 @@ const ContactsSection: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.underEverything}>
-                <div className={styles.textUnder}>
-                    <p> Зробіть свій внесок у майбутнє кібербезпеки !
-                    Станьте партнером <span className={styles.highlightRed}>BEST CTF 2025</span>!</p>
-                </div>
-                <div className={styles.buttonUnder}>
-                    <p className={styles.textOnButton}>Співпрацювати</p>
-                </div>
-
-            </div>
         </div>
       </div>
     </section>
