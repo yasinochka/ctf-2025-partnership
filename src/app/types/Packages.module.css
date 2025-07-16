@@ -1,0 +1,233 @@
+.packagesSection {
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.packagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+}
+
+.packageCard {
+  padding: 1.5rem;
+  width: 300px;
+  height: 650px;
+  text-align: left;
+  position: relative;
+  overflow: visible;
+  background: linear-gradient(
+    to top,
+    #2b2929 0%, 
+    #3c060637 60%, 
+    #000000 80%
+  );
+}
+
+/* Фіксований градієнт для Base * та вибраних пакетів */
+.packageCardBase,
+.packageCardSelected {
+  background: linear-gradient(
+    to top,
+    #bd0612 0%,    /* Яскраво-червоний знизу */
+    #710D16 12%,   /* Темніший червоний */
+    #000000 65%,   /* Чорний у центрі */
+    #710D16 90%,   /* Темніший червоний */
+    #c20713cf 100% /* Яскраво-червоний зверху */
+  );
+}
+
+.packageTitle {
+  font-size: 25px;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.packagePrice {
+  color: #BB002E;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.mandatoryText {
+  font-size: 16px;
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+}
+
+.packageFeatures {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.featureItem {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  left: -5px;
+}
+
+.addButton {
+  background-color: #a80505;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+}
+
+.addButton:hover:not(:disabled) {
+  background-color: #d90404;
+}
+
+.addButton:disabled {
+  background-color: #6b0303; /* Тьмяніший червоний для неактивної кнопки */
+  cursor: not-allowed;
+}
+
+.additionalInfo {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+.additionalInfo p {
+  margin: 0.5rem 0;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: left;
+}
+
+.modalFeatures {
+  list-style: none;
+  padding: 0;
+}
+
+.modalFeatures li {
+  margin-bottom: 1rem;
+}
+
+.closeButton {
+  background-color: #a80505;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.closeButton:hover {
+  background-color: #d90404;
+}
+
+.infoBase,
+.infoBrand,
+.infoFlow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 570px;
+  left: 260px;
+}
+
+.unionBase {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.unionBrand {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.unionFlow {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .packageCard {
+    width: 100%;
+  }
+  .packageTitle {
+    font-size: 1.5rem;
+  }
+  .packagePrice {
+    font-size: 1.1rem;
+  }
+  .buttonGroup {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    position: static;
+    margin-top: 1rem;
+  }
+  .addButton {
+    width: 150px;
+  }
+  .infoBase,
+  .infoBrand,
+  .infoFlow {
+    position: static;
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

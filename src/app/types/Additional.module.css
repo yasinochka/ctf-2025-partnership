@@ -1,0 +1,257 @@
+.additionalSection {
+  padding: 6rem 2rem;
+  position: relative;
+  background: url('/images/AdditionalBackgr.png') no-repeat left top;
+  background-size: 1100px 900px;
+  background-position: -70px 1px;
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.additionalContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.additionalCard {
+  padding: 1rem 2rem;
+  width: 80%;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    #E30613B8 0%,
+    #710D168C 30%,
+    #29060600 60%,
+    #710D168C 100%
+  );
+  text-align: left;
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.selectedCard {
+  background: linear-gradient(
+    to bottom,
+    #BB002E 0%,
+    #710D16 30%,
+    #290606 60%,
+    #710D16 100%
+  );
+}
+
+.disabledCard {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  justify-content: center;
+}
+
+.infoCheckboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Відстань між ціною, інформацією і квадратиком */
+  justify-content: flex-end; /* Посередині справа */
+  margin-left: auto; /* Відступ від лівого краю */
+}
+
+.checkboxWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkboxLabel {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('/images/checkbox-empty.svg') no-repeat center;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.checkboxCheckmark {
+  display: none;
+  width: 24px;
+  height: 24px;
+  background: url('/images/checkbox-line.svg') no-repeat center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth transition for checkmark */
+}
+
+.checkbox:checked + .checkboxLabel + .checkboxCheckmark {
+  display: block; /* Show checkmark when checked */
+  opacity: 1; /* Fade in checkmark smoothly */
+}
+
+.checkbox:disabled + .checkboxLabel {
+  cursor: pointer; /* Ensure pointer cursor even when disabled */
+}
+
+.serviceName {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+  white-space: normal;
+  overflow: visible;
+}
+
+.availableText {
+  font-size: 0.9rem;
+  color: #BB002E;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.unavailableText {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.priceButton {
+  background-color: #a80505;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem; /* Зменшено для компактності */
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  height: 24px; /* Вирівнювання по висоті з іконками */
+}
+
+.priceButton:hover:not(:disabled) {
+  background-color: #d90404;
+}
+
+.disabledPriceButton {
+  background-color: #710D16;
+  cursor: not-allowed;
+}
+
+.infoIcon {
+  position: relative;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.selectedInfoIcon {
+  filter: hue-rotate(0deg) brightness(100%) contrast(100%); /* Червоний колір */
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: left;
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.modalDescription {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #a80505;
+}
+
+@media (max-width: 768px) {
+  .additionalCard {
+    width: 100%;
+  }
+  .serviceName {
+    font-size: 1rem;
+  }
+  .availableText,
+  .unavailableText {
+    font-size: 0.8rem;
+  }
+  .priceButton {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+  .infoIcon {
+    position: static;
+    margin-top: 0;
+    display: block;
+    margin-left: 0;
+  }
+  .checkboxLabel {
+    width: 20px;
+    height: 20px;
+  }
+}
