@@ -16,13 +16,6 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
   const [email, setEmail] = useState("");
   const [isCartUpdated, setIsCartUpdated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [submittedData, setSubmittedData] = useState<{
-    company: string;
-    email: string;
-    packages: string;
-    options: string;
-    total: string;
-  } | null>(null);
 
   useEffect(() => {
     if (cart.length > 0 && cart.length > 1) {
@@ -198,15 +191,21 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                 <p className={styles.discountInfoSecond}>Акційна пропозиція “Early bird” сумується з найбільшою.</p>
               </div>
             </form>
-            {formSubmitted && submittedData && (
+            {formSubmitted && (
               <div className={styles.submittedInfo}>
                 <h3>Надіслана інформація:</h3>
                 <div>
-                  Компанія: {submittedData.company}<br />
-                  Email: {submittedData.email}<br />
-                  Пакети: {submittedData.packages}<br />
-                  Опції: {submittedData.options}<br />
-                  Всього: {submittedData.total}
+                  Компанія: {companyName}<br />
+                  Email: {email}<br />
+                  Пакети: {cart
+                    .filter((item) => packages.some((pkg) => pkg.name === item.name))
+                    .map((item) => item.name)
+                    .join(", ") || "Немає вибраних пакетів"}<br />
+                  Опції: {cart
+                    .filter((item) => !packages.some((pkg) => pkg.name === item.name))
+                    .map((item) => item.name)
+                    .join(", ") || "Немає додаткових послуг"}<br />
+                  Всього: {total}$
                 </div>
               </div>
             )}
