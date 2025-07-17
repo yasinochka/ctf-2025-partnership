@@ -45,7 +45,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
     <section className={styles.cartSection}>
       <div className={styles.cartWrapper}>
         <h1 className={styles.cartTitle}>КОШИК</h1>
-        <div className={styles.cartContainer} style={{ backgroundImage: "url('/images/cart-background.jpg')" }}>
+        <div className={styles.cartContainer} style={{ backgroundImage: "url('/images/cart-background.png')" }}>
           <div className={styles.cartLeft}>
             <div className={styles.cartItems}>
               {cart.length === 0 ? (
@@ -59,7 +59,6 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                       .map((item: Package, index) => (
                         <div key={index} className={`${styles.cartItem} ${isCartUpdated ? styles.cartItemUpdated : ""}`}>
                           <span>{item.name}</span>
-                          <span>{item.price} × {item.quantity}</span>
                           <button
                             className={styles.removeButton}
                             onClick={() => handleRemoveFromCart(item)}
@@ -72,20 +71,23 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                   </div>
                   <div className={styles.cartCategory}>
                     <h2 className={styles.categoryTitle}>Додаткові опції</h2>
-                    {cart
-                      .filter((item: Package) => !packages.some((pkg: Package) => pkg.name === item.name))
-                      .map((item: Package, index) => (
-                        <div key={index} className={`${styles.cartItem} ${isCartUpdated ? styles.cartItemUpdated : ""}`}>
-                          <span>{item.name}</span>
-                          <span>{item.price} × {item.quantity}</span>
-                          <button
-                            className={styles.removeButton}
-                            onClick={() => handleRemoveFromCart(item)}
-                          >
-                            ×
-                          </button>
-                        </div>
-                      ))}
+                    {cart.filter((item: Package) => !packages.some((pkg: Package) => pkg.name === item.name)).length === 0 ? (
+                      <p className={styles.emptyCart}>Немає</p>
+                    ) : (
+                      cart
+                        .filter((item: Package) => !packages.some((pkg: Package) => pkg.name === item.name))
+                        .map((item: Package, index) => (
+                          <div key={index} className={`${styles.cartItem} ${isCartUpdated ? styles.cartItemUpdated : ""}`}>
+                            <span>{item.name}</span>
+                            <button
+                              className={styles.removeButton}
+                              onClick={() => handleRemoveFromCart(item)}
+                            >
+                              ×
+                            </button>
+                          </div>
+                        ))
+                    )}
                   </div>
                 </>
               )}
@@ -116,16 +118,16 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
               </button>
               <div className={styles.discountInfo}>
                 <p>
-                  <span className={styles.discountBullet}>•</span> Оплата буде здійснюватись за курсом НБУ.
+                  <span className={styles.discountSquare}></span> Оплата буде здійснюватись за курсом НБУ.
                 </p>
                 <p>
-                  <span className={styles.discountBullet}>•</span> Партнерам попереднього CTF -5% (після узгодження організаторами).
+                  <span className={styles.discountSquare}></span> Партнерам попереднього CTF -5% (після узгодження організаторами).
                 </p>
                 <p>
-                  <span className={styles.discountBullet}>•</span> Base + 3 додаткові опції -50$.
+                  <span className={styles.discountSquare}></span> Base + 3 додаткові опції -50$.
                 </p>
                 <p>
-                  <span className={styles.discountBullet}>•</span> Base + два пакети -150$.
+                  <span className={styles.discountSquare}></span> Base + два пакети -150$.
                 </p>
                 <p>
                   Знижки не поєднуються між собою – автоматично вибирається найбільша з можливих. 

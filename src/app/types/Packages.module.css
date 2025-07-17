@@ -38,7 +38,7 @@
   background: linear-gradient(
     to top,
     #2b2929 0%, 
-    #3c060637 60%, 
+    #26060637 60%, 
     #000000 80%
   );
   transition: background 0.3s ease;
@@ -48,11 +48,11 @@
 .packageCardSelected {
   background: linear-gradient(
     to top,
-    #bd0612 0%,    
-    #710D16 10%,   
-    #000000 65%,   
-    #710D16 90%,   
-    #c20713cf 100% 
+    #bd0612af 0%,    
+    #710d15b7 10%,   
+    #000000d6 65%,   
+    #710d15a7 90%,   
+    #c20713b4 100% 
   );
   transition: background 0.5s ease; 
 }
@@ -169,7 +169,7 @@
 }
 
 .modalContent {
-  background-color: #231f1f;
+  background-color: #1d1b1b;
   color: #ffffff;
   padding: 1.5rem; 
   border-radius: 0.25rem;
