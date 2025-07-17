@@ -45,10 +45,10 @@ const ImageSwiper: React.FC = () => {
             </Swiper>
 
             <button className={styles.swiperButtonPrev}>
-              <span className={styles.arrow}>&lt;</span> {/* Замінено < на &lt; */}
+              <span className={styles.arrow}>&lt;</span> 
             </button>
             <button className={styles.swiperButtonNext}>
-              <span className={styles.arrow}>&gt;</span> {/* Замінено > на &gt; */}
+              <span className={styles.arrow}>&gt;</span> 
             </button>
           </div>
         </div>

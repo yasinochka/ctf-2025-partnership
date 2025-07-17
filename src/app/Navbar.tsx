@@ -33,7 +33,7 @@ export default function Navbar() {
           <li><a href="#offers" onClick={(e) => { e.preventDefault(); handleNavClick('offers'); }}>Пропозиції</a></li>
           <li><a href="#stats" onClick={(e) => { e.preventDefault(); handleNavClick('stats'); }}>Статистика</a></li>
           <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleNavClick('contact'); }}>Контакти</a></li>
-          <li><a href="#partner" onClick={(e) => { e.preventDefault(); handleNavClick('partner'); }} className="partner-button">Стати партнером</a></li>
+          <li><a href="#countdown" onClick={(e) => { e.preventDefault(); handleNavClick('countdown'); }} className="partner-button">Стати партнером</a></li>
         </ul>
       </div>
     </nav>

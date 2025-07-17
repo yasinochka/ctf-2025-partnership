@@ -1,6 +1,6 @@
-'use client';
-import styles from './Countdown.module.css';
-import { useState, useEffect } from 'react';
+"use client";
+import styles from "./Countdown.module.css";
+import { useState, useEffect } from "react";
 
 const CountdownSection: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -11,7 +11,7 @@ const CountdownSection: React.FC = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2025-08-21T00:00:00+03:00').getTime(); 
+    const targetDate = new Date("2025-08-23T00:00:00+03:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -38,7 +38,7 @@ const CountdownSection: React.FC = () => {
   };
 
   return (
-    <section className={styles.CountdownSection}>
+    <section className={styles.CountdownSection} id="countdown">
       <div className={styles.content}>
         <div className={styles.text}>
           <h1 className={styles.title1}>Акційна пропозиція “Early bird”</h1>
@@ -63,8 +63,10 @@ const CountdownSection: React.FC = () => {
             <p className={styles.label3}>Хвилин</p>
             <p className={styles.label4}>Секунд</p>
           </div>
-          <p className={styles.notTitle}><span className={styles.highlightRed}>-5%</span> для партнерів, які придбають та оплатять пакети
-          або додаткові опції у перший місяць пропозиції.</p>
+          <p className={styles.notTitle}>
+            <span className={styles.highlightRed}>-5%</span> для партнерів, які придбають та оплатять пакети
+            або додаткові опції у перший місяць пропозиції.
+          </p>
         </div>
       </div>
     </section>
