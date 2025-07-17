@@ -4,19 +4,17 @@ import { useState, useEffect } from "react";
 import { Package } from "./types/types";
 import Image from "next/image";
 
-// Визначення пропсів для Packages
 interface PackagesProps {
   cart: Package[];
   setCart: React.Dispatch<React.SetStateAction<Package[]>>;
   selectedPackages: Set<string>;
   setSelectedPackages: React.Dispatch<React.SetStateAction<Set<string>>>;
-  packages?: Package[]; // Зроблено опціональним
+  packages?: Package[]; 
 }
 
 const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packages = [] }: PackagesProps) => {
   const [selectedPackage, setSelectedPackage] = useState<Package | null>(null);
 
-  // Локальні дані про пакети (за замовчуванням)
   const defaultPackages: Package[] = [
     {
       id: "1",
@@ -78,13 +76,11 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
   ];
 
   const toggleCart = (pkg: Package) => {
-    // Ігноруємо кліки для Base *
     if (pkg.id === "1") return;
 
     setCart((prevCart: Package[]) => {
       const isAlreadyInCart = prevCart.some((item: Package) => item.id === pkg.id);
       if (isAlreadyInCart) {
-        // Видаляємо пакет з кошика і selectedPackages
         setSelectedPackages(new Set([...selectedPackages].filter((id) => id !== pkg.id)));
         return prevCart.filter((item: Package) => item.id !== pkg.id);
       } else {
@@ -108,7 +104,7 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
         setSelectedPackage(null);
         modalOverlay.classList.remove(`${styles.closing}`);
         modalContent.classList.remove(`${styles.closing}`);
-      }, 700); // Час анімації 0.7s
+      }, 700);
     }
   };
 
@@ -155,7 +151,7 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
                         ? { position: "relative", top: "-2px" }
                         : {}
                     }
-                    data-testid={`feature-item-${pkg.id}-${index}`} // Для тестування
+                    data-testid={`feature-item-${pkg.id}-${index}`}
                   >
                     <Image
                       src="/images/Union1.svg"

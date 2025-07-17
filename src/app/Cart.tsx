@@ -30,7 +30,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
   };
 
   const handleRemoveFromCart = (item: Package) => {
-    if (item.id === "1") return; // Ігноруємо видалення для Base *
+    if (item.id === "1") return; 
     setSelectedPackages((prev: Set<string>) => {
       const newSet = new Set(prev);
       newSet.delete(item.id);
@@ -63,7 +63,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                           <button
                             className={styles.removeButton}
                             onClick={() => handleRemoveFromCart(item)}
-                            disabled={item.id === "1"} // Вимикаємо кнопку для Base *
+                            disabled={item.id === "1"} 
                           >
                             ×
                           </button>

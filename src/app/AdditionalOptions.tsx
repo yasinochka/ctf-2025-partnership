@@ -4,7 +4,6 @@ import Image from "next/image";
 import styles from "/Users/macbook/Desktop/brochure/ctf-2025-partnership/src/app/types/Additional.module.css";
 import { Package } from "./types/types";
 
-// Визначення типу пропсів
 interface AdditionalOptionsProps {
   cart?: Package[];
   setCart?: (newCart: Package[] | ((prevCart: Package[]) => Package[])) => void;
@@ -12,7 +11,6 @@ interface AdditionalOptionsProps {
   selectedPackageServices?: string[];
 }
 
-// Тип для опцій
 interface AddOption {
   id: string;
   name: string;
@@ -21,7 +19,6 @@ interface AddOption {
   available: number;
 }
 
-// Просте модальне вікно
 const Modal = ({ onClose, children }: { onClose: () => void; children: React.ReactNode }) => {
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
@@ -32,7 +29,6 @@ const Modal = ({ onClose, children }: { onClose: () => void; children: React.Rea
   );
 };
 
-// Дані для додаткових опцій
 const addOptions: AddOption[] = [
   { id: "1", name: "Доступ до бази CV учасників - 90$", price: "90$", description: "Доступ до бази резюме всіх учасників.", available: 6 },
   { id: "2", name: "Публікація reels в Instagram - 80$", price: "80$", description: "Публікація ролика в Instagram.", available: 6 },
@@ -63,8 +59,8 @@ const AdditionalOptions = ({
   }, [openTooltipId]);
 
   const toggleOption = useCallback((service: AddOption) => {
-    console.log("toggleOption called for:", service.name); // Дебаг: чи викликається функція
-    console.log("Current cart:", cart); // Дебаг: поточний стан кошика
+    console.log("toggleOption called for:", service.name);
+    console.log("Current cart:", cart); 
 
     if (service.available === 0 || selectedPackageServices.includes(service.name)) {
       console.log(`Опція ${service.name} недоступна`);
@@ -74,20 +70,17 @@ const AdditionalOptions = ({
     const isAlreadyInCart = cart.some((item) => item.name === service.name);
 
     if (isAlreadyInCart) {
-      // Видаляємо з кошика
       setCart((prevCart: Package[]) => {
         const newCart = prevCart.filter((item) => item.name !== service.name);
-        console.log(`Видалено ${service.name}, new cart:`, newCart); // Дебаг
+        console.log(`Видалено ${service.name}, new cart:`, newCart); 
         return newCart;
       });
     } else {
-      // Перевіряємо ліміт у 7 опцій
       const currentOptions = cart.filter((item) => addOptions.some((opt) => opt.name === item.name)).length;
       if (currentOptions >= 7) {
         console.log("Досягнуто ліміт у 7 опцій");
         return;
       }
-      // Додаємо до кошика
       const newItem: Package = {
         id: `add_${Date.now()}_${service.name}`,
         name: service.name,
@@ -98,7 +91,7 @@ const AdditionalOptions = ({
       };
       setCart((prevCart: Package[]) => {
         const newCart = [...prevCart, newItem];
-        console.log(`Додано ${service.name}, new cart:`, newCart); // Дебаг
+        console.log(`Додано ${service.name}, new cart:`, newCart);
         return newCart;
       });
     }
@@ -123,14 +116,14 @@ const AdditionalOptions = ({
                  !cart.some((item) => item.name === service.name));
               const isSelected = cart.some((item) => item.name === service.name);
 
-              console.log(`Service: ${service.name}, isDisabled: ${isDisabled}, isSelected: ${isSelected}`); // Дебаг
+              console.log(`Service: ${service.name}, isDisabled: ${isDisabled}, isSelected: ${isSelected}`); 
 
               return (
                 <div 
                   key={service.id} 
                   className={`${styles.additionalCard} ${isSelected ? styles.selectedCard : ''} ${isDisabled ? styles.disabledCard : ''}`}
                   onClick={() => {
-                    console.log(`Card clicked for ${service.name}`); // Дебаг
+                    console.log(`Card clicked for ${service.name}`); 
                     if (!isDisabled) toggleOption(service);
                   }}
                 >
@@ -148,7 +141,7 @@ const AdditionalOptions = ({
                       <button
                         className={`${styles.addButton} ${isDisabled ? styles.disabledButton : ''}`}
                         onClick={() => {
-                          console.log(`Button clicked for ${service.name}`); // Дебаг
+                          console.log(`Button clicked for ${service.name}`); 
                           toggleOption(service);
                         }}
                         disabled={isDisabled}
