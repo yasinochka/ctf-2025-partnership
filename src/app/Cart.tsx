@@ -1,7 +1,8 @@
+"use client";
 import styles from "./types/Cart.module.css";
 import { useState, useEffect } from "react";
 import { Package } from "./types/types";
-import emailjs from "@emailjs/browser"; // Додаємо emailjs
+import emailjs from "@emailjs/browser";
 
 interface CartProps {
   cart: Package[];
@@ -14,6 +15,14 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
   const [companyName, setCompanyName] = useState("");
   const [email, setEmail] = useState("");
   const [isCartUpdated, setIsCartUpdated] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [submittedData, setSubmittedData] = useState<{
+    company: string;
+    email: string;
+    packages: string;
+    options: string;
+    total: string;
+  } | null>(null);
 
   useEffect(() => {
     if (cart.length > 0 && cart.length > 1) {
@@ -33,7 +42,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
   };
 
   const handleRemoveFromCart = (item: Package) => {
-    if (item.id === "1") return; 
+    if (item.id === "1") return;
     setSelectedPackages((prev: Set<string>) => {
       const newSet = new Set(prev);
       newSet.delete(item.id);
@@ -49,30 +58,39 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
     e.preventDefault();
 
     try {
+      const selectedPackages = cart
+        .filter((item) => packages.some((pkg) => pkg.name === item.name))
+        .map((item) => item.name)
+        .join(", ") || "Немає вибраних пакетів";
+
+      const additionalOptions = cart
+        .filter((item) => !packages.some((pkg) => pkg.name === item.name))
+        .map((item) => item.name)
+        .join(", ") || "Немає додаткових послуг";
+
       const templateParams = {
+        company: companyName,
         email: email,
-        name: companyName,
-        packages: cart
-          .filter((item) => packages.some((pkg) => pkg.name === item.name))
-          .map((item) => item.name)
-          .join(", ") || "Немає вибраних пакетів",
-        options: cart
-          .filter((item) => !packages.some((pkg) => pkg.name === item.name))
-          .map((item) => item.name)
-          .join(", ") || "Немає додаткових послуг",
+        packages: selectedPackages,
+        options: additionalOptions,
+        total: `${total}$`,
+        message: `Компанія: ${companyName}<br>Email: ${email}<br>Пакети: ${selectedPackages}<br>Опції: ${additionalOptions}<br>Всього: ${total}$`,
       };
 
       await emailjs.send(
-        "service_u8kyhtg",        
-        "template_795di0c",        
+        "service_0ppucce",
+        "template_yz1qdfq",
         templateParams,
         "u9J-J_czz99mb0qCW"
-);
-      console.log("templateParams name: ", templateParams.name);
+      );
 
+      setFormSubmitted(true);
       alert("Дякуємо! Ми зв'яжемося з вами найближчим часом.");
       setCompanyName("");
       setEmail("");
+      // Очищаємо кошик після відправлення (видаліть наступні два рядки, якщо не хочете очищати кошик)
+      setCart([]);
+      setSelectedPackages(new Set());
     } catch (error: unknown) {
       if (error && typeof error === 'object' && 'text' in error) {
         console.error("Email sending error:", (error as { text: string }).text);
@@ -105,7 +123,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                           <button
                             className={styles.removeButton}
                             onClick={() => handleRemoveFromCart(item)}
-                            disabled={item.id === "1"} 
+                            disabled={item.id === "1"}
                           >
                             ×
                           </button>
@@ -175,11 +193,23 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                   <span className={styles.discountSquare}></span> Base + два пакети <span className={styles.highlightRed}>-150$</span>.
                 </p>
                 <p className={styles.discountInfoFirst}>
-                  Знижки не поєднуються між собою – автоматично вибирається найбільша з можливих. 
+                  Знижки не поєднуються між собою – автоматично вибирається найбільша з можливих.
                 </p>
                 <p className={styles.discountInfoSecond}>Акційна пропозиція “Early bird” сумується з найбільшою.</p>
               </div>
             </form>
+            {formSubmitted && submittedData && (
+              <div className={styles.submittedInfo}>
+                <h3>Надіслана інформація:</h3>
+                <div>
+                  Компанія: {submittedData.company}<br />
+                  Email: {submittedData.email}<br />
+                  Пакети: {submittedData.packages}<br />
+                  Опції: {submittedData.options}<br />
+                  Всього: {submittedData.total}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
