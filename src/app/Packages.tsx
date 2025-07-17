@@ -1,6 +1,6 @@
 "use client";
 import styles from "/Users/macbook/Desktop/brochure/ctf-2025-partnership/src/app/types/Packages.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Package } from "./types/types";
 import Image from "next/image";
 
@@ -29,10 +29,10 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
         "Участь у нетворкінгу",
       ],
       descriptions: [
-        "Банер з логотипами на події.",
-        "Логотип у поствідео на @best_lviv.",
-        "Мention у 1 story, дайджест у Telegram.",
-        "Нетворкінг в день закриття.",
+        "На місці проведення події буде розміщено великий банер з логотипами всіх компаній, що стали нашими партнерами. На сайті івенту теж буде додано логотип про кожної з них.",
+        "Після завершення змагань на Instagram-сторінку @best_lviv буде викладено відео з додаванням логотипа партнерів івенту.",
+        "Розміщення інформації про компанію в соціальних мережах: 1 згадка в Instagram Stories на сторінці @best_lviv — Вашу компанію буде представлено як офіційного партнера BEST CTF 2025. Постдайджест у Telegram-каналі BEST Lviv Students https://t.me/bestlviv — інформація про Вашу компанію буде розміщена в пості про всіх партнерів.",
+        "Нетворкінг – це час виділений на неформальну бесіду між організаторами, представниками компаній та учасниками для надання можливості поділитися інформацією про компанію, наявні вакансії та пропозиції. Нетворкінг відбуватиметься після лекцій та перед початком змагань.",
       ],
     },
     {
@@ -44,12 +44,14 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
         "Розміщення банера компанії під час змагань",
         "Трансляція відеоролика про компанію під час події",
         "Розсилка можливостей від компанії у Telegram-боті та LinkedIn",
+        "Промоція у TikTok"
       ],
       descriptions: [
-        "Співбесіди з учасниками на нетворкінгу.",
-        "Пост про компанію в LinkedIn.",
-        "Розіграш (Kahoot/Quiz).",
-        "До 3 stories з контентом компанії.",
+        "Під час тижня живої реклами, що проходитиме за місяць до старту події в Національному університеті “Львівська політехніка”, ми організовуємо квест для студентів. Компанії-партнери, зокрема Ваша, можуть надати подарунки (мерч), які будуть заховані на території університету. Для учасників у форматі Instagram-stories публікуватимуться підказки для пошуку. Після знаходження подарунків ми опублікуємо Instagram-stories з переможцями та згадкою про Вашу компанію на сторінці @best_lviv.",
+        "Впродовж усієї події на місці проведення буде розміщено банер Вашої компанії (надається компанією до зазначеного терміну).",
+        "Трансляція відео про компанію на перервах між лекціями та під час нетворкінгу. (відео надсилає компанія, часове обмеження відео до 1 хвилини).",
+        "Коротке відео про Вашу компанію та її внесок у розвиток молоді й кібербезпеки викладене на сторінку @best__lviv у TikTok. Відео буде зняте під час події, матеріал про Вашу компанію має бути підготовлений Вами до змагань.",
+        "Розсилка можливостей від компанії у Telegram-боті та LinkedIn\nЩомісяця, протягом пів року у Telegram-боті CTF ’2025 та на нашій сторінці в LinkedIn будуть публікуватись пропозиції Вашої компанії (курси, стажування, вакансії).",
       ],
     },
     {
@@ -61,16 +63,16 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
         "Проведення лекції або воркшопу для учасників",
         "Доступ до бази CV учасників",
         "Логотип на футболках учасників-переможців та організаторів",
-        "Доступ до CV",
         "Пост про компанію в Instagram @best_lviv",
         "Надання завдань для змагань",
       ],
       descriptions: [
-        "Відео до 5 хвилин на нетворкінгу.",
-        "Воркшоп до 1 години.",
-        "База CV учасників.",
-        "Стаття на BEST Lviv.",
-        "Логотип на мерчі (футболки, плакати).",
+        "На сайті BEST Lviv буде розміщена стаття про Вашу компанію та її внесок в організацію івенту.",
+        "Представник Вашої компанії має змогу провести лекцію або воркшоп для учасників (обмеження в часі – 1 година). Лекція має на меті не лише поділитися практичними знаннями, кейсами чи досвідом із реального середовища, а й надихнути студентів на подальший розвиток у галузі. Воркшоп – це тип інтерактивного навчання, де учасники виконують низку навчальних дій, це може бути демонстраційний показ, практичне заняття або дискусійний клуб.",
+        "Надання бази CV учасників для подальшої комунікації з ними.",
+        "Розміщення логотипа компанії на футболках учасників-переможців та організаторів (обмежена кількість – 3).",
+        "Ми опублікуємо пост в Instagram-профілі @best_lviv, у якому буде представлена інформація про Вашу компанію із зазначенням Вашого статусу як ключового партнера події.",
+        "Змога надати завдання для змагань, тим самим компанія має можливість підвищити свій імідж серед учасників. На платформі для завдань буде позначено, що вони від компанії, таким чином відбуватиметься піар в середовищі.",
       ],
     },
   ];
@@ -86,7 +88,6 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
         setSelectedPackages(new Set([...selectedPackages].filter((id) => id !== pkg.id)));
         return prevCart.filter((item: Package) => item.id !== pkg.id);
       } else {
-        // Додаємо пакет до кошика і selectedPackages
         setSelectedPackages(new Set([...selectedPackages, pkg.id]));
         return [...prevCart, { ...pkg, quantity: 1 }];
       }
@@ -98,11 +99,32 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
   };
 
   const closeDetails = () => {
-    setSelectedPackage(null);
+    const modalOverlay = document.querySelector(`.${styles.modalOverlay}`);
+    const modalContent = document.querySelector(`.${styles.modalContent}`);
+    if (modalOverlay && modalContent) {
+      modalOverlay.classList.add(`${styles.closing}`);
+      modalContent.classList.add(`${styles.closing}`);
+      setTimeout(() => {
+        setSelectedPackage(null);
+        modalOverlay.classList.remove(`${styles.closing}`);
+        modalContent.classList.remove(`${styles.closing}`);
+      }, 700); // Час анімації 0.7s
+    }
   };
 
+  useEffect(() => {
+    if (selectedPackage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedPackage]);
+
   return (
-    <section className={styles.packagesSection}>
+    <section className={styles.packagesSection} id="offers">
       <div className={styles.contentWrapper}>
         <h1 className={styles.title}>ПРОПОЗИЦІЇ</h1>
         <div className={styles.packagesContainer}>
@@ -113,20 +135,33 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
                 pkg.id === "1" ? styles.packageCardBase :
                 selectedPackages.has(pkg.id) ? styles.packageCardSelected : ""
               }`}
+              data-package={pkg.id}
             >
               <h2 className={styles.packageTitle}>{pkg.name}</h2>
               <p className={styles.packagePrice}>{pkg.price}</p>
               {pkg.id === "1" && (
                 <p className={styles.mandatoryText}>Цей пакет є обов’язковим!</p>
               )}
+              {pkg.id === "3" && (
+                <p className={styles.remainingText}>(Залишилось 3)</p>
+              )}
               <ul className={styles.packageFeatures}>
                 {pkg.features.map((feature, index) => (
-                  <li key={index} className={styles.featureItem}>
+                  <li
+                    key={index}
+                    className={styles.featureItem}
+                    style={
+                      pkg.id === "3"
+                        ? { position: "relative", top: "-2px" }
+                        : {}
+                    }
+                    data-testid={`feature-item-${pkg.id}-${index}`} // Для тестування
+                  >
                     <Image
-                      src="/images/Union.png"
+                      src="/images/Union1.svg"
                       alt="Union Icon"
-                      width={15}
-                      height={15}
+                      width={10}
+                      height={10}
                       className={
                         pkg.id === "1"
                           ? styles.unionBase
@@ -148,10 +183,10 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
                   {cart.some((item: Package) => item.id === pkg.id) && pkg.id !== "1" ? "Видалити" : "До кошика"}
                 </button>
                 <Image
-                  src="/images/info.png"
+                  src="/images/union.svg"
                   alt="Partner Info"
-                  width={30}
-                  height={30}
+                  width={20}
+                  height={20}
                   className={
                     pkg.id === "1"
                       ? styles.infoBase
@@ -173,23 +208,26 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
       {selectedPackage && (
         <div className={styles.modalOverlay} onClick={closeDetails}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <h2>{selectedPackage.name} {selectedPackage.price}</h2>
+            <Image
+              src="/images/close.svg"
+              alt="Close Modal"
+              width={40}
+              height={40}
+              className={styles.closeIcon}
+              onClick={closeDetails}
+            />
+            <h2 className={styles.modalTitle}>{selectedPackage.name} {selectedPackage.price}</h2>
             <ul className={styles.modalFeatures}>
-              <li>Логотип на брендволлі</li>
-              <li>Плакат на брендволлі</li>
-              <li>Логотип у постівентному відео</li>
-              <li>Логотип у постівідео на @best_lviv</li>
-              <li>Логотип у постівідео на сторінці всиx партнерів змагань</li>
-              <li>Логотип у всіх змагань</li>
-              <li>Логотип у постівентному відео</li>
-              <li>Промоція в соцмережах</li>
-              <li>Дайджест у Telegram</li>
-              <li>Участь у нетворкінгу</li>
-              <li>Нетворкінг у день закриття</li>
+              {selectedPackage.descriptions.map((desc, index) => {
+                const [title, ...rest] = desc.split('\n');
+                return (
+                  <li key={index}>
+                    <h3>{title}</h3>
+                    <p dangerouslySetInnerHTML={{ __html: rest.join('<br>').replace(/\n/g, '<br>') }}></p>
+                  </li>
+                );
+              })}
             </ul>
-            <button className={styles.closeButton} onClick={closeDetails}>
-              Закрити
-            </button>
           </div>
         </div>
       )}

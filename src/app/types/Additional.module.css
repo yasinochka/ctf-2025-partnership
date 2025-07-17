@@ -33,7 +33,7 @@
 }
 
 .additionalCard {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem; /* Зменшено з 2rem до 1rem для коротших боків */
   width: 80%;
   height: 100px;
   background: linear-gradient(
@@ -76,9 +76,11 @@
 .infoCheckboxWrapper {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Відстань між ціною, інформацією і квадратиком */
-  justify-content: flex-end; /* Посередині справа */
-  margin-left: auto; /* Відступ від лівого краю */
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-left: auto;
+  position: relative; /* Додано для зсуву */
+  top: -20px; /* Піднято на 20 пікселів вгору */
 }
 
 .checkboxWrapper {
@@ -113,16 +115,16 @@
   left: 0;
   z-index: 2;
   opacity: 0;
-  transition: opacity 0.3s ease; /* Smooth transition for checkmark */
+  transition: opacity 0.3s ease;
 }
 
 .checkbox:checked + .checkboxLabel + .checkboxCheckmark {
-  display: block; /* Show checkmark when checked */
-  opacity: 1; /* Fade in checkmark smoothly */
+  display: block;
+  opacity: 1;
 }
 
 .checkbox:disabled + .checkboxLabel {
-  cursor: pointer; /* Ensure pointer cursor even when disabled */
+  cursor: pointer;
 }
 
 .serviceName {
@@ -152,21 +154,12 @@
   background-color: #a80505;
   color: #fff;
   border: none;
-  padding: 0.4rem 1rem; /* Зменшено для компактності */
+  padding: 0.4rem 1rem;
   border-radius: 0.25rem;
   cursor: pointer;
   text-align: center;
   font-size: 1rem;
-  height: 24px; /* Вирівнювання по висоті з іконками */
-}
-
-.priceButton:hover:not(:disabled) {
-  background-color: #d90404;
-}
-
-.disabledPriceButton {
-  background-color: #710D16;
-  cursor: not-allowed;
+  height: 24px;
 }
 
 .infoIcon {
@@ -177,7 +170,7 @@
 }
 
 .selectedInfoIcon {
-  filter: hue-rotate(0deg) brightness(100%) contrast(100%); /* Червоний колір */
+  filter: hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .modalOverlay {
@@ -253,5 +246,8 @@
   .checkboxLabel {
     width: 20px;
     height: 20px;
+  }
+  .infoCheckboxWrapper {
+    top: -20px; /* Збережено зсув на мобільних */
   }
 }

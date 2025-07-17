@@ -1,6 +1,7 @@
 .packagesSection {
   padding: 4rem 2rem;
   position: relative;
+  scroll-margin: 60px;
 }
 
 .contentWrapper {
@@ -29,8 +30,8 @@
 
 .packageCard {
   padding: 1.5rem;
-  width: 300px;
-  height: 650px;
+  width: 350px;
+  height: 690px;
   text-align: left;
   position: relative;
   overflow: visible;
@@ -40,19 +41,21 @@
     #3c060637 60%, 
     #000000 80%
   );
+  transition: background 0.3s ease; /* Плавне переключення фону для всіх карток */
 }
 
-/* Фіксований градієнт для Base * та вибраних пакетів */
+/* Фіксований градієнт для Base * та вибраних пакетів з плавним переходом */
 .packageCardBase,
 .packageCardSelected {
   background: linear-gradient(
     to top,
     #bd0612 0%,    /* Яскраво-червоний знизу */
-    #710D16 12%,   /* Темніший червоний */
+    #710D16 10%,   /* Темніший червоний */
     #000000 65%,   /* Чорний у центрі */
     #710D16 90%,   /* Темніший червоний */
     #c20713cf 100% /* Яскраво-червоний зверху */
   );
+  transition: background 0.5s ease; /* Плавний перехід градієнта */
 }
 
 .packageTitle {
@@ -69,9 +72,16 @@
   font-weight: bold;
 }
 
+.remainingText {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
 .mandatoryText {
-  font-size: 16px;
-  margin-bottom: 0.75rem;
+  font-size: 14px;
+  margin-bottom: 3rem;
   font-weight: 300;
 }
 
@@ -82,10 +92,18 @@
 }
 
 .featureItem {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
   padding-left: 1.2rem;
   position: relative;
+  word-spacing: 3px;
+  right: 20px;
+  font-weight: 200;
+  color:#fff;
+}
+
+.packageCard:not(.packageCardBase):not(.packageCardBrand):not(.packageCardFlow) .packageFeatures {
+  margin-top: 75px; /* Зміщуємо список features униз для всіх, крім Base *, Brand і Go with the flow */
 }
 
 .buttonGroup {
@@ -99,22 +117,30 @@
 }
 
 .addButton {
-  background-color: #a80505;
+  background-color: #000000;
   color: #fff;
   border: none;
-  padding: 15px 20px;
-  border-radius: 0.25rem;
+  padding: 5px 20px;
   cursor: pointer;
-  width: 200px;
+  width: 300px;
   text-align: center;
+  font-size: 1.3rem;
+  font-weight: 100;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Плавний перехід кольору та масштабування */
 }
 
 .addButton:hover:not(:disabled) {
-  background-color: #d90404;
+  background-color: #000000; /* Трохи світліший відтінок для ефекту наведення */
+  transform: scale(1.02); 
+}
+
+.addButton:active:not(:disabled) {
+  transform: scale(1); /* Плавне зменшення при натисканні */
+  background-color: #000000; /* Темніший відтінок при натисканні */
 }
 
 .addButton:disabled {
-  background-color: #6b0303; /* Тьмяніший червоний для неактивної кнопки */
+  background-color: #000000; /* Тьмяніший червоний для неактивної кнопки */
   cursor: not-allowed;
 }
 
@@ -144,24 +170,57 @@
 }
 
 .modalContent {
-  background-color: #fff;
-  color: #000;
-  padding: 2rem;
+  background-color: #231f1f;
+  color: #ffffff;
+  padding: 1.5rem; /* Зменшено для компенсації висоти */
   border-radius: 0.25rem;
   max-width: 500px;
   width: 90%;
   position: relative;
   text-align: left;
+  height: 80vh; /* Виправлено з 69vh на 60vh */
+  overflow-y: auto; /* Вертикальна прокрутка при необхідності */
+  text-align: justify;
+  border: 2px solid #800000; /* Бордовий border */
+  padding-left: 20px; /* Зсув тексту вліво */
 }
 
 .modalFeatures {
   list-style: none;
   padding: 0;
+  margin-left: -1rem; /* Додатковий зсув тексту вліво */
 }
 
 .modalFeatures li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; /* Більший відступ між пунктами */
+  word-wrap: break-word; /* Обгортання довгих слів */
+  max-width: 100%; /* Забезпечення повного використання ширини */
 }
+
+.modalFeatures li h3 {
+  font-size: 1.3rem; /* Зменшено розмір заголовків */
+  font-weight: 700; /* Жирний шрифт для заголовків */
+  color: #ffffff; /* Білий колір для виділення */
+  margin-bottom: 0.5rem; /* Відступ між заголовком і текстом */
+  text-align: left; /* Вирівнювання по лівому краю */
+}
+
+.modalFeatures li p {
+  margin: 0;
+  font-size: 1.1rem; /* Розмір тексту опису */
+  font-weight: 400; /* Нормальна вага для опису */
+  line-height: 1.6; /* Збільшений міжрядковий інтервал */
+}
+
+.goWithFlowFeature {
+  margin-top: -200px; /* Піднімає текст на 2 пікселі вгору */
+}
+
+/* Додатковий специфічний селектор для тестування */
+.packageCard[data-package="3"] .goWithFlowFeature {
+  margin-top: -200px !important; /* Вищий пріоритет */
+}
+
 
 .closeButton {
   background-color: #a80505;
@@ -173,6 +232,10 @@
   margin-top: 1rem;
 }
 
+.goWithFlowFeature {
+  margin-top: -2px;
+}
+
 .closeButton:hover {
   background-color: #d90404;
 }
@@ -182,8 +245,8 @@
 .infoFlow {
   cursor: pointer;
   position: absolute;
-  bottom: 570px;
-  left: 260px;
+  bottom: 610px;
+  left: 310px;
 }
 
 .unionBase {
@@ -230,4 +293,125 @@
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* Нові стилі для анімації та ефектів */
+.modalOverlay {
+  opacity: 0; /* Початкова прозорість для анімації */
+  animation: fadeIn 0.4s ease-in-out forwards; /* Анімація появи */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  transform: scale(0.8); /* Початковий масштаб для анімації */
+  opacity: 0; /* Початкова прозорість для анімації */
+  animation: scaleIn 0.2s ease-in-out forwards; /* Анімація появи */
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Додаємо анімацію для зникнення */
+.modalOverlay.closing {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+.modalContent.closing {
+  animation: scaleOut 0.2s ease-in-out forwards;
+}
+
+.infoBase,
+.infoBrand,
+.infoFlow {
+  transition: transform 0.2s ease; /* Плавний перехід для збільшення */
+}
+
+.infoBase:hover,
+.infoBrand:hover,
+.infoFlow:hover {
+  transform: scale(1.2); /* Збільшення іконки при наведенні */
+}
+
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Плавний перехід для збільшення */
+}
+
+.closeIcon:hover {
+  transform: scale(1.2); /* Збільшення хрестика при наведенні */
+}
+
+@media (max-width: 768px) {
+  .infoBase:hover,
+  .infoBrand:hover,
+  .infoFlow:hover {
+    transform: scale(1.1); /* Менше збільшення на мобільних */
+  }
+  .closeIcon:hover {
+    transform: scale(1.1); /* Менше збільшення хрестика на мобільних */
+  }
+}
+
+/* Нові стилі для тексту в модальному вікні */
+.modalContent {
+  font-family: 'Arial', sans-serif; /* Використано читабельний шрифт */
+  font-size: 1.1rem; /* Трохи більший шрифт для кращої читабельності */
+  line-height: 1.6; /* Збільшений міжрядковий інтервал */
+}
+
+.modalFeatures {
+  padding-left: 1rem; /* Відступ зліва для списку */
+}
+
+.modalFeatures li {
+  margin-bottom: 1.5rem; /* Більший відступ між пунктами */
+  word-wrap: break-word; /* Обгортання довгих слів */
+  max-width: 100%; /* Забезпечення повного використання ширини */
+  color: #ffffff; /* Темніший колір тексту для контрасту */
+  font-weight: 560;
+}
+
+.modalTitle {
+  margin-bottom: 2rem; /* Доданий відступ під назвою пакета */
+  font-weight: 500; /* Трохи більша вага для заголовка */
+  color: #ffffff; /* Зміна кольору на білий для відповідності фону */
 }
