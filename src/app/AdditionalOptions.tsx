@@ -7,7 +7,6 @@ import { Package } from "./types/types";
 interface AdditionalOptionsProps {
   cart?: Package[];
   setCart?: (newCart: Package[] | ((prevCart: Package[]) => Package[])) => void;
-  removeFromCart?: (item: Package) => void;
   selectedPackageServices?: string[];
 }
 
@@ -56,7 +55,6 @@ const addOptions: AddOption[] = [
 const AdditionalOptions = ({
   cart = [],
   setCart = () => {},
-  removeFromCart = () => {},
   selectedPackageServices = [],
 }: AdditionalOptionsProps) => {
   const [openTooltipId, setOpenTooltipId] = useState<string | null>(null);

@@ -1,6 +1,7 @@
-'use client';
+"use client";
 import './Navbar.css';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Navbar() {
     <nav id="navbar">
       <div className="container">
         <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img src="/images/logocopy.png" alt="CTF logo" className="logo-icon" />
+          <Image src="/images/logocopy.png" alt="CTF logo" width={150} height={50} className="logo-icon" />
         </div>
         <div className={`menu-burger ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <span></span>

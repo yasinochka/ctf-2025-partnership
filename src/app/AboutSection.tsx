@@ -22,7 +22,7 @@ const AboutSection = () => {
             <h1 className={styles.mainHeading} data-aos="fade-up" data-aos-delay="100">Про наш івент</h1>
             <div className={styles.textContent}>
               <p className={styles.paragraph1} data-aos="fade-up" data-aos-delay="200">
-                <span className={styles.highlight}>BEST CTF</span> — це командне змагання з кібербезпеки, де учасники демонструють свої технічні навички, розв’язуючи практичні завдання. Вони виявляють вразливості в системах і здобувають так звані "прапорці".
+                <span className={styles.highlight}>BEST CTF</span> — це командне змагання з кібербезпеки, де учасники демонструють свої технічні навички, розв’язуючи практичні завдання. Вони виявляють вразливості в системах і здобувають так звані “прапорці”.
               </p>
               <p className={styles.paragraph2} data-aos="fade-up" data-aos-delay="300">
                 Уже другий рік поспіль ми проводимо ці змагання у Львові. <span className={styles.highlight}>BEST CTF</span> — це чудова можливість підтримати розвиток етичного хакінгу серед студентів і початківців у сфері кібербезпеки.

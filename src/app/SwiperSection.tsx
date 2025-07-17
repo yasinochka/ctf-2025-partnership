@@ -1,5 +1,6 @@
 'use client';
 import styles from './Swiper.module.css';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -37,17 +38,17 @@ const ImageSwiper: React.FC = () => {
               {images.map((image, index) => (
                 <SwiperSlide key={index}>
                   <div className={styles.swiperSlide}>
-                    <img src={image.src} alt={image.alt} className={styles.swiperPhoto} />
+                    <Image src={image.src} alt={image.alt} className={styles.swiperPhoto} width={1200} height={300} />
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
 
             <button className={styles.swiperButtonPrev}>
-              <span className={styles.arrow}>&lt;</span>
+              <span className={styles.arrow}>&lt;</span> {/* Замінено < на &lt; */}
             </button>
             <button className={styles.swiperButtonNext}>
-              <span className={styles.arrow}>&gt;</span>
+              <span className={styles.arrow}>&gt;</span> {/* Замінено > на &gt; */}
             </button>
           </div>
         </div>
