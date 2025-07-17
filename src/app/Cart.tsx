@@ -1,6 +1,7 @@
 import styles from "./types/Cart.module.css";
 import { useState, useEffect } from "react";
 import { Package } from "./types/types";
+import emailjs from "@emailjs/browser"; // Додаємо emailjs
 
 interface CartProps {
   cart: Package[];
@@ -20,6 +21,8 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
     } else {
       setIsCartUpdated(false);
     }
+    // Ініціалізація emailjs
+    emailjs.init("_8KlxS0-6bbPQMhDy");
   }, [cart]);
 
   const calculateTotal = () => {
@@ -40,6 +43,46 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
   };
 
   const total = calculateTotal();
+
+  // Функція відправки email
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const templateParams = {
+        email: email,
+        name: companyName,
+        packages: cart
+          .filter((item) => packages.some((pkg) => pkg.name === item.name))
+          .map((item) => item.name)
+          .join(", ") || "Немає вибраних пакетів",
+        options: cart
+          .filter((item) => !packages.some((pkg) => pkg.name === item.name))
+          .map((item) => item.name)
+          .join(", ") || "Немає додаткових послуг",
+      };
+
+      await emailjs.send(
+        "service_u8kyhtg",        
+        "template_795di0c",        
+        templateParams,
+        "u9J-J_czz99mb0qCW"
+);
+      console.log("templateParams name: ", templateParams.name);
+
+      alert("Дякуємо! Ми зв'яжемося з вами найближчим часом.");
+      setCompanyName("");
+      setEmail("");
+    } catch (error: unknown) {
+      if (error && typeof error === 'object' && 'text' in error) {
+        console.error("Email sending error:", (error as { text: string }).text);
+        alert("Помилка надсилання! " + (error as { text: string }).text);
+      } else {
+        console.error("Email sending error:", error);
+        alert("Помилка надсилання! Спробуйте ще раз.");
+      }
+    }
+  };
 
   return (
     <section className={styles.cartSection}>
@@ -98,13 +141,14 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
             </div>
           </div>
           <div className={styles.cartRight}>
-            <div className={styles.orderForm}>
+            <form className={styles.orderForm} onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Назва компанії"
                 value={companyName}
                 onChange={(e) => setCompanyName(e.target.value)}
                 className={styles.inputField}
+                required
               />
               <input
                 type="email"
@@ -112,8 +156,9 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className={styles.inputField}
+                required
               />
-              <button className={styles.orderButton} disabled={!companyName || !email}>
+              <button className={styles.orderButton} type="submit" disabled={!companyName || !email}>
                 Замовити
               </button>
               <div className={styles.discountInfoLeft}>
@@ -121,7 +166,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                   <span className={styles.discountSquare}></span> Оплата буде здійснюватись за курсом НБУ.
                 </p>
                 <p className={styles.discountInfoSpacing}>
-                  <span className={styles.discountSquare}></span> Партнерам попереднього CTF <span className={styles.highlightRed}>-5% </span>(після узгодження організаторами).
+                  <span className={styles.discountSquare}></span> Партнерам попереднього CTF <span className={styles.highlightRed}>-5%</span> (після узгодження організаторами).
                 </p>
                 <p className={styles.discountInfoSpacing}>
                   <span className={styles.discountSquare}></span> Base + 3 додаткові опції <span className={styles.highlightRed}>-50$</span>.
@@ -134,7 +179,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                 </p>
                 <p className={styles.discountInfoSecond}>Акційна пропозиція “Early bird” сумується з найбільшою.</p>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

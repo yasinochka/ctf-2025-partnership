@@ -151,9 +151,9 @@
 
 .discountSquare {
   display: inline-block;
-  width: 0.5rem; /* Розмір квадратика */
-  height: 0.5rem; /* Розмір квадратика */
-  background-color: #ff0000; /* Червоний колір */
+  width: 0.3rem; /* Розмір квадратика */
+  height: 0.3rem; /* Розмір квадратика */
+  background-color: #a00707; /* Червоний колір */
   margin-right: 0.5rem; /* Відступ від тексту */
   vertical-align: middle; /* Вирівнювання по центру */
 }
