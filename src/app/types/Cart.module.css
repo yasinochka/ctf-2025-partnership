@@ -1,3 +1,4 @@
+
 .cartSection {
   padding: 6rem 3rem;
   position: relative;
@@ -54,7 +55,8 @@
 
 .emptyCart {
   color: #ffffff;
-  text-align: center;
+  text-align: left; 
+  font-size: 1.5rem;
 }
 
 .cartItem {
@@ -65,22 +67,21 @@
   margin: 0.75rem 0;
   font-size: 1.2rem;
   padding: 0.75rem;
-  border-bottom: 1px solid #ffffff; /* Біла лінія знизу */
+  border-bottom: 1px solid #ffffff; 
 }
 
 .removeButton {
   background: none;
   border: none;
-  color: #ffffff; /* Білий хрестик */
-  font-size: 2rem; /* Збільшений хрестик */
-  font-weight: normal; /* Не такий жирний */
+  color: #ffffff; 
+  font-size: 1.5rem; 
+  font-weight: normal;
   cursor: pointer;
   padding: 0 0.5rem;
-  font-weight:100;
 }
 
 .removeButton:hover {
-  color: #cccccc; /* Світліший відтінок при ховері */
+  color: #cccccc; 
 }
 
 .cartTotal {
@@ -97,33 +98,34 @@
 
 .orderForm {
   text-align: center;
-  margin-top: 2rem; /* Переміщення форми нижче */
+  margin-top: 2rem; 
   margin-bottom: 1.5rem;
 }
 
 .inputField {
   display: block;
-  width: 60%; /* Зменшена ширина */
-  margin: 0.75rem auto;
+  width: 60%; 
+  margin: 1.2rem auto;
   padding: 0.75rem;
-  border: 2px solid #ff0000;
+  border: 2px solid #8f0404ac;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   font-size: 1rem;
 }
 
 .orderButton {
-  background-color: #666666;
+  background-color: #4f4e4e;
   color: #fff;
   border: none;
-  padding: 1rem 2rem; /* Збільшена кнопка */
+  padding: 1.5rem 2.5rem; /* Збільшена кнопка */
   border-radius: 0.25rem;
   cursor: pointer;
-  margin-top: 1.5rem;
+  margin-top: 5rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.2rem; /* Збільшений шрифт */
+  border: 3.5px solid rgb(44, 41, 41);
 }
 
 .orderButton:hover:not(:disabled) {
@@ -135,17 +137,17 @@
   cursor: not-allowed;
 }
 
-.discountInfo {
-  margin-top: 1.5rem; /* Переміщення тексту знижок нижче */
+.discountInfoLeft {
+  margin-top: 3rem; /* Переміщення тексту знижок нижче */
+  margin-left:7rem;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.5;
-  text-align: right; /* Переміщення праворуч */
+  text-align: left; /* Переміщення зліва */
+  font-weight: 300;
+  max-width: 400px;;
 }
 
-.discountInfo p {
-  margin: 0.5rem 0;
-}
 
 .discountSquare {
   display: inline-block;
@@ -159,6 +161,11 @@
 .discountBullet {
   display: none; /* Прибрано крапки */
 }
+
+.discountInfoFirst {
+  margin-top: 1rem; /* Простір навколо першого рядка */
+}
+
 
 @media (max-width: 768px) {
   .cartContainer {
@@ -175,4 +182,10 @@
     padding: 0.75rem 1.5rem; /* Трохи менша на мобільних */
     font-size: 1.1rem;
   }
+}
+.highlightRed {
+  color: #d80404;
+  font-weight: 700;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
 }

@@ -116,23 +116,23 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
               <button className={styles.orderButton} disabled={!companyName || !email}>
                 Замовити
               </button>
-              <div className={styles.discountInfo}>
-                <p>
+              <div className={styles.discountInfoLeft}>
+                <p className={styles.discountInfoSpacing}>
                   <span className={styles.discountSquare}></span> Оплата буде здійснюватись за курсом НБУ.
                 </p>
-                <p>
-                  <span className={styles.discountSquare}></span> Партнерам попереднього CTF -5% (після узгодження організаторами).
+                <p className={styles.discountInfoSpacing}>
+                  <span className={styles.discountSquare}></span> Партнерам попереднього CTF <span className={styles.highlightRed}>-5% </span>(після узгодження організаторами).
                 </p>
-                <p>
-                  <span className={styles.discountSquare}></span> Base + 3 додаткові опції -50$.
+                <p className={styles.discountInfoSpacing}>
+                  <span className={styles.discountSquare}></span> Base + 3 додаткові опції <span className={styles.highlightRed}>-50$</span>.
                 </p>
-                <p>
-                  <span className={styles.discountSquare}></span> Base + два пакети -150$.
+                <p className={styles.discountInfoSpacing}>
+                  <span className={styles.discountSquare}></span> Base + два пакети <span className={styles.highlightRed}>-150$</span>.
                 </p>
-                <p>
+                <p className={styles.discountInfoFirst}>
                   Знижки не поєднуються між собою – автоматично вибирається найбільша з можливих. 
-                  Акційна пропозиція “Early bird” сумується з найбільшою.
                 </p>
+                <p className={styles.discountInfoSecond}>Акційна пропозиція “Early bird” сумується з найбільшою.</p>
               </div>
             </div>
           </div>
