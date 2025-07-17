@@ -1,4 +1,4 @@
-import styles from "/Users/macbook/Desktop/brochure/ctf-2025-partnership/src/app/types/Cart.module.css";
+import styles from "./types/Cart.module.css";
 import { useState, useEffect } from "react";
 import { Package } from "./types/types";
 

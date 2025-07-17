@@ -12,7 +12,7 @@ const WhyParticipateSection: React.FC = () => {
           </div>
           <div className={styles.redFrame}>
             <Image
-              src="/images/redFrame.png" 
+              src="/images/redFrame.png"
               alt="Frame design"
               width={2400}
               height={1060}
@@ -22,7 +22,8 @@ const WhyParticipateSection: React.FC = () => {
           <div className={styles.rectangles}>
             {Array.from({ length: 6 }).map((_, index) => (
               <Image
-                src="/images/rectangle.png" 
+                key={index}
+                src="/images/rectangle.png"
                 alt="Rectangle design"
                 width={399}
                 height={170}

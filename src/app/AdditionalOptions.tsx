@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
-import styles from "/Users/macbook/Desktop/brochure/ctf-2025-partnership/src/app/types/Additional.module.css";
+import styles from "./types/Additional.module.css";
 import { Package } from "./types/types";
 
 interface AdditionalOptionsProps {
