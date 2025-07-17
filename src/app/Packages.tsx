@@ -1,5 +1,5 @@
 "use client";
-import styles from "/Users/macbook/Desktop/brochure/ctf-2025-partnership/src/app/types/Packages.module.css";
+import styles from "./types/Packages.module.css";
 import { useState, useEffect } from "react";
 import { Package } from "./types/types";
 import Image from "next/image";
