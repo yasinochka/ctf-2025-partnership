@@ -15,7 +15,6 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
   const [companyName, setCompanyName] = useState("");
   const [email, setEmail] = useState("");
   const [isCartUpdated, setIsCartUpdated] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
   useEffect(() => {
     if (cart.length > 0 && cart.length > 1) {
@@ -77,11 +76,10 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
         "u9J-J_czz99mb0qCW"
       );
 
-      setFormSubmitted(true);
       alert("Дякуємо! Ми зв'яжемося з вами найближчим часом.");
       setCompanyName("");
       setEmail("");
-      // Очищаємо кошик після відправлення (видаліть наступні два рядки, якщо не хочете очищати кошик)
+      // Очищаємо кошик після відправлення
       setCart([]);
       setSelectedPackages(new Set());
     } catch (error: unknown) {
