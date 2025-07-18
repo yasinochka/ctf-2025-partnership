@@ -1,5 +1,5 @@
 .aboutSection {
-  padding: 9rem 8rem;
+  padding: 7rem 8rem;
   color: #fff;
   background-color: var(--background);
   overflow: hidden;
@@ -10,6 +10,7 @@
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+  overflow-x: visible;
 }
 
 .container {
@@ -17,6 +18,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
+  overflow-x: visible;
 }
 
 .textBlock {
@@ -29,7 +31,7 @@
   background-size: contain;
   background-position: center;
   border-radius: 1rem;
-  overflow: visible; 
+  overflow-x: visible;
   position: relative;
 }
 
@@ -41,10 +43,12 @@
   margin-left: 1rem; 
   margin-bottom: 1rem;
   line-height: 1.2;
+  overflow-x: visible;
 }
 
 .textContent {
   text-align: left;
+  overflow-x: visible;
 }
 
 .paragraph1 {
@@ -53,6 +57,7 @@
   padding: 1rem 0.6rem;
   max-width: 450px; 
   word-wrap: break-word;
+  overflow-x: visible;
 }
 
 .paragraph2 {
@@ -62,17 +67,20 @@
   border-radius: 0.5rem;
   max-width: 500px;
   word-wrap: break-word;
+  overflow-x: visible;
 }
 
 .subTitle {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
   font-weight: 600;
+  overflow-x: visible;
 }
 
 .goalList {
   list-style-type: disc;
   padding-left: 1.5rem;
+  overflow-x: visible;
 }
 
 .goalList li {
@@ -81,6 +89,7 @@
   line-height: 1.5;
   max-width: 450px; 
   word-wrap: break-word;
+  overflow-x: visible;
 
 }
 
@@ -90,11 +99,13 @@
   padding: 0.25rem;
   border-radius: 0.25rem;
   transition: all 0.3s ease;
+  overflow-x: visible;
 }
 
 .highlight:hover {
   transform: scale(1.1);
   color: #d90404;
+  overflow-x: visible;
 }
 
 .imageBlock {
@@ -104,7 +115,7 @@
   flex: 1;
   min-width: 300px;
   border-radius: 1rem;
-  overflow: visible;
+  overflow-x: visible;
   
 }
 
@@ -113,6 +124,7 @@
   height: auto;
   object-fit: cover;
   display: block;
+  overflow-x: visible;
 }
 .textBlock {
   flex: 1;
@@ -124,7 +136,7 @@
   background-size: contain;
   background-position: center;
   border-radius: 1rem;
-  overflow: visible;
+  overflow-x: visible;
 }
 
 @media (max-width: 768px) {

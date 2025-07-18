@@ -11,6 +11,7 @@
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
+  overflow-x: visible;
 }
 
 .title {
@@ -19,6 +20,7 @@
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 300;
+    overflow-x: visible;
 }
 
 .packagesContainer {
@@ -26,6 +28,7 @@
   flex-wrap: wrap;
   gap: 100px;
   justify-content: center;
+    overflow-x: visible;
 }
 
 .packageCard {
@@ -42,6 +45,7 @@
     #000000 80%
   );
   transition: background 0.3s ease;
+    overflow-x: visible;
 }
 
 .packageCardBase,
@@ -55,6 +59,7 @@
     #c20713b4 100% 
   );
   transition: background 0.5s ease; 
+    overflow-x: visible;
 }
 
 .packageTitle {
@@ -62,6 +67,7 @@
   margin-bottom: 0.75rem;
   color: #ffffff;
   font-weight: 300;
+    overflow-x: visible;
 }
 
 .packagePrice {
@@ -69,6 +75,7 @@
   font-size: 30px;
   margin-bottom: 20px;
   font-weight: bold;
+    overflow-x: visible;
 }
 
 .remainingText {
@@ -76,18 +83,21 @@
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: 1rem;
+    overflow-x: visible;
 }
 
 .mandatoryText {
   font-size: 14px;
   margin-bottom: 3rem;
   font-weight: 300;
+    overflow-x: visible;
 }
 
 .packageFeatures {
   list-style: none;
   padding: 0;
   margin-bottom: 1rem;
+    overflow-x: visible;
 }
 
 .featureItem {
@@ -99,6 +109,7 @@
   right: 20px;
   font-weight: 200;
   color:#fff;
+    overflow-x: visible;
 }
 
 .packageCard:not(.packageCardBase):not(.packageCardBrand):not(.packageCardFlow) .packageFeatures {
@@ -113,6 +124,7 @@
   position: absolute;
   bottom: 30px;
   left: -5px;
+    overflow-x: visible;
 }
 
 .addButton {
@@ -126,6 +138,7 @@
   font-size: 1.3rem;
   font-weight: 100;
   transition: background-color 0.3s ease, transform 0.2s ease; 
+    overflow-x: visible;
 }
 
 .addButton:hover:not(:disabled) {
@@ -149,6 +162,7 @@
   font-size: 1.1rem;
   font-weight: 300;
   margin-top: 2rem;
+    overflow-x: visible;
 }
 
 .additionalInfo p {

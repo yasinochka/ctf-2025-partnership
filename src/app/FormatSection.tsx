@@ -11,8 +11,8 @@ const FormatSection: React.FC = () => {
             <Image
               src="/images/finger.png" 
               alt="Fingerprint design"
-              width={300}
-              height={330}
+              width={260}
+              height={290}
               className={styles.fingerprintImage}
             />
           </div>

@@ -3,15 +3,18 @@
     padding-top: 80;
     padding-left: 40px;
     scroll-margin: 90px;
+    overflow-x: visible;
 }
 
 .content{
     max-width: 2000px;
     margin: 0 35px;
+    overflow-x: visible;
 }
 
 .container{
     position: relative;
+    overflow-x: visible;
 }
 
 .title{
@@ -20,15 +23,18 @@
     text-align: center;
     margin-bottom: 70px;
     margin-left: -55px;
+    overflow-x: visible;
 }
 
 .contactsFrames{
     display: flex;
     flex-direction: row;
     gap:60px;
+    overflow-x: visible;
 }
 .Dima {
     position: relative; 
+    overflow-x: visible;
 }
 .Text{
     position:absolute;
@@ -37,17 +43,20 @@
     max-width: 400px;
     top:385px;
     right:10px;
+    overflow-x: visible;
 }
 
 .NameSurname{
     font-size: 30px;
     letter-spacing: 1px;
     margin-bottom: 10px;
+    overflow-x: visible;
 }
 
 .WhoIs{
     font-size: 16px;
     margin-bottom: 10px;
+    overflow-x: visible;
 }
 
 .MailWrapper{
@@ -56,10 +65,12 @@
     gap:5px;
     margin-left:80px;
     margin-bottom:10px;
+    overflow-x: visible;
 }
 
 .mail{
     margin:5px;
+    overflow-x: visible;
 }
 
 .PhoneWrapper{
@@ -68,16 +79,20 @@
     gap:5px;
     margin-left:120px;
     margin-bottom:10px;
+    overflow-x: visible;
 }
 
 .phone{
     margin:5px;
+    overflow-x: visible;
 }
 
 .Yulya{
     position:relative;
+    overflow-x: visible;
 }
 
 .Vika{
     position:relative;
+    overflow-x: visible;
 }

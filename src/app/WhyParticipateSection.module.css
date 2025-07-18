@@ -11,6 +11,7 @@
 .content {
   max-width: 1440px;
   margin: 100px;
+      overflow-x: visible;
 }
 
 .container {
@@ -22,6 +23,7 @@
     "rectangles rectangles";
   gap: 40px;
   justify-content: center;
+      overflow-x: visible;
 }
 
 .redFrame {
@@ -31,12 +33,14 @@
   margin-top: -400px;
   position: relative;
   left: -20px;
+  overflow-x: visible;
 }
 
 .redframeImage {
   object-fit: contain;
   width: 100%;
   height: 100%;
+  overflow-x: visible;
 }
 
 .text {
@@ -67,6 +71,7 @@
   padding: 40px 0;
   box-sizing: border-box;
   text-align: left;
+  overflow-x: visible;
 }
 
 .rectangle {

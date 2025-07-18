@@ -22,6 +22,7 @@
     min-height: calc(100vh - 120px);
     position: relative;
     z-index: 1;
+     overflow-x: visible;
 }
 
 .heroText {
@@ -39,6 +40,7 @@
     background-size: 100% 100%;
     margin-top: -30px; 
     margin-left:70px;
+     overflow-x: visible;
 }
 
 .heroTitle {
@@ -49,6 +51,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.2;
+     overflow-x: visible;
 }
 
 .heroQuote {
@@ -62,6 +65,7 @@
 .heroSubtitleContainer {
     display: flex;
     justify-content: left;
+     overflow-x: visible;
 }
 
 .calendarIcon {
@@ -71,6 +75,7 @@
     margin-right: 17px; 
     padding-bottom:15px;
     top: 27px;
+    overflow-x: visible;
 }
 
 .heroSubtitle {
@@ -82,6 +87,7 @@
     line-height: 1.1;
     font-weight: 200 ;
     font-family: 'Barlow', sans-serif ;
+    overflow-x: visible;
 }
 
 .heroButton {
@@ -99,6 +105,7 @@
     justify-content: center;
     max-width: 200px;
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow-x: visible;
 }
 
 .heroButton:hover {
@@ -121,6 +128,7 @@
                 box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
                 background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform-origin: center;
+    overflow-x: visible;
 }
 
 .heroButton:hover::before {
@@ -128,7 +136,9 @@
     box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.3), 
                 0 0 10px 4px rgba(255, 0, 0, 0.5), 
                 0 0 15px 6px rgba(255, 0, 0, 0.7);
+                overflow-x: visible;
 }
+
 
 .heroMask {
     flex: 1;
@@ -141,6 +151,7 @@
     width: 100%;
     opacity: 0.55;
     height:100%;
+    overflow-x: visible;
 }
 
 .heroMaskImage {
@@ -152,6 +163,7 @@
     top: -650px;
     right: -20%;
     z-index: 3000;
+    overflow-x: visible;
 }
 
 .heroCode {

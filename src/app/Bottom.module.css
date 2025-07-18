@@ -3,6 +3,7 @@
   position: relative;
   min-height: 620px;
   overflow-y: hidden;
+  overflow-x: visible;
 }
 
 .content {
@@ -12,18 +13,21 @@
   position: relative;
   height: 550px;
   overflow: visible;
+  overflow-x: visible;
 }
 
 .left {
   position: relative;
   bottom: 0;
   left: 0;
+  overflow-x: visible;
 }
 
 .right {
   position: relative;
   bottom: 0;
   right: -264px;
+  overflow-x: visible;
 }
 
 .bottomBlock {
@@ -38,6 +42,7 @@
   max-width: 500px;
   text-align: center;
   z-index: 10;
+  overflow-x: visible;
 }
 
 .textBottom {
@@ -45,6 +50,7 @@
   color: #fff;
   margin-bottom: 100px;
   font-weight: 150;
+  overflow-x: visible;
 }
 
 .highlightRed {
@@ -52,17 +58,20 @@
   font-weight: 700;
   padding: 0.25rem;
   transition: all 0.3s ease;
+  overflow-x: visible;
 }
 
 .highlightRed:hover {
   transform: scale(1.1);
   color: #d90404;
+  overflow-x: visible;
 }
 
 .buttonBottom {
   position: relative;
   bottom: 70px;
   padding: 0;
+  overflow-x: visible;
 }
 
 .textOnButton {
@@ -77,10 +86,12 @@
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-weight: 600;
+  overflow-x: visible;
 }
 
 .textOnButton:hover {
   transform: scale(1.05);
+  overflow-x: visible;
 }
 
 .strip {
@@ -96,38 +107,46 @@
   right: 0;
   padding: 0 70px;
   margin: 0;
+  overflow-x: visible;
 }
 
 .stripItem {
   display: flex;
   align-items: center;
+  overflow-x: visible;
 }
 
 .socialLogos {
   margin-left: -20px;
   cursor: pointer;
+  overflow-x: visible;
 }
 
 .bestLogo {
   margin-left: -40px;
+  overflow-x: visible;
 }
 
 .yearText {
   margin-left: -20px;
+  overflow-x: visible;
 }
 
 .logos {
   display: flex;
   gap: 10px;
+  overflow-x: visible;
 }
 
 .TgIcon,
 .statIcon {
   margin: 10px;
+  overflow-x: visible;
 }
 
 .year {
   font-size: 20px;
   margin: 40px;
   font-weight: 500;
+  overflow-x: visible;
 }

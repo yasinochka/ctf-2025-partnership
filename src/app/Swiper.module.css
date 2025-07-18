@@ -1,64 +1,71 @@
 .swiperSection {
   position: relative;
-  padding: 100px 0;
-  background-color: #000;
+  width: 100%;
+  padding-top:4rem;
+  padding-bottom:4rem;
 }
 
 .content {
   position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
 }
 
 .container {
   position: relative;
-  width: 100%;
 }
 
+.swiperContainer {
+  position: relative;
+}
 
 .swiper {
   width: 100%;
-  height: auto;
+  height: 300px;
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .swiperPhoto {
-  width: 100%; 
-  height: 300px; 
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
 }
 
-.swiperPhoto:hover {
-  transform: scale(1.01);
-}
-
-.swiperButtonPrev,
-.swiperButtonNext {
+.swiperButtonNext,
+.swiperButtonPrev {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  background: none;
   border: none;
   cursor: pointer;
+  font-size: 24px;
   z-index: 10;
-  transition: ease-in-out 0.3s ease;
-  background-color: transparent; 
+  color: var(--foreground);
+  padding: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.swiperButtonNext:hover,
+.swiperButtonPrev:hover {
+  opacity: 0.8;
 }
 
 .swiperButtonPrev {
-  left: -90px;
+  left: -100px;
 }
 
 .swiperButtonNext {
-  right: -90px;
+  right: -100px;
 }
 
 .arrow {
-  color: #E30613; 
-  font-size: 54px; 
+  display: inline-block;
+  font-weight: 600;
+  color:rgb(171, 9, 9);
+  font-size: 45px;
 }
