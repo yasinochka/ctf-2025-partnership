@@ -98,48 +98,6 @@
   height: 0;
 }
 
-.checkboxLabel {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background: url('/images/checkbox-empty.svg') no-repeat center;
-  background-size: contain;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.checkboxCheckmark {
-  display: none;
-  width: 14px;
-  height: 14px;
-  background: url('/images/checkbox-line.svg') no-repeat center;
-  background-size: contain;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.checkbox:checked + .checkboxLabel + .checkboxCheckmark {
-  display: block;
-  opacity: 1;
-}
-
-.checkbox:disabled + .checkboxLabel {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.checkbox:disabled + .checkboxLabel + .checkboxCheckmark {
-  display: none;
-  opacity: 0;
-}
-
 .serviceName {
   font-size: 1.1125rem;
   font-weight: bold;

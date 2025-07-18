@@ -3,6 +3,39 @@ import styles from './WhyParticipateSection.module.css';
 import Image from 'next/image';
 
 const WhyParticipateSection: React.FC = () => {
+  const rectanglesData = [
+    {
+      title: "Підсилення соціальної відповідальності бренду",
+      text: "Участь у BEST CTF формує активну позицію Вашої компанії у сфері освіти, кібербезпеки та демонструє підтримку українських військових і волонтерів.",
+      icon: "/images/why1.svg",
+    },
+    {
+      title: "Доступ до молодих талантів у сфері кібербезпеки",
+      text: "Отримайте пряму можливість познайомитися з перспективними студентами. BEST CTF дозволяє оцінювати навички в реальному часі та формувати перший контакт з потенційними майбутніми спеціалістами.",
+      icon: "/images/why2.svg",
+    },
+    {
+      title: "Підтримка українських військових",
+      text: "10% зібраних коштів буде передано на підтримку Збройних Сил України — це Ваша нагода зробити крок до спільної перемоги.",
+      icon: "/images/why3.svg",
+    },
+    {
+      title: "Конкурентна перевага",
+      text: "Підтримка нових талантів дає Вашій компанії конкурентну перевагу в майбутньому завдяки впізнаваності Вашого бренду.",
+      icon: "/images/why4.svg",
+    },
+    {
+      title: "Підвищення впізнаваності бренду серед молодої аудиторії",
+      text: "Присутність Вашої компанії на BEST CTF посилює асоціацію бренду з інноваціями, розвитком та підтримкою українських студентів.",
+      icon: "/images/why5.svg",
+    },
+    {
+      title: "Інвестиція в майбутнє галузі",
+      text: "BEST CTF є плацдармом для формування кваліфікованого середовища. Саме тут формуються компетентні, мотивовані студенти-фахівці, які вже завтра визначатимуть стандарти кібербезпеки.",
+      icon: "/images/why6.svg",
+    },
+  ];
+
   return (
     <section className={styles.whyparticipateSection}>
       <div className={styles.content}>
@@ -20,15 +53,27 @@ const WhyParticipateSection: React.FC = () => {
             />
           </div>
           <div className={styles.rectangles}>
-            {Array.from({ length: 6 }).map((_, index) => (
-              <Image
-                key={index}
-                src="/images/rectangle.png"
-                alt="Rectangle design"
-                width={399}
-                height={170}
-                className={styles.rectanglesImage}
-              />
+            {rectanglesData.map((rect, index) => (
+              <div key={index} className={styles.rectangle}>
+                <div className={styles.iconTitleWrapper}>
+                  <Image
+                    src={rect.icon}
+                    alt={`${rect.title} icon`}
+                    width={20}
+                    height={20}
+                    className={`${styles.rectangleIcon} ${
+                      index === 0 ? styles.rectangleIcon1 :
+                      index === 1 ? styles.rectangleIcon2 :
+                      index === 2 ? styles.rectangleIcon3 :
+                      index === 3 ? styles.rectangleIcon4 :
+                      index === 4 ? styles.rectangleIcon5 :
+                      index === 5 ? styles.rectangleIcon6 : ''
+                    }`}
+                  />
+                  <h3 className={styles.rectangleTitle}>{rect.title}</h3>
+                </div>
+                <p className={styles.rectangleText}>{rect.text}</p>
+              </div>
             ))}
           </div>
         </div>

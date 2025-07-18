@@ -29,7 +29,7 @@ const PortraitSection: React.FC = () => {
             <div className={styles.universityWrapper}>
               <div className={styles.leftDiv}>
                 <Image
-                  src="/images/portraitandtabl.png"
+                  src="/images/portraitandtabl.svg"
                   alt="portraitandtabl"
                   width={700}
                   height={500}

@@ -9,7 +9,7 @@ interface PackagesProps {
   setCart: React.Dispatch<React.SetStateAction<Package[]>>;
   selectedPackages: Set<string>;
   setSelectedPackages: React.Dispatch<React.SetStateAction<Set<string>>>;
-  packages?: Package[]; 
+  packages?: Package[];
 }
 
 const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packages = [] }: PackagesProps) => {
@@ -42,7 +42,7 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
         "Розміщення банера компанії під час змагань",
         "Трансляція відеоролика про компанію під час події",
         "Розсилка можливостей від компанії у Telegram-боті та LinkedIn",
-        "Промоція у TikTok"
+        "Промоція у TikTok",
       ],
       descriptions: [
         "Під час тижня живої реклами, що проходитиме за місяць до старту події в Національному університеті “Львівська політехніка”, ми організовуємо квест для студентів. Компанії-партнери, зокрема Ваша, можуть надати подарунки (мерч), які будуть заховані на території університету. Для учасників у форматі Instagram-stories публікуватимуться підказки для пошуку. Після знаходження подарунків ми опублікуємо Instagram-stories з переможцями та згадкою про Вашу компанію на сторінці @best_lviv.",
@@ -74,6 +74,15 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
       ],
     },
   ];
+
+  // Додаємо пакет "Base" до кошика за замовчуванням
+  useEffect(() => {
+    const basePackage = defaultPackages.find((pkg) => pkg.id === "1");
+    if (basePackage && !cart.some((item) => item.id === "1")) {
+      setCart((prevCart) => [...prevCart, { ...basePackage, quantity: 1 }]);
+      setSelectedPackages((prev) => new Set([...prev, "1"]));
+    }
+  }, [cart, setCart, setSelectedPackages]);
 
   const toggleCart = (pkg: Package) => {
     if (pkg.id === "1") return;
@@ -176,7 +185,7 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
                   onClick={() => toggleCart(pkg)}
                   disabled={pkg.id === "1"}
                 >
-                  {cart.some((item: Package) => item.id === pkg.id) && pkg.id !== "1" ? "Видалити" : "До кошика"}
+                  {cart.some((item: Package) => item.id === pkg.id) ? "Видалити" : "До кошика"}
                 </button>
                 <Image
                   src="/images/union.svg"

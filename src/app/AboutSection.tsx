@@ -39,7 +39,7 @@ const AboutSection = () => {
           </div>
           <div className={styles.imageBlock}>
             <Image
-              src="/images/AboutSectionPhoto.png"
+              src="/images/AboutSectionPhoto.svg"
               alt="Event Photo"
               width={1000}
               height={100}

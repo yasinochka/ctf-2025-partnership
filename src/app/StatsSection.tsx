@@ -9,7 +9,7 @@ const StatsSection: React.FC = () => {
         <div className={styles.container}>
           <div className={styles.statsImg}>
             <Image
-              src="/images/stats.png"
+              src="/images/stats.svg"
               alt="Stats"
               width={700}
               height={400}
@@ -52,7 +52,7 @@ const StatsSection: React.FC = () => {
           <div className={styles.additionalContent}>
             <div className={styles.frameWrapper}>
               <Image
-                src="/images/statsFrame.png"
+                src="/images/statsFrame.svg"
                 alt="Team Photo"
                 width={1000}
                 height={800}

@@ -9,12 +9,12 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const ImageSwiper: React.FC = () => {
   const images = [
-    { src: "/images/swiper1.png", alt: "Photo 1" },
-    { src: "/images/swiper2.png", alt: "Photo 2" },
-    { src: "/images/swiper3.png", alt: "Photo 3" },
-    { src: "/images/swiper4.png", alt: "Photo 4" },
-    { src: "/images/swiper5.png", alt: "Photo 5" },
-    { src: "/images/swiper6.png", alt: "Photo 6" },
+    { src: "/images/swiper1.svg", alt: "Photo 1" },
+    { src: "/images/swiper2.svg", alt: "Photo 2" },
+    { src: "/images/swiper3.svg", alt: "Photo 3" },
+    { src: "/images/swiper4.svg", alt: "Photo 4" },
+    { src: "/images/swiper5.svg", alt: "Photo 5" },
+    { src: "/images/swiper6.svg", alt: "Photo 6" },
   ];
 
   return (
