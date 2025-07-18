@@ -139,16 +139,22 @@
   overflow-x: visible;
 }
 
+/* Мобільна версія */
 @media (max-width: 768px) {
   .aboutSection {
-    padding: 5rem 1rem;
+    padding: 0.5rem 1rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .container {
     flex-direction: column;
     align-items: center;
-    margin-left: 40px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .textBlock {
@@ -157,8 +163,7 @@
     padding: 1rem;
     border: 3px solid #d6170d;
     box-shadow: 10px 5px 10px #a40b0baf, 0 0 20px #c10303, 0 0 30px #df4646;
-    border-radius: 10px;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     background-image: none;
   }
 
@@ -175,7 +180,7 @@
     margin-bottom: -2px;
   }
 
-  .paragraph1
+  .paragraph1,
   .paragraph2,
   .goalList li {
     font-size: 15px;
@@ -187,20 +192,45 @@
 
   .subTitle {
     font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem;
     font-weight: 600;
     text-align: center;
   }
 
   .imageBlock {
-    top: 0;
-    right: 0;
-    min-width: 100%;
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
   .eventImage {
-    max-width: 130%;
+    max-width: 90%;
     max-height: 400px;
     object-fit: contain;
+    margin: 10px auto;
+    content: url('/images/participants.svg'); /* Встановлюємо participants.svg для мобільної версії */
   }
+}
+
+/* Десктопна версія (поза медіа-запитом) */
+.imageBlock {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.eventImage {
+  position: relative;
+  max-width: 100%; /* Або інші стилі для десктопу */
+  max-height: 350px; /* Приклад */
+  object-fit: contain;
+  margin: 20px auto;
+  left:25px;
+  /* Наприклад, якщо потрібне інше зображення: content: url('desktop-image.jpg'); */
 }

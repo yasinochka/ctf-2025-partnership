@@ -28,7 +28,7 @@ const AboutSection = () => {
                 Уже другий рік поспіль ми проводимо ці змагання у Львові. <span className={styles.highlight}>BEST CTF</span> — це чудова можливість підтримати розвиток етичного хакінгу серед студентів і початківців у сфері кібербезпеки.
               </p>
               <div data-aos="fade-up" data-aos-delay="400">
-                <h2 className={styles.subTitle}>Наша мета:</h2>
+                <h2 className={styles.subTitle}>Наша мета</h2>
                 <ul className={styles.goalList}>
                   <li>підвищити зацікавленість студентів у галузі кібербезпеки;</li>
                   <li>зростити нове, сильне покоління молодих спеціалістів у цій сфері;</li>

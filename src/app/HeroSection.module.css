@@ -181,60 +181,74 @@
 
 
 @media (max-width: 768px) {
-
-.heroSection {
+  .heroSection {
     min-height: calc(100vh - 50px);
-    padding-top: 70px;
-}
+    padding: 40px 20px; /* Зменшив padding з боків для кращої адаптивності на малих екранах */
+    display: flex; /* Додаємо Flexbox для вертикального центрування */
+    flex-direction: column;
+    justify-content: center; /* Вертикальне центрування */
+    align-items: center; /* Горизонтальне центрування */
+  }
 
-.heroContent {
+  .heroContent {
     flex-direction: column;
     min-height: auto;
     text-align: center;
     align-items: center;
-}
+    justify-content: center; 
+    width: 100%; 
+  }
 
-.heroText {
+  .heroText {
     flex: 1;
     max-width: 100%;
     padding: 16px;
-    }
-.heroTitle {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Горизонтальне центрування тексту та кнопок */
+  }
+
+  .heroTitle {
     font-size: 40px;
     text-align: center;
-}
+  }
 
-.heroSubtitle {
+  .heroSubtitle {
     font-size: 25px;
     text-align: center;
-}
+    margin-top: 10px;
+  }
 
-.heroQuote {
+  .heroQuote {
     font-size: 16px;
     text-align: center;
-}
+  }
 
-.heroButton {
+
+  .heroButton {
     padding: 10px 20px;
     font-size: clamp(0.9em, 4vw, 1em);
-}
-.heroCode {
+    margin: 50px auto; /* Центруємо кнопку */
+  }
+
+  .heroCode {
     position: absolute;
     left: 0;
     top: 0;
-    width: 120%;
+    width: 100%;
     height: 100vh;
     background: url('/images/kod.png') repeat;
     background-size: cover;
     z-index: -1;
-    top: -250px;
-}
+    top: -270px;
+  }
 
-.heroMask {
+  .heroMask {
     display: none !important;
-}
+  }
 
-.heroMaskImage {
+  .heroMaskImage {
     display: none !important;
-}
+  }
 }
