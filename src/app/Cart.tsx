@@ -191,24 +191,6 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                 <p className={styles.discountInfoSecond}>Акційна пропозиція “Early bird” сумується з найбільшою.</p>
               </div>
             </form>
-            {formSubmitted && (
-              <div className={styles.submittedInfo}>
-                <h3>Надіслана інформація:</h3>
-                <div>
-                  Компанія: {companyName}<br />
-                  Email: {email}<br />
-                  Пакети: {cart
-                    .filter((item) => packages.some((pkg) => pkg.name === item.name))
-                    .map((item) => item.name)
-                    .join(", ") || "Немає вибраних пакетів"}<br />
-                  Опції: {cart
-                    .filter((item) => !packages.some((pkg) => pkg.name === item.name))
-                    .map((item) => item.name)
-                    .join(", ") || "Немає додаткових послуг"}<br />
-                  Всього: {total}$
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>
