@@ -126,6 +126,7 @@
   display: block;
   overflow-x: visible;
 }
+
 .textBlock {
   flex: 1;
   min-width: 400px;

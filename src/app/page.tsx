@@ -10,6 +10,7 @@ import StatsSection from './StatsSection';
 import SwiperSection from './SwiperSection';
 import PortraitSection from './PortraitSection';
 import CountdownSection from './CountdownSection';
+import styles from './Home.module.css';
 import Packages from "./Packages";
 import AdditionalOptions from "./AdditionalOptions"; 
 import Cart from "./Cart"; 

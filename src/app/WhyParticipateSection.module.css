@@ -145,3 +145,77 @@
   top: -3px;
 }
 
+@media (max-width: 768px) {
+  .whyparticipateSection {
+    padding: 20px 10px;
+    min-height: auto;
+  }
+
+  .content {
+    margin: 20px 10px;
+    max-width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .redFrame {
+    display: none; 
+  }
+
+  .text {
+    font-size: 18px;
+    bottom: 0;
+    margin-right: 0;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .rectangles {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .rectangle {
+    width: 90%;
+    max-width: 340px;
+    height: auto; 
+    min-height: 150px;
+    padding: 15px;
+  }
+
+  .rectangleTitle {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .rectangleText {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .rectangleIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .rectangleIcon1,
+  .rectangleIcon2,
+  .rectangleIcon3,
+  .rectangleIcon4,
+  .rectangleIcon5,
+  .rectangleIcon6 {
+    top: 0;
+  }
+}
