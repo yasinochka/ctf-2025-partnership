@@ -26,7 +26,7 @@ const BottomSection: React.FC = () => {
       <div className={styles.content}>
         <div className={styles.left}>
           <Image
-            src="/images/bottomLeft.png"
+            src="/images/bottomLeft.svg"
             alt="left"
             width={450}
             height={580}
@@ -34,7 +34,7 @@ const BottomSection: React.FC = () => {
         </div>
         <div className={styles.right}>
           <Image
-            src="/images/bottomRight.png"
+            src="/images/bottomRight.svg"
             alt="right"
             width={500}
             height={580}

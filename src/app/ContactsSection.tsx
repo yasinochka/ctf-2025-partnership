@@ -11,7 +11,7 @@ const ContactsSection: React.FC = () => {
           <div className={styles.contactsFrames}>
             <div className={styles.Dima}>
               <Image
-                src="/images/Dima.png"
+                src="/images/Dima.svg"
                 alt="Dima"
                 width={400}
                 height={550}
@@ -21,7 +21,7 @@ const ContactsSection: React.FC = () => {
                 <p className={styles.WhoIs}>Відповідальний за корпоративні зв’язки</p>
                 <div className={styles.MailWrapper}> 
                   <Image
-                    src="/images/Mail.png"
+                    src="/images/Mail.svg"
                     alt="Mail"
                     width={13}
                     height={13}
@@ -31,7 +31,7 @@ const ContactsSection: React.FC = () => {
                 </div>
                 <div className={styles.PhoneWrapper}> 
                   <Image
-                    src="/images/Phone.png"
+                    src="/images/Phone.svg"
                     alt="Phone"
                     width={15}
                     height={15}
@@ -44,7 +44,7 @@ const ContactsSection: React.FC = () => {
 
             <div className={styles.Yulya}>
               <Image
-                src="/images/Dima.png"
+                src="/images/Yulya.svg"
                 alt="Yulya"
                 width={400}
                 height={550}
@@ -54,7 +54,7 @@ const ContactsSection: React.FC = () => {
                 <p className={styles.WhoIs}>Головний організатор</p>
                 <div className={styles.MailWrapper}> 
                   <Image
-                    src="/images/Mail.png"
+                    src="/images/Mail.svg"
                     alt="Mail"
                     width={13}
                     height={13}
@@ -64,7 +64,7 @@ const ContactsSection: React.FC = () => {
                 </div>
                 <div className={styles.PhoneWrapper}> 
                   <Image
-                    src="/images/Phone.png"
+                    src="/images/Phone.svg"
                     alt="Phone"
                     width={15}
                     height={15}
@@ -77,7 +77,7 @@ const ContactsSection: React.FC = () => {
 
             <div className={styles.Vika}>
               <Image
-                src="/images/Dima.png"
+                src="/images/Vika.svg"
                 alt="Vika"
                 width={400}
                 height={550}
@@ -87,7 +87,7 @@ const ContactsSection: React.FC = () => {
                 <p className={styles.WhoIs}>Відповідальна за корпоративні зв’язки</p>
                 <div className={styles.MailWrapper}> 
                   <Image
-                    src="/images/Mail.png"
+                    src="/images/Mail.svg"
                     alt="Mail"
                     width={13}
                     height={13}
@@ -97,7 +97,7 @@ const ContactsSection: React.FC = () => {
                 </div>
                 <div className={styles.PhoneWrapper}> 
                   <Image
-                    src="/images/Phone.png"
+                    src="/images/Phone.svg"
                     alt="Phone"
                     width={15}
                     height={15}

@@ -62,7 +62,7 @@
 .buttonBottom {
   position: relative;
   bottom: 70px;
-  padding: 0; /* Видалено padding, щоб не впливати на button */
+  padding: 0;
 }
 
 .textOnButton {
@@ -71,9 +71,9 @@
   text-align: center;
   margin: 0;
   padding: 10px 40px;
-  background-color: #a6141c; 
-  border: 2px solid #a6141c; /* Червона рамка */
-  text-decoration: none; /* Видаляє синю риску */
+  background-color: #8e080fdc; 
+  border: 2px solid  #88060cdc; 
+  text-decoration: none;
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-weight: 600;

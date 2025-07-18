@@ -1,6 +1,6 @@
 .statsSection {
   position: relative;
-  padding: 50px 0;
+  padding: 20px 0;
   overflow: visible;
   scroll-margin-top: 180px;
   display: flex;
@@ -8,16 +8,6 @@
   align-items: center;
 }
 
-.statsBack {
-  width: 100%;
-  max-width: 230px;
-  height: auto;
-  object-fit: contain;
-  transform: translateX(-50%);
-  position: absolute;
-  left: 8%;
-  top: -15%;
-}
 
 .content {
   position: relative;
@@ -107,7 +97,7 @@
 
 .statsText {
   position: absolute;
-  top: 57%;
+  top: 43%;
   left: 43%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -118,8 +108,8 @@
 
 .statsText h1 {
   position: relative;
-  bottom:85px;
-  right:20px;
+  bottom:50px;
+  right:35px;
   text-transform: uppercase;
   font-size: 38px;
   margin-bottom: 10px;
@@ -128,7 +118,7 @@
 .statsText p {
   text-align: left;
   font-size: 22px;
-  margin: 10px 0;
   position: relative; 
-  top: -64px; 
+  top: -20px; 
+  margin-top: 20px;
 }

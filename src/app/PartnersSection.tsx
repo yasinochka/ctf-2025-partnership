@@ -9,63 +9,63 @@ const PartnersSection: React.FC = () => {
         <h2 className={styles.title}>Наші партнери</h2>
         <div className={styles.partnersLogos}>
           <Image
-            src="/images/partner1.png" 
+            src="/images/partner1.svg" 
             alt="Partner 1"
             width={150}
             height={100}
             className={styles.logo}
           />
           <Image
-            src="/images/partner2.png" 
+            src="/images/partner2.svg" 
             alt="Partner 2"
             width={150}
             height={100}
             className={styles.logo}
           />
           <Image
-            src="/images/partner3.png" 
+            src="/images/partner3.svg" 
             alt="Partner 3"
             width={150}
             height={100}
             className={styles.logo}
           />
           <Image
-            src="/images/partner4.png" 
+            src="/images/partner4.svg" 
             alt="Partner 4"
             width={150}
             height={100}
             className={styles.logo}
           />
           <Image
-            src="/images/partner5.png" 
+            src="/images/partner5.svg" 
             alt="Partner 5"
             width={150}
             height={100}
             className={styles.logo}
           />
           <Image
-            src="/images/partner6.png" 
+            src="/images/partner6.svg" 
             alt="Partner 6"
             width={150}
             height={100}
             className={styles.logo}
           />
           <Image
-            src="/images/partner7.png"
+            src="/images/partner7.svg"
             alt="Partner 7"
             width={150}
             height={100}
             className={styles.logo}
           />
           <Image
-            src="/images/partner8.png" 
+            src="/images/partner8.svg" 
             alt="Partner 8"
             width={150}
             height={100}
             className={styles.logo}
           />
           <Image
-            src="/images/partner9.png"
+            src="/images/partner9.svg"
             alt="Partner 9"
             width={150}
             height={100}

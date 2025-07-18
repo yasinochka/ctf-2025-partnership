@@ -5,13 +5,6 @@ import Image from 'next/image';
 const StatsSection: React.FC = () => {
   return (
     <section className={styles.statsSection} id="stats">
-        <Image
-          src="/images/statsBack.png"
-          alt="StatsBack"
-          width={230}
-          height={670}
-          className={styles.statsBack}
-        />
       <div className={styles.content}>
         <div className={styles.container}>
           <div className={styles.statsImg}>
@@ -70,6 +63,9 @@ const StatsSection: React.FC = () => {
                 <p>Користувачі, які пройшли повну реєстрацію: 154</p>
                 <p>Зареєстрованих команд: 42</p>
                 <p>Команди, що пройшли відбір: 12</p>
+                <p>Кількість переглядів публікацій під час івентів: 20.5 тисяч</p>
+                <p>Середня кількість переглядів у Stories: 675</p>
+                <p>Середня кількість взаємодій протягом місяця: 6 тисяч</p>
               </div>
             </div>
           </div>
