@@ -144,7 +144,7 @@
     padding: 10px 0; 
   }
 
-  #navbar .container {
+ .container {
     padding: 0;
   }
 
@@ -155,7 +155,7 @@
 
   .logo-icon {
     margin-right: 0; 
-    width: 110px;
+    width: 90px;
   }
 
   .menu-burger {

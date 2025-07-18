@@ -179,6 +179,7 @@
     flex-direction: column;
     min-height: auto;
     text-align: center;
+    align-items: center;
 }
 
 .heroText {
@@ -188,14 +189,17 @@
     }
 .heroTitle {
     font-size: 40px;
+    text-align: center;
 }
 
 .heroSubtitle {
     font-size: 25px;
+    text-align: center;
 }
 
 .heroQuote {
     font-size: 16px;
+    text-align: center;
 }
 
 .heroButton {
