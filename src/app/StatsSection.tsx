@@ -93,14 +93,30 @@ const StatsSection: React.FC = () => {
               <span>750+ followers</span>
             </div>
           </div>
+          <div className={styles.settingMobile}>
+            <Image
+              src="/images/settingmobile.svg"
+              alt="Setting Mobile"
+              width={125}
+              height={100}
+              className={styles.settingMobileImage}
+            />
+          </div>
           <div className={styles.additionalContent}>
             <div className={styles.frameWrapper}>
               <Image
                 src="/images/statsFrame.svg"
-                alt="Team Photo"
+                alt="Team Photo Desktop"
                 width={1000}
                 height={800}
                 className={styles.teamPhoto}
+              />
+              <Image
+                src="/images/StatsFrameMobile.svg"
+                alt="Team Photo Mobile"
+                width={500}
+                height={400}
+                className={styles.teamPhotoMobile}
               />
               <div className={styles.statsText}>
                 <h1>Статистика CTF 2024</h1>

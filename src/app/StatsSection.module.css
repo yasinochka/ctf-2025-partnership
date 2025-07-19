@@ -46,7 +46,7 @@
   left: 5px;
   font-size: 35px;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -129,12 +129,21 @@
   margin-bottom: 10px;
 }
 
+.settingMobile{
+  display:none;
+}
+
+.teamPhotoMobile{
+  display: none;
+}
+
 .statsText p {
   text-align: left;
   font-size: 22px;
   position: relative;
   top: -20px;
   margin-top: 20px;
+  left:-20px;
 }
 
 @keyframes glow {
@@ -170,13 +179,12 @@
 
 @media (max-width: 768px) {
   .container {
-    margin: 0 20px;
+    margin: 0;
   }
 
   .title {
     position: static;
     font-size: 2rem;
-    margin: 20px 0;
     left: 0;
     bottom: 0;
   }
@@ -203,9 +211,9 @@
     height: 100px;
     animation: glow 3s ease-in-out infinite;
     border: 2px solid rgb(156, 5, 5);
-    margin-top:2rem;
-    margin-right:2rem;
-    margin-left:2rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -217,7 +225,76 @@
   .statItem span {
     font-size: 1rem;
     color: #fff;
-    margin-top:0.3rem;
+    margin-top: 0.3rem;
+  }
+
+  .settingMobile {
+    display: block;
+    position: absolute;
+    top: 120px;
+    right: -10px;
+  }
+
+  .settingMobileImage {
+    width: 120%;
+    height: 160%;
+  }
+
+  .teamPhoto {
+    display: none;
+  }
+
+  .teamPhotoMobile {
+    display: block;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 5 / 4;
+  }
+
+  .statsText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9vw;
+    max-width: 95vw;
+    padding: 80px;
+    text-align: center;
+    color: #fff;
+    overflow-x: auto;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    min-height: 250px;
+  }
+
+  .statsText h1 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    margin-bottom: 10px;
+    position: relative;
+    top: 50px;
+    right: 0;
+  }
+
+  .statsText p {
+    font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+    margin-top: 10px;
+    padding-left: 20px;
+    text-align: left;
+    position: relative;
+    top: 67px;
+    left:2px;
+  }
+
+  .statsText p::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 4px;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(156, 5, 5);
   }
 
   .additionalContent {
@@ -227,29 +304,34 @@
   .frameWrapper {
     left: 0;
     width: 100%;
+    position: relative;
   }
 
-  .teamPhoto {
-    margin-top: 50px;
-    width: 100%;
-    max-width: 500px;
-  }
+  @media (max-width: 480px) {
+    .statsText {
+      width: 85vw;
+      max-width: 85vw;
+      padding: 15px;
+    }
 
-  .statsText {
-    width: 95%;
-    top: 50%;
-    left: 50%;
-  }
+    .statsText h1 {
+      font-size: clamp(1rem, 3.5vw, 1.3rem);
+    }
 
-  .statsText h1 {
-    font-size: 1.5rem;
-    bottom: 0;
-    right: 0;
-  }
+    .statsText p {
+      font-size: clamp(0.6rem, 2.2vw, 0.7rem);
+      padding-left: 15px;
+    }
 
-  .statsText p {
-    font-size: 1rem;
-    top: 0;
-    margin-top: 10px;
+    .statsText p::before {
+      width: 4px;
+      height: 4px;
+      top: 3px;
+      left: 0;
+    }
+
+    .teamPhotoMobile {
+      max-width: 90vw;
+    }
   }
 }
