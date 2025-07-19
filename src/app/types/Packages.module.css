@@ -416,3 +416,90 @@
   font-weight: 500; 
   color: #ffffff; 
 }
+
+@media (max-width: 768px) {
+  .packageCard {
+    width: 100%;
+    position: relative;
+  }
+  .packageTitle {
+    font-size: 1.5rem;
+  }
+  .packagePrice {
+    font-size: 1.1rem;
+  }
+  .buttonGroup {
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    position: absolute; 
+    bottom: 1rem;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 270px;
+  }
+  .addButton {
+    width: 270px;
+  }
+  .infoBase,
+  .infoBrand,
+  .infoFlow {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    margin: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 375px){
+   .infoBase,
+  .infoBrand,
+  .infoFlow {
+    position: absolute;
+    top: 1.9rem;
+    left:16rem;
+    margin: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 390px){
+   .infoBase,
+  .infoBrand,
+  .infoFlow {
+    position: absolute;
+    top: 1.9rem;
+    left:17.4rem;
+    margin: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 360px){
+   .infoBase,
+  .infoBrand,
+  .infoFlow {
+    position: absolute;
+    top: 1.9rem;
+    left:15.5rem;
+    margin: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 430px){
+   .buttonGroup {
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    position: absolute; 
+    bottom: 1rem;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 270px; 
+  }
+  .addButton {
+    width: 270px;
+  }
+}

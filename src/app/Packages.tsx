@@ -187,6 +187,8 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
                 >
                   {cart.some((item: Package) => item.id === pkg.id) ? "Видалити" : "До кошика"}
                 </button>
+              </div>
+              <div className={styles.infoGroup}>
                 <Image
                   src="/images/union.svg"
                   alt="Partner Info"
