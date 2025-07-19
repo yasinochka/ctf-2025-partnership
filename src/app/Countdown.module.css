@@ -88,3 +88,59 @@
 .highlightRed{
     color: #d90404;
 }
+
+@media (max-width: 768px) {
+    .CountdownSection {
+        padding: 20px 10px;
+    }
+
+    .text {
+        padding: 15px;
+        max-width: 90%;
+        position: relative; /* Додано для правильного позиціонування абсолютних елементів */
+    }
+
+    .title1 {
+        font-size: 24px;
+    }
+
+    .title2 {
+        font-size: 18px;
+    }
+
+    .notTitle {
+        font-size: 12px;
+        margin-top: 40px; /* Додано відступ зверху, щоб уникнути накладання */
+    }
+
+    .countdown {
+        gap: 20px;
+    }
+
+    .countdownItem {
+        padding: 5px;
+    }
+
+    .count {
+        font-size: 18px;
+    }
+
+    .label {
+        font-size: 9px;
+    }
+
+    .labels {
+        gap: 10px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 175px; 
+    }
+}
+
+
+@media (width: 430px) { 
+    .labels {
+        top: 145px; 
+    }
+}
