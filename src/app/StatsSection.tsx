@@ -17,6 +17,47 @@ const StatsSection: React.FC = () => {
             />
             <div className={styles.statsItems}>
               <div className={styles.statItem}>
+                <div className={styles.iconWrapper}>
+                  <Image
+                    src="/images/instagram.png"
+                    alt="Instagram Followers"
+                    width={50}
+                    height={50}
+                    className={styles.statIcon}
+                  />
+                </div>
+                <span>3550+ followers</span>
+              </div>
+              <div className={styles.statItem}>
+                <div className={styles.iconWrapper}>
+                  <Image
+                    src="/images/telegram.png"
+                    alt="Tg Followers"
+                    width={50}
+                    height={50}
+                    className={styles.statIcon}
+                  />
+                </div>
+                <span>900+ followers</span>
+              </div>
+              <div className={styles.statItem}>
+                <div className={styles.iconWrapper}>
+                  <Image
+                    src="/images/linkedin.png"
+                    alt="LinkedIn Followers"
+                    width={50}
+                    height={50}
+                    className={styles.statIcon}
+                  />
+                </div>
+                <span>750+ followers</span>
+              </div>
+            </div>
+          </div>
+          <h1 className={styles.title}>Статистика</h1>
+          <div className={styles.statsItemsMobile}>
+            <div className={styles.statItem}>
+              <div className={styles.iconWrapper}>
                 <Image
                   src="/images/instagram.png"
                   alt="Instagram Followers"
@@ -24,9 +65,11 @@ const StatsSection: React.FC = () => {
                   height={50}
                   className={styles.statIcon}
                 />
-                <span>3550+ followers</span>
               </div>
-              <div className={styles.statItem}>
+              <span>3550+ followers</span>
+            </div>
+            <div className={styles.statItem}>
+              <div className={styles.iconWrapper}>
                 <Image
                   src="/images/telegram.png"
                   alt="Tg Followers"
@@ -34,9 +77,11 @@ const StatsSection: React.FC = () => {
                   height={50}
                   className={styles.statIcon}
                 />
-                <span>900+ followers</span>
               </div>
-              <div className={styles.statItem}>
+              <span>900+ followers</span>
+            </div>
+            <div className={styles.statItem}>
+              <div className={styles.iconWrapper}>
                 <Image
                   src="/images/linkedin.png"
                   alt="LinkedIn Followers"
@@ -44,11 +89,10 @@ const StatsSection: React.FC = () => {
                   height={50}
                   className={styles.statIcon}
                 />
-                <span>750+ followers</span>
               </div>
+              <span>750+ followers</span>
             </div>
           </div>
-          <h1 className={styles.title}>Статистика</h1>
           <div className={styles.additionalContent}>
             <div className={styles.frameWrapper}>
               <Image
@@ -59,7 +103,7 @@ const StatsSection: React.FC = () => {
                 className={styles.teamPhoto}
               />
               <div className={styles.statsText}>
-                <h1 >Статистика CTF 2024</h1>
+                <h1>Статистика CTF 2024</h1>
                 <p>Користувачі, які пройшли повну реєстрацію: 154</p>
                 <p>Зареєстрованих команд: 42</p>
                 <p>Команди, що пройшли відбір: 12</p>

@@ -1,17 +1,27 @@
 'use client';
 import styles from './AboutSection.module.css';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const AboutSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 800,
       once: false,
       offset: 100,
     });
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -39,11 +49,12 @@ const AboutSection = () => {
           </div>
           <div className={styles.imageBlock}>
             <Image
-              src="/images/AboutSectionPhoto.svg"
+              src={isMobile ? '/images/participants.svg' : '/images/AboutSectionPhoto.svg'}
               alt="Event Photo"
               width={1000}
               height={100}
               className={styles.eventImage}
+              priority={true}
             />
           </div>
         </div>

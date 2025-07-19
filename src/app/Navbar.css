@@ -8,6 +8,7 @@
   width: 100%;
   z-index: 1000;
   opacity: 0.8;
+  overflow-x: visible;
 }
 
 .container {
@@ -17,7 +18,7 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 10px 20px;
-  
+    overflow-x: visible;
 }
 
 .logo {
@@ -28,6 +29,7 @@
   height: 67px;
   margin-left: 0; 
   padding-left: 0; 
+    overflow-x: visible;
 }
 
 .logo-icon {
@@ -35,6 +37,7 @@
   width: 90px;
   margin-right: 0; 
   cursor: pointer;
+    overflow-x: visible;
 }
 
 .menu-burger {
@@ -46,6 +49,7 @@
   cursor: pointer;
   padding: 4px 0;
   z-index: 1001;
+    overflow-x: visible;
 }
 
 .menu-burger span {
@@ -55,6 +59,7 @@
   transition: all 0.3s ease;
   transform-origin: center;
   display: block;
+    overflow-x: visible;
 }
 
 .nav-links {
@@ -67,6 +72,7 @@
   width: 100%;
   margin-left: 100px;
   align-items: center;
+    overflow-x: visible;
 }
 
 .nav-links li a {
@@ -76,6 +82,7 @@
   position: relative;
   transition: color 0.3s ease;
   line-height: 1;
+    overflow-x: visible;
 }
 
 .nav-links li a:not(.partner-button)::after {
@@ -87,6 +94,7 @@
   left: 50%;
   background-color: #dc2626;
   transition: width 0.3s ease, left 0.3s ease;
+    overflow-x: visible;
 }
 
 .nav-links li a:not(.partner-button):hover {
@@ -96,6 +104,7 @@
 .nav-links li a:not(.partner-button):hover::after {
   width: 100%;
   left: 0;
+    overflow-x: visible;
 }
 
 .partner-button {
@@ -110,10 +119,12 @@
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: scale(1);
   z-index: 100;
+    overflow-x: visible;
 }
 
 .partner-button:hover {
   transform: scale(1.03);
+    overflow-x: visible;
 }
 
 .partner-button::before {
@@ -130,6 +141,7 @@
                 box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
                 background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform-origin: center;
+      overflow-x: visible;
 }
 
 .partner-button:hover::before {
@@ -137,6 +149,7 @@
     box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.3), 
                 0 0 10px 4px rgba(255, 0, 0, 0.5), 
                 0 0 15px 6px rgba(255, 0, 0, 0.7);
+                  overflow-x: visible;
 }
 @media (max-width: 768px) {
   #navbar {

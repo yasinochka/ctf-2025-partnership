@@ -9,11 +9,10 @@
   z-index: 0;
 }
 
-/* Мобільна версія (до 768px) */
 @media (max-width: 768px) {
   .fullBackground {
-    background-size: auto 100vh; /* Зменшуємо висоту фону */
-    background-position: right -100px; /* Зміщуємо позицію для кращого відображення */
-    min-height: 80vh; /* Зменшуємо мінімальну висоту */
+    background-size: auto 110vh;
+    background-position: right -100px; 
+    min-height: 80vh; 
   }
 }

@@ -8,7 +8,6 @@
   align-items: center;
 }
 
-
 .content {
   position: relative;
   z-index: 1;
@@ -19,13 +18,12 @@
 }
 
 .container {
-    margin:0 70px;
+  margin: 0 70px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 .statsImg {
   position: relative;
@@ -33,7 +31,8 @@
   width: 100%;
   max-width: 700px;
   height: auto;
-      overflow-x: visible;
+  overflow-x: visible;
+  right:40px;
 }
 
 .statsImage {
@@ -44,7 +43,7 @@
 .title {
   position: relative;
   bottom: 288px;
-  left: 45px;
+  left: 5px;
   font-size: 35px;
   color: #fff;
   margin-bottom: 20px;
@@ -53,9 +52,9 @@
 
 .statsItems {
   position: absolute;
-  top:360px;
+  top: 360px;
   left: 55%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   gap: 250px;
@@ -67,13 +66,27 @@
   align-items: center;
 }
 
-.statIcon {
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
+}
+
+.statIcon {
+  width: 50px;
+  height: 50px;
 }
 
 .statItem span {
   font-size: 18px;
   font-weight: 600;
+}
+
+.statsItemsMobile {
+  display: none;
 }
 
 .additionalContent {
@@ -86,12 +99,12 @@
 
 .frameWrapper {
   position: relative;
-  left:90px;
+  left: 90px;
 }
 
 .teamPhoto {
-  margin-top:130px ;
-  margin-bottom:50px;
+  margin-top: 130px;
+  margin-bottom: 50px;
   height: auto;
 }
 
@@ -109,8 +122,8 @@
 
 .statsText h1 {
   position: relative;
-  bottom:50px;
-  right:35px;
+  bottom: 50px;
+  right: 35px;
   text-transform: uppercase;
   font-size: 38px;
   margin-bottom: 10px;
@@ -119,7 +132,124 @@
 .statsText p {
   text-align: left;
   font-size: 22px;
-  position: relative; 
-  top: -20px; 
+  position: relative;
+  top: -20px;
   margin-top: 20px;
+}
+
+@keyframes glow {
+  0% {
+    border-color: rgb(149, 12, 12);
+    box-shadow: 
+      0 0 10px rgb(156, 5, 5),
+      0 0 20px rgb(156, 5, 5),
+      0 0 30px rgba(156, 5, 5, 0.5);
+  }
+  33% {
+    border-color:rgb(205, 38, 38);
+    box-shadow: 
+      0 0 15px rgb(181, 16, 16),
+      0 0 25px rgb(176, 26, 26),
+      0 0 35px rgba(187, 22, 22, 0.756);
+  }
+  66% {
+    border-color: rgb(187, 12, 12);
+    box-shadow: 
+      0 0 20px rgb(174, 13, 13),
+      0 0 30px rgb(157, 14, 14),
+      0 0 40px rgba(158, 3, 3, 0.741);
+  }
+  100% {
+    border-color: rgb(149, 12, 12);
+    box-shadow: 
+      0 0 10px rgb(156, 5, 5),
+      0 0 20px rgb(156, 5, 5),
+      0 0 30px rgba(169, 5, 5, 0.635);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 20px;
+  }
+
+  .title {
+    position: static;
+    font-size: 2rem;
+    margin: 20px 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .statsImg {
+    display: none;
+  }
+
+  .statsItems {
+    display: none;
+  }
+
+  .statsItemsMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .iconWrapper {
+    width: 125px;
+    height: 100px;
+    animation: glow 3s ease-in-out infinite;
+    border: 2px solid rgb(156, 5, 5);
+    margin-top:2rem;
+    margin-right:2rem;
+    margin-left:2rem;
+    margin-bottom: 1rem;
+  }
+
+  .statIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .statItem span {
+    font-size: 1rem;
+    color: #fff;
+    margin-top:0.3rem;
+  }
+
+  .additionalContent {
+    margin-top: 30px;
+  }
+
+  .frameWrapper {
+    left: 0;
+    width: 100%;
+  }
+
+  .teamPhoto {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .statsText {
+    width: 95%;
+    top: 50%;
+    left: 50%;
+  }
+
+  .statsText h1 {
+    font-size: 1.5rem;
+    bottom: 0;
+    right: 0;
+  }
+
+  .statsText p {
+    font-size: 1rem;
+    top: 0;
+    margin-top: 10px;
+  }
 }

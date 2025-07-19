@@ -155,6 +155,7 @@
     align-items: center;
     margin: 0 auto;
     width: 100%;
+    max-width: 320px; /* Узгоджено з шириною .textBlock */
   }
 
   .textBlock {
@@ -163,13 +164,13 @@
     padding: 1rem;
     border: 3px solid #d6170d;
     box-shadow: 10px 5px 10px #a40b0baf, 0 0 20px #c10303, 0 0 30px #df4646;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem; /* Збільшено відступ знизу для врахування світіння */
     background-image: none;
   }
 
   .mainHeading {
     font-size: 1.9rem;
-    margin-left: -0.9rem;
+    margin-left: 0;
     text-align: center;
   }
 
@@ -198,19 +199,22 @@
   }
 
   .imageBlock {
-    position: relative;
-    max-width: 100%;
+    min-width: 300px;
+    max-width: 320px; /* Узгоджено з шириною .textBlock */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    top: 0;
+    right: 0;
   }
 
   .eventImage {
-    max-width: 90%;
-    max-height: 400px;
+    width: 100%;
+    max-width: 320px; /* Узгоджено з шириною .textBlock */
+    max-height: 450px;
     object-fit: contain;
-    margin: 10px auto;
-    content: url('/images/participants.svg'); /* Встановлюємо participants.svg для мобільної версії */
+    margin: 0 auto; /* Зменшено відступи */
+    left: 0;
   }
 }
