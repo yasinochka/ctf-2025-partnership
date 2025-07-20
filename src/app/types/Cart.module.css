@@ -1,4 +1,3 @@
-
 .cartSection {
   padding: 6rem 3rem;
   position: relative;
@@ -168,9 +167,17 @@
 
 
 @media (max-width: 768px) {
+  .cartSection {
+  padding: 6rem 2rem;
+  position: relative;
+}
   .cartContainer {
     flex-direction: column;
-    min-height: 500px; 
+    min-height: 500px;
+    background-image: none !important ;
+    background-color: #181818 !important;
+    border: 3px solid #d6170d; 
+    box-shadow: 10px 5px 10px #a40b0baf, 0 0 20px #c10303, 0 0 30px #df4646; 
   }
   .cartLeft, .cartRight {
     width: 100%;
@@ -179,7 +186,7 @@
     width: 80%;
   }
   .orderButton {
-    padding: 0.75rem 1.5rem; 
+    padding: 0.75rem 0.75rem; 
     font-size: 1.1rem;
   }
 }
@@ -188,4 +195,36 @@
   font-weight: 700;
   padding: 0.25rem;
   border-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .cartContainer {
+    flex-direction: column;
+    min-height: 500px;
+    background: none; 
+    border: 3px solid #d6170d; 
+    box-shadow: 10px 5px 10px #a40b0baf, 0 0 20px #c10303, 0 0 30px #df4646; 
+
+  }
+  .cartLeft, .cartRight {
+    width: 100%;
+  }
+  .inputField {
+    width: 80%;
+  }
+  .orderButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  .discountInfoLeft {
+    max-width: 100%; 
+    margin-left: 0; 
+    margin-right: 0; 
+    padding: 0 1rem; 
+    box-sizing: border-box; 
+    overflow-y: hidden;
+  }
+  .discountInfoLeft p {
+    overflow-y: hidden;
+  }
 }

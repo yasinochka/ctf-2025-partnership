@@ -75,7 +75,6 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
     },
   ];
 
-  // Додаємо пакет "Base" до кошика за замовчуванням
   useEffect(() => {
     const basePackage = defaultPackages.find((pkg) => pkg.id === "1");
     if (basePackage && !cart.some((item) => item.id === "1")) {

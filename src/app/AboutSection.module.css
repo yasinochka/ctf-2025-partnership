@@ -155,7 +155,7 @@
     align-items: center;
     margin: 0 auto;
     width: 100%;
-    max-width: 320px; /* Узгоджено з шириною .textBlock */
+    max-width: 320px; 
   }
 
   .textBlock {
@@ -164,7 +164,7 @@
     padding: 1rem;
     border: 3px solid #d6170d;
     box-shadow: 10px 5px 10px #a40b0baf, 0 0 20px #c10303, 0 0 30px #df4646;
-    margin: 0 auto 1.5rem; /* Збільшено відступ знизу для врахування світіння */
+    margin: 0 auto 1.5rem; 
     background-image: none;
   }
 
@@ -200,7 +200,7 @@
 
   .imageBlock {
     min-width: 300px;
-    max-width: 320px; /* Узгоджено з шириною .textBlock */
+    max-width: 320px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,10 +211,10 @@
 
   .eventImage {
     width: 100%;
-    max-width: 320px; /* Узгоджено з шириною .textBlock */
+    max-width: 320px; 
     max-height: 450px;
     object-fit: contain;
-    margin: 0 auto; /* Зменшено відступи */
+    margin: 0 auto; 
     left: 0;
   }
 }
