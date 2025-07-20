@@ -9,16 +9,15 @@
   width: 100%;
   z-index: 1000;
   opacity: 0.8;
-  height: 70px;
+  height: 90px;
   overflow-y: hidden;
-  overscroll-behavior: none
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
+  max-height: 300px;
   margin: 0 auto;
   padding: 10px 20px;
 }
@@ -29,6 +28,7 @@
   align-items: center;
   width: 120px;
   height: 67px;
+  margin-left: 10px;
 }
 
 .logo-icon {
@@ -70,6 +70,10 @@
   align-items: center;
 }
 
+.nav-links li{
+  overflow-y: hidden;
+  text-align: center;
+}
 .nav-links li a {
   color: #fff;
   text-decoration: none;
@@ -77,34 +81,14 @@
   position: relative;
   transition: color 0.3s ease;
   line-height: 1;
-  overflow-x: visible;
-  overflow-y: visible;
   z-index: 1;
-  overscroll-behavior: none
 }
 
-.nav-links li a:not(.partner-button)::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 50%;
-  background-color: #dc2626;
-  transition: width 0.3s ease, left 0.3s ease;
-  overflow-x: visible;
-  overflow-y: visible;
-  z-index: 1;
-}
 
 .nav-links li a:not(.partner-button):hover {
   color: #dc2626;
 }
 
-.nav-links li a:not(.partner-button):hover::after {
-  width: 100%;
-  left: 0;
-}
 
 .partner-button {
   display: inline-block;
@@ -116,10 +100,7 @@
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: scale(1);
   z-index: 100;
-}
-
-.partner-button:hover {
-  transform: scale(1.03);
+  overflow-y: hidden;
 }
 
 .partner-button::before {
@@ -129,7 +110,7 @@
   left: -4px;
   width: calc(100% + 8px);
   height: calc(100% + 4px);
-  background-color: #a21616df;
+  background-color: #940909df;
   border: 2px solid #850202;
   z-index: -1;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
