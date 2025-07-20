@@ -79,7 +79,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
       alert("Дякуємо! Ми зв'яжемося з вами найближчим часом.");
       setCompanyName("");
       setEmail("");
-      // Очищаємо кошик після відправлення
+      
       setCart([]);
       setSelectedPackages(new Set());
     } catch (error: unknown) {

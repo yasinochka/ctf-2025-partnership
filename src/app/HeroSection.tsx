@@ -16,7 +16,16 @@ const HeroSection: React.FC = () => {
             <Image src={calendarIcon} alt="Календар" width={24} height={24} className={styles.calendarIcon} />
             <p className={styles.heroSubtitle}>22 листопада</p>
           </div>
-          <a href="#partner" className={styles.heroButton}>Стати партнером</a>
+          <a 
+            href="#countdown" 
+            className={styles.heroButton}
+            onClick={(e) => {
+            e.preventDefault();
+            document.querySelector('#countdown')?.scrollIntoView({ behavior: 'smooth' });
+  }}
+>
+  Стати партнером
+</a>
         </div>
         <div className={styles.heroMask}>
           <Image src={heroImage} alt="Фон чела" width={600} height={400} className={styles.heroMaskImage} />
