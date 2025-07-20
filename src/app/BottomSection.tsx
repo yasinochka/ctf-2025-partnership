@@ -31,7 +31,15 @@ const BottomSection: React.FC = () => {
             width={500}
             height={580}
           />
-        </div>
+
+          </div>
+          <Image
+            src="/images/leftMobile.svg"
+            alt="left mobile"
+            width={300}
+            height={300}
+            className={styles.leftMobile}
+          />
         <div className={styles.right}>
           <Image
             src="/images/bottomRight.svg"
@@ -39,7 +47,14 @@ const BottomSection: React.FC = () => {
             width={500}
             height={580}
           />
-        </div>
+          </div>
+          <Image
+            src="/images/rightMobile.svg"
+            alt="right mobile"
+            width={300}
+            height={300}
+            className={styles.rightMobile}
+          />
       </div>
       <div className={styles.strip}>
         <div className={styles.stripItem}>

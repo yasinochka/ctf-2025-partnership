@@ -24,7 +24,7 @@ const contacts = [
   {
     name: 'Галіпчак Вікторія',
     role: 'Відповідальна за корпоративні зв’язки',
-    email: 'name.surname@best-eu.org',
+    email: 'victoriia.galipchak@best-eu.org',
     phone: '+380681330480',
     imageSrc: '/images/Vika.svg',
     imageAlt: 'Vika',

@@ -50,10 +50,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center; 
-    min-width: 0;
     overflow-x: visible;
 }
-
+.frame h1{
+    overflow-y: hidden;
+}
 .fingerprintImage {
     transition: transform 0.3s ease; 
          overflow-x: visible;

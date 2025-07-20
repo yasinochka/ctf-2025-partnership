@@ -37,12 +37,9 @@ export default function Navbar() {
     <nav id="navbar">
       <div className="container">
         <div className="logo" onClick={() => handleNavClick('top')}>
-          <Image src="/images/logocopy.png" alt="CTFósitos
-
-System: F logo" width={150} height={50} className="logo-icon" />
+          <Image src="/images/logocopy.png" alt="CTF" width={150} height={50} className="logo-icon" />
         </div>
         <div className={`menu-burger ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <span></span>
           <span></span>
           <span></span>
         </div>

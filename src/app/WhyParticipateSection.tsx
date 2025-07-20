@@ -20,11 +20,6 @@ const WhyParticipateSection: React.FC = () => {
       icon: "/images/why3.svg",
     },
     {
-      title: "Конкурентна перевага",
-      text: "Підтримка нових талантів дає Вашій компанії конкурентну перевагу в майбутньому завдяки впізнаваності Вашого бренду.",
-      icon: "/images/why4.svg",
-    },
-    {
       title: "Підвищення впізнаваності бренду серед молодої аудиторії",
       text: "Присутність Вашої компанії на BEST CTF посилює асоціацію бренду з інноваціями, розвитком та підтримкою українських студентів.",
       icon: "/images/why5.svg",
@@ -45,7 +40,7 @@ const WhyParticipateSection: React.FC = () => {
           </div>
           <div className={styles.redFrame}>
             <Image
-              src="/images/redFrame.png"
+              src="/images/redFrame.svg"
               alt="Frame design"
               width={2400}
               height={1060}
