@@ -45,7 +45,13 @@
 
 @media (max-width: 768px) {
   .partnersSection {
-    padding: 20px 40px;
+    position: relative;
+    min-height: 43vh;
+    padding: 20px 20px;
+  }
+
+  .content{
+    max-height: 500px;
   }
 
   .title {

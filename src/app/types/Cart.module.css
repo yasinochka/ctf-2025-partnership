@@ -168,7 +168,7 @@
 
 @media (max-width: 768px) {
   .cartSection {
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   position: relative;
 }
   .cartContainer {
@@ -188,6 +188,9 @@
   .orderButton {
     padding: 0.75rem 0.75rem; 
     font-size: 1.1rem;
+  }
+    .discountInfoLeft p {
+    overflow-y: hidden;
   }
 }
 .highlightRed {
