@@ -23,7 +23,7 @@ const OrganisersSection: React.FC = () => {
           </div>
           <Image
             src="/images/bestframe.png"
-            alt="BEST Logo"
+            alt="BEST Logo Frame"
             width={500}
             height={300}
             className={`${styles.logo} ${styles.logoFaded}`}
