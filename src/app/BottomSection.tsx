@@ -28,7 +28,7 @@ const BottomSection: React.FC = () => {
           <Image
             src="/images/bottomLeft.svg"
             alt="left"
-            width={450}
+            width={500}
             height={580}
           />
         </div>

@@ -2,111 +2,92 @@
 import styles from './Contacts.module.css';
 import Image from 'next/image';
 
-const ContactsSection: React.FC = () => {
+const contacts = [
+  {
+    name: 'Антончик Дмитро',
+    role: 'Відповідальний за корпоративні зв’язки',
+    email: 'dmytro.antonchyk@best-eu.org',
+    phone: '+380969809048',
+    imageSrc: '/images/Dima.svg',
+    imageAlt: 'Dima',
+    phoneClass: styles.phoneDima,
+  },
+  {
+    name: 'Синичак Юлія',
+    role: 'Головний організатор',
+    email: 'name.surname@best-eu.org',
+    phone: '+380993107224',
+    imageSrc: '/images/Yulya.svg',
+    imageAlt: 'Yulya',
+    phoneClass: styles.phoneYulya,
+  },
+  {
+    name: 'Галіпчак Вікторія',
+    role: 'Відповідальна за корпоративні зв’язки',
+    email: 'name.surname@best-eu.org',
+    phone: '+380681330480',
+    imageSrc: '/images/Vika.svg',
+    imageAlt: 'Vika',
+    phoneClass: styles.phoneVika,
+  },
+];
+
+const ContactsSection = () => {
   return (
     <section className={styles.contactsSection} id="contact">
       <div className={styles.content}>
         <div className={styles.container}>
           <h1 className={styles.title}>Контакти</h1>
-          <div className={styles.contactsFrames}>
-            <div className={styles.Dima}>
-              <Image
-                src="/images/Dima.svg"
-                alt="Dima"
-                width={400}
-                height={550}
-              />
-              <div className={styles.Text}>
-                <h1 className={styles.NameSurname}>Антончик Дмитро</h1>
-                <p className={styles.WhoIs}>Відповідальний за корпоративні зв’язки</p>
-                <div className={styles.MailWrapper}> 
-                  <Image
-                    src="/images/Mail.svg"
-                    alt="Mail"
-                    width={13}
-                    height={13}
-                    className={styles.mail}
-                  />
-                  <p className={styles.Mail}>name.surname@best-eu.org</p>
-                </div>
-                <div className={styles.PhoneWrapper}> 
-                  <Image
-                    src="/images/Phone.svg"
-                    alt="Phone"
-                    width={15}
-                    height={15}
-                    className={styles.phone}
-                  />
-                  <p className={styles.PhoneDima}>+380969809048</p>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.Yulya}>
-              <Image
-                src="/images/Yulya.svg"
-                alt="Yulya"
-                width={400}
-                height={550}
-              />
-              <div className={styles.Text}>
-                <h1 className={styles.NameSurname}>Синичак Юлія</h1>
-                <p className={styles.WhoIs}>Головний організатор</p>
-                <div className={styles.MailWrapper}> 
-                  <Image
-                    src="/images/Mail.svg"
-                    alt="Mail"
-                    width={13}
-                    height={13}
-                    className={styles.mail}
-                  />
-                  <p className={styles.Mail}>name.surname@best-eu.org</p>
-                </div>
-                <div className={styles.PhoneWrapper}> 
-                  <Image
-                    src="/images/Phone.svg"
-                    alt="Phone"
-                    width={15}
-                    height={15}
-                    className={styles.phone}
-                  />
-                  <p className={styles.PhoneYulya}>+380993107224</p>
+          <div className={styles.contacts}>
+            {contacts.map((contact, index) => (
+              <div key={index} className={styles.card}>
+                <Image
+                  src={contact.imageSrc}
+                  alt={contact.imageAlt}
+                  width={400}
+                  height={550}
+                  className={styles.image}
+                />
+                <div className={styles.info}>
+                  <h1 className={styles.name}>{contact.name}</h1>
+                  <p className={styles.role}>{contact.role}</p>
+                  <div className={styles.mailWrapper}>
+                    <Image
+                      src="/images/Mail.svg"
+                      alt="Mail"
+                      width={13}
+                      height={13}
+                      className={styles.mailIcon}
+                    />
+                    <p>
+                      <a
+                        href={`mailto:${contact.email}`}
+                        className={styles.email}
+                      >
+                        {contact.email}
+                      </a>
+                    </p>
+                  </div>
+                  <div className={styles.phoneWrapper}>
+                    <Image
+                      src="/images/Phone.svg"
+                      alt="Phone"
+                      width={15}
+                      height={15}
+                      className={styles.phoneIcon}
+                    />
+                    <p>
+                      <a
+                        href={`tel:${contact.phone}`}
+                        className={contact.phoneClass}
+                      >
+                        {contact.phone}
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className={styles.Vika}>
-              <Image
-                src="/images/Vika.svg"
-                alt="Vika"
-                width={400}
-                height={550}
-              />
-              <div className={styles.Text}>
-                <h1 className={styles.NameSurname}>Галіпчак Вікторія</h1>
-                <p className={styles.WhoIs}>Відповідальна за корпоративні зв’язки</p>
-                <div className={styles.MailWrapper}> 
-                  <Image
-                    src="/images/Mail.svg"
-                    alt="Mail"
-                    width={13}
-                    height={13}
-                    className={styles.mail}
-                  />
-                  <p className={styles.Mail}>name.surname@best-eu.org</p>
-                </div>
-                <div className={styles.PhoneWrapper}> 
-                  <Image
-                    src="/images/Phone.svg"
-                    alt="Phone"
-                    width={15}
-                    height={15}
-                    className={styles.phone}
-                  />
-                  <p className={styles.PhoneVika}>+380681330480</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

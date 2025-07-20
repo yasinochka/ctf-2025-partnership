@@ -1,6 +1,6 @@
-.organisersSection{
+.organisersSection {
   position: relative;
-  padding:0px 80px;
+  padding: 0px 80px;
   color: #fff;
   overflow-x: visible;
 }
@@ -11,15 +11,15 @@
   z-index: 1;
   max-width: 1440px;
   margin: 0 auto;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .title {
   font-size: 44px;
   margin-bottom: 50px;
   text-transform: uppercase;
-  text-align: center; 
-    overflow-x: visible;
+  text-align: center;
+  overflow-x: visible;
 }
 
 .textOverlay {
@@ -32,25 +32,27 @@
   z-index: 2;
   padding: 10px;
   width: 500px;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .highlightedText {
-  font-size: 25px; 
+  font-size: 25px;
   font-weight: 600;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
   position: relative;
-  top:18px;
+  top: 18px;
   right: 185px;
 }
 
 .mainText {
   position: relative;
-  font-size: 16px; 
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  top:20px;
+  top: 20px;
   right: 180px;
+  white-space: nowrap;
+  text-align: left; 
 }
 
 .logoContainer {
@@ -69,28 +71,28 @@
 }
 
 .logoFaded {
-  opacity: 0.6; 
+  opacity: 0.6;
 }
 
 .logoShifted {
-  margin-top: 25px; 
+  margin-top: 25px;
 }
 
-.mapContainer{
-    position: relative;
-    bottom:50px;
-    display: flex;
-    justify-content: center;
-      overflow-x: visible;
+.mapContainer {
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  overflow-x: visible;
 }
 
 .radarContainer {
   position: absolute;
-  top:-300px; 
+  top: -300px;
   right: 61%;
   transform: translateX(-50%);
   z-index: 0;
-  opacity: 0.85; 
+  opacity: 0.85;
 }
 
 .stats {
@@ -100,27 +102,28 @@
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-around;
-  width: 300px;
-  flex-direction: column; 
+  width: 400px;
+  flex-direction: column;
   align-items: center;
+  overflow: visible;
 }
 
 .statGroup {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   width: 100%;
   gap: 80px;
 }
 
 .statColumn {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .statColumn > :not(:first-child) {
-  margin-top: 60px; 
+  margin-top: 60px;
 }
 
 .statItem {
@@ -128,14 +131,16 @@
   font-weight: 500;
   color: #ff0000;
   text-align: center;
+  white-space: normal;
 }
 
 .statText {
-  display: block; 
+  display: block;
   font-size: 0.8em;
   font-weight: normal;
-  color: #fff; 
-  margin-top: 5px; 
+  color: #fff;
+  margin-top: 5px;
+  white-space: normal;
 }
 
 .textContainer {
@@ -147,6 +152,7 @@
 .textContainer p {
   margin: 10px 0;
 }
+
 @media (max-width: 768px) {
   .organisersSection {
     padding: 0px 20px;
@@ -184,26 +190,26 @@
   }
 
   .highlightedText {
-    display: none; /* Remove highlighted text as it's not needed in mobile */
+    display: none;
   }
 
   .mainText {
-    position: absolute;
-    top: 20%;
-    right: 12%;
+    position: static;
     line-height: 1.4;
     padding: 15px;
     color: #fff;
     z-index: 2;
-    max-width: 19rem;
     font-size: 0.8rem;
     font-weight: 300;
+    text-align: left; 
+    white-space: normal;
+    max-width: none;
   }
 
   .logoFaded {
     position: absolute;
     width: 110%;
-    height: 280px; /* Increase size for mobile */
+    height: 280px;
     opacity: 0.8;
     overflow-y: hidden;
     top: 0;
@@ -211,7 +217,7 @@
 
   .logoShifted {
     position: absolute;
-    width: 150px; /* Reduce size to fit alongside bestframe.png */
+    width: 150px;
     height: 90px;
     margin: 0.5rem;
     top: 50%;
@@ -226,7 +232,7 @@
   }
 
   .radarContainer {
-    top: -280px; /* Adjust position for smaller map */
+    top: -280px;
     right: 95%;
     transform: translateX(50%);
     width: 150px;
@@ -240,22 +246,24 @@
   }
 
   .map {
-    width: 300px; /* Scale down map */
+    width: 300px;
     height: 275px;
     position: relative;
   }
 
   .stats {
     position: absolute;
-    top: 1rem; 
-    right: -10px; 
+    top: 1rem;
+    right: -30px; 
+    left: auto; 
     transform: none;
-    width: 7rem;
+    width: 10rem;
     flex-direction: column;
     align-items: flex-start;
-    text-align: right; 
+    text-align: right;
     padding: 20px;
     padding-right: 30px;
+    overflow: visible;
   }
 
   .statGroup {
@@ -269,63 +277,63 @@
 
   .statItem {
     font-size: 1rem;
-    width:3rem;
+    width: 3rem;
+    white-space: normal;
   }
 
   .statText {
     font-size: 0.6em;
+    white-space: normal;
   }
 }
 
-@media (max-width: 375px){
+@media (max-width: 375px) {
   .mainText {
-    position: absolute;
-    top: 25%;
-    right: 12%;
+    position: static;
     line-height: 1.4;
     padding: 15px;
     color: #fff;
     z-index: 2;
-    max-width: 19rem;
     font-size: 0.7rem;
     font-weight: 300;
+    text-align: left; 
+    white-space: normal;
+    max-width: none;
   }
 
-    .logoShifted {
+  .logoShifted {
     position: absolute;
-    width: 130px; 
+    width: 130px;
     height: 90px;
     margin: 0.5rem;
     top: 58%;
     left: 60%;
     overflow-y: hidden;
   }
-
 }
 
-@media (max-width: 430px){
+@media (max-width: 430px) {
   .mainText {
-    position: absolute;
-    top: 20%;
-    right: 12%;
+    position: static;
     line-height: 1.4;
     padding: 15px;
-    padding-bottom:30px;
+    padding-bottom: 30px;
     color: #fff;
     z-index: 2;
-    max-width: 19rem;
     font-size: 0.8rem;
     font-weight: 300;
+    text-align: left; 
+    white-space: normal;
+    max-width: none;
   }
 
-    .logoShifted {
+  .logoShifted {
     position: absolute;
-    width: 130px; 
+    width: 130px;
     height: 90px;
     margin: 0.5rem;
     top: 62%;
     left: 60%;
     overflow-y: hidden;
   }
-
 }
