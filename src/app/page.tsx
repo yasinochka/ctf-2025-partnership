@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useState } from "react";
 import AboutSection from './AboutSection';
 import HeroSection from './HeroSection';
@@ -40,6 +40,7 @@ export default function Home() {
     },
   ]);
   const [selectedPackages, setSelectedPackages] = useState<Set<string>>(new Set(["1"]));
+  const [highlightedOptions, setHighlightedOptions] = useState<string[]>([]); // Додаємо стан для підсвічених опцій
 
   const defaultPackages: Package[] = [
     {
@@ -101,30 +102,31 @@ export default function Home() {
     },
   ];
 
-
   return (
     <>
       <HeroSection />
       <AboutSection />
-        <div className={styles.fullBackground}>
+      <div className={styles.fullBackground}>
         <FormatSection />
         <WhyParticipateSection />
       </div>
-      <StatsSection/>
-      <SwiperSection/>
-      <PortraitSection/>
-      <CountdownSection/>
+      <StatsSection />
+      <SwiperSection />
+      <PortraitSection />
+      <CountdownSection />
       <Packages
         cart={cart}
         setCart={setCart}
         selectedPackages={selectedPackages}
         setSelectedPackages={setSelectedPackages}
         packages={defaultPackages}
+        setHighlightedOptions={setHighlightedOptions} // Передаємо setHighlightedOptions
       />
       <AdditionalOptions
         cart={cart}
         setCart={setCart}
         selectedPackageServices={[]}
+        highlightedOptions={highlightedOptions} // Передаємо highlightedOptions
       />
       <Cart
         cart={cart}
@@ -132,10 +134,10 @@ export default function Home() {
         setSelectedPackages={setSelectedPackages}
         packages={defaultPackages}
       />
-      <PartnersSection/>
-      <OrganisersSection/>
-      <ContactsSection/>
-      <BottomSection/>
+      <PartnersSection />
+      <OrganisersSection />
+      <ContactsSection />
+      <BottomSection />
     </>
   );
 }

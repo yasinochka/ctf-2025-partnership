@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import styles from "./types/Additional.module.css";
@@ -8,6 +8,7 @@ interface AdditionalOptionsProps {
   cart?: Package[];
   setCart?: (newCart: Package[] | ((prevCart: Package[]) => Package[])) => void;
   selectedPackageServices?: string[];
+  highlightedOptions?: string[]; // Додаємо проп для підсвічених опцій
 }
 
 interface AddOption {
@@ -56,6 +57,7 @@ const AdditionalOptions = ({
   cart = [],
   setCart = () => {},
   selectedPackageServices = [],
+  highlightedOptions = [], 
 }: AdditionalOptionsProps) => {
   const [openTooltipId, setOpenTooltipId] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -144,13 +146,15 @@ const AdditionalOptions = ({
                  !cart.some((item) => item.name === service.name)) ||
                 isProcessing;
               const isSelected = cart.some((item) => item.name === service.name);
+              const isHighlighted = highlightedOptions.includes(service.name) && !isSelected; 
 
-              console.log(`Service: ${service.name}, isDisabled: ${isDisabled}, isSelected: ${isSelected}`);
+              console.log(`Service: ${service.name}, isDisabled: ${isDisabled}, isSelected: ${isSelected}, isHighlighted: ${isHighlighted}`);
 
               return (
                 <div
                   key={service.id}
-                  className={`${styles.additionalCard} ${isSelected ? styles.selectedCard : ''} ${isDisabled ? styles.disabledCard : ''}`}
+                  className={`${styles.additionalCard} ${isSelected ? styles.selectedCard : ''} ${isDisabled ? styles.disabledCard : ''} ${isHighlighted ? styles.highlightedCard : ''}`}
+                  onClick={() => !isDisabled && toggleOption(service)}
                 >
                   <div className={styles.cardContent}>
                     <span className={styles.serviceName}>{service.name}</span>

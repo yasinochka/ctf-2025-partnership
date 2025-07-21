@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import styles from "./types/Cart.module.css";
 import { useState, useEffect } from "react";
 import { Package } from "./types/types";
@@ -40,7 +40,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
       newSet.delete(item.id);
       return newSet;
     });
-    setCart((prevCart: Package[]) => prevCart.filter((cartItem) => cartItem.id !== item.id));
+    setCart((prevCart: Package[]) => prevCart.filter((cartItem) => cartItem.id !== cartItem.id));
   };
 
   const total = calculateTotal();
@@ -110,7 +110,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                       .filter((item: Package) => packages.some((pkg: Package) => pkg.name === item.name))
                       .map((item: Package, index) => (
                         <div key={index} className={`${styles.cartItem} ${isCartUpdated ? styles.cartItemUpdated : ""}`}>
-                          <span>{item.name}</span>
+                          <span>{item.name} - {item.price}</span>
                           <button
                             className={styles.removeButton}
                             onClick={() => handleRemoveFromCart(item)}
@@ -137,7 +137,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
                             >
                               ×
                             </button>
-                          </div>
+                        </div>
                         ))
                     )}
                   </div>

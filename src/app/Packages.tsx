@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import styles from "./types/Packages.module.css";
 import { useState, useEffect } from "react";
 import { Package } from "./types/types";
@@ -10,9 +10,10 @@ interface PackagesProps {
   selectedPackages: Set<string>;
   setSelectedPackages: React.Dispatch<React.SetStateAction<Set<string>>>;
   packages?: Package[];
+  setHighlightedOptions?: (options: string[]) => void;
 }
 
-const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packages = [] }: PackagesProps) => {
+const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packages = [], setHighlightedOptions = () => {} }: PackagesProps) => {
   const [selectedPackage, setSelectedPackage] = useState<Package | null>(null);
 
   const defaultPackages: Package[] = [
@@ -83,6 +84,22 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
     }
   }, [cart, setCart, setSelectedPackages]);
 
+  useEffect(() => {
+    const highlightedOptions: string[] = [];
+    if (selectedPackages.has("2")) {
+      highlightedOptions.push("BEST Treasure Hunt");
+    }
+    if (selectedPackages.has("3")) {
+      highlightedOptions.push(
+        "Проведення лекції або воркшопу для учасників",
+        "Доступ до бази CV учасників",
+        "Логотип на футболках учасників-переможців та організаторів"
+      );
+    }
+    console.log("Updating highlightedOptions:", highlightedOptions, "Selected packages:", [...selectedPackages]);
+    setHighlightedOptions(highlightedOptions);
+  }, [selectedPackages, setHighlightedOptions]);
+
   const toggleCart = (pkg: Package) => {
     if (pkg.id === "1") return;
 
@@ -140,6 +157,7 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
                 selectedPackages.has(pkg.id) ? styles.packageCardSelected : ""
               }`}
               data-package={pkg.id}
+              onClick={() => pkg.id !== "1" && toggleCart(pkg)}
             >
               <h2 className={styles.packageTitle}>{pkg.name}</h2>
               <p className={styles.packagePrice}>{pkg.price}</p>
@@ -181,7 +199,10 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
               <div className={styles.buttonGroup}>
                 <button
                   className={styles.addButton}
-                  onClick={() => toggleCart(pkg)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleCart(pkg);
+                  }}
                   disabled={pkg.id === "1"}
                 >
                   {cart.some((item: Package) => item.id === pkg.id) ? "Видалити" : "До кошика"}
@@ -189,7 +210,7 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
               </div>
               <div className={styles.infoGroup}>
                 <Image
-                  src="/images/union.svg"
+                  src="/images/info.png"
                   alt="Partner Info"
                   width={20}
                   height={20}
@@ -200,7 +221,10 @@ const Packages = ({ cart, setCart, selectedPackages, setSelectedPackages, packag
                       ? styles.infoBrand
                       : styles.infoFlow
                   }
-                  onClick={() => openDetails(pkg)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openDetails(pkg);
+                  }}
                 />
               </div>
             </div>

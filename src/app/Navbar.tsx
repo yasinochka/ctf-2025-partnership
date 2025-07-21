@@ -8,14 +8,20 @@ export default function Navbar() {
 
   const handleNavClick = (id: string) => {
     console.log(`Navigating to section: ${id}`);
-    setIsMenuOpen(false); // Закриваємо меню одразу
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setIsMenuOpen(false); 
+    if (id === 'top') {
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       document.querySelectorAll('.nav-links a').forEach((link) => link.classList.remove('active'));
-      document.querySelector(`.nav-links a[href="#${id}"]`)?.classList.add('active');
     } else {
-      console.log(`Element with id "${id}" not found!`);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.querySelectorAll('.nav-links a').forEach((link) => link.classList.remove('active'));
+        document.querySelector(`.nav-links a[href="#${id}"]`)?.classList.add('active');
+      } else {
+        console.log(`Element with id "${id}" not found!`);
+      }
     }
   };
 

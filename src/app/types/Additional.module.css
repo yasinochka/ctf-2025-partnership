@@ -13,7 +13,7 @@
   flex-direction: column;
   gap: 3rem;
   justify-content: center;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .title {
@@ -23,7 +23,7 @@
   margin-bottom: 2rem;
   font-weight: 300;
   margin-bottom: 50px;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .additionalContainer {
@@ -32,7 +32,7 @@
   gap: 45px;
   justify-content: center;
   align-items: center;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .additionalCard {
@@ -51,7 +51,7 @@
   transition: all 0.3s ease;
   cursor: default;
   border: solid 2px #4A4444;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .selectedCard {
@@ -62,13 +62,26 @@
     #230404 100%
   );
   border: solid 2px #800000;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .disabledCard {
   opacity: 0.5;
   cursor: not-allowed;
-    overflow-x: visible;
+  overflow-x: visible;
+}
+
+.additionalCard.highlightedCard {
+  background: linear-gradient(
+    to right,
+    #1f4a2d 0%, /* Зелений відтінок для підсвічування */
+    #063c1a37 70%,
+    #000000 100%
+  );
+  border: solid 2px #00cc00; /* Яскраво-зелена рамка */
+  box-shadow: 0 0 10px rgba(0, 204, 0, 0.5); /* Легке сяйво */
+  transition: all 0.3s ease;
+  overflow-x: visible;
 }
 
 .cardContent {
@@ -77,7 +90,7 @@
   align-items: flex-end;
   justify-content: flex-start;
   height: 100%;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .infoCheckboxWrapper {
@@ -89,7 +102,7 @@
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .checkboxWrapper {
@@ -97,7 +110,7 @@
   display: inline-block;
   width: 14px;
   height: 14px;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .checkbox {
@@ -105,7 +118,7 @@
   opacity: 0;
   width: 0;
   height: 0;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .serviceName {
@@ -117,14 +130,14 @@
   white-space: normal;
   overflow: visible;
   max-width: 70%;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .infoIcon {
   position: relative;
   cursor: pointer;
   transition: transform 0.2s ease;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .infoIcon:hover {
@@ -148,7 +161,7 @@
   z-index: 1000;
   opacity: 0;
   animation: fadeIn 0.4s ease-in-out forwards;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 @keyframes fadeIn {
@@ -193,7 +206,7 @@
   opacity: 0;
   animation: scaleIn 0.2s ease-in-out forwards;
   overscroll-behavior: contain;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 @keyframes scaleIn {
@@ -228,7 +241,7 @@
   color: #ffffff;
   margin-bottom: 2rem;
   padding-right: 50px;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .modalDescription {
@@ -237,12 +250,12 @@
   line-height: 1.6;
   color: #ffffff;
   margin-bottom: 1rem;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .modalDescription p {
   margin: 0 0 1rem 0;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .closeIcon {
@@ -253,7 +266,7 @@
   width: 40px;
   height: 40px;
   transition: transform 0.2s ease;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .closeIcon:hover {
@@ -274,7 +287,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .addButton:hover:not(:disabled) {
@@ -295,11 +308,11 @@
     overflow: visible;
     word-wrap: break-word; 
     white-space: normal; 
-    padding:0.5rem;
+    padding: 0.5rem;
     align-items: center;
   }
 
-  .cardContent{
+  .cardContent {
     align-items: center;
   }
   .serviceName {

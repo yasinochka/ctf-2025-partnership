@@ -124,7 +124,7 @@
   position: absolute;
   bottom: 30px;
   left: 0;
-  z-index: 10; /* Додано для уникнення перекриття */
+  z-index: 10;
   overflow-x: visible;
 }
 
@@ -139,7 +139,7 @@
   font-size: 1.3rem;
   font-weight: 100;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  touch-action: manipulation; /* Додано для сенсорних подій */
+  touch-action: manipulation;
   overflow-x: visible;
 }
 
@@ -233,7 +233,7 @@
   right: 10px;
   cursor: pointer;
   transition: transform 0.2s ease; 
-  z-index: 20; /* Додано для уникнення перекриття */
+  z-index: 20;
 }
 
 .closeIcon:hover {
@@ -246,16 +246,16 @@
   cursor: pointer;
   position: absolute;
   bottom: 640px;
-  right: 1rem; /* Змінено для універсальності */
-  z-index: 15; /* Додано для уникнення перекриття */
-  touch-action: manipulation; /* Додано для сенсорних подій */
+  right: 1rem;
+  z-index: 15;
+  touch-action: manipulation;
+  transition: transform 0.3s ease; /* Додано для плавного масштабування */
 }
 
-.unionBase,
-.unionBrand,
-.unionFlow {
-  margin-right: 5px;
-  vertical-align: middle;
+.infoBase:hover,
+.infoBrand:hover,
+.infoFlow:hover {
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
@@ -278,7 +278,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 270px;
-    z-index: 10; /* Додано */
+    z-index: 10;
   }
   .addButton {
     width: 270px;
@@ -288,10 +288,19 @@
   .infoFlow {
     position: absolute;
     top: 1.5rem;
-    right: 1rem; /* Універсальне позиціонування */
-    z-index: 15; /* Додано */
+    right: 1rem;
+    z-index: 15;
     margin: 0;
     display: block;
+    transition: transform 0.3s ease; /* Додано для плавного масштабування */
+  }
+  .infoBase:hover,
+  .infoBrand:hover,
+  .infoFlow:hover {
+    transform: scale(1.1);
+  }
+  .closeIcon:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -352,23 +361,6 @@
 
 .modalContent.closing {
   animation: scaleOut 0.2s ease-in-out forwards;
-}
-
-.infoBase:hover,
-.infoBrand:hover,
-.infoFlow:hover {
-  transform: scale(1.2); 
-}
-
-@media (max-width: 768px) {
-  .infoBase:hover,
-  .infoBrand:hover,
-  .infoFlow:hover {
-    transform: scale(1.1); 
-  }
-  .closeIcon:hover {
-    transform: scale(1.1); 
-  }
 }
 
 .modalContent {
