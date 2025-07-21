@@ -1,4 +1,5 @@
 'use client';
+import Head from 'next/head';
 import { useState } from "react";
 import AboutSection from './AboutSection';
 import HeroSection from './HeroSection';
@@ -40,7 +41,7 @@ export default function Home() {
     },
   ]);
   const [selectedPackages, setSelectedPackages] = useState<Set<string>>(new Set(["1"]));
-  const [highlightedOptions, setHighlightedOptions] = useState<string[]>([]); // Додаємо стан для підсвічених опцій
+  const [highlightedOptions, setHighlightedOptions] = useState<string[]>([]); 
 
   const defaultPackages: Package[] = [
     {
@@ -120,13 +121,13 @@ export default function Home() {
         selectedPackages={selectedPackages}
         setSelectedPackages={setSelectedPackages}
         packages={defaultPackages}
-        setHighlightedOptions={setHighlightedOptions} // Передаємо setHighlightedOptions
+        setHighlightedOptions={setHighlightedOptions} 
       />
       <AdditionalOptions
         cart={cart}
         setCart={setCart}
         selectedPackageServices={[]}
-        highlightedOptions={highlightedOptions} // Передаємо highlightedOptions
+        highlightedOptions={highlightedOptions}
       />
       <Cart
         cart={cart}
