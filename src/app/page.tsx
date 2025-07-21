@@ -1,5 +1,5 @@
 'use client';
-import Head from 'next/head';
+
 import { useState } from "react";
 import AboutSection from './AboutSection';
 import HeroSection from './HeroSection';
