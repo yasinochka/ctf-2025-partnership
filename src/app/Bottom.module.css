@@ -20,14 +20,14 @@
   position: relative;
   bottom: 0;
   left: 0;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 .right {
   position: relative;
   bottom: 0;
   right: -264px;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 .leftMobile {
@@ -183,7 +183,7 @@
     position: absolute;
     bottom:-80px;
     left: -20px;
-    overflow-x: visible;
+    overflow-x: hidden;
   }
 
   .rightMobile {
@@ -191,7 +191,7 @@
     position: absolute;
     bottom: -80px;
     right: -25px;
-    overflow-x: visible;
+    overflow-x: hidden;
   }
 
   .bottomBlock {
