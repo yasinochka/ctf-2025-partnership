@@ -184,10 +184,10 @@
   .heroSection {
     min-height: calc(100vh - 50px);
     padding: 40px 20px; /* Зменшив padding з боків для кращої адаптивності на малих екранах */
-    display: flex; /* Додаємо Flexbox для вертикального центрування */
+    display: flex; 
     flex-direction: column;
-    justify-content: center; /* Вертикальне центрування */
-    align-items: center; /* Горизонтальне центрування */
+    justify-content: center; 
+    align-items: center;
   }
 
   .heroContent {
@@ -206,7 +206,7 @@
     margin-left: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Горизонтальне центрування тексту та кнопок */
+    align-items: center; 
   }
 
   .heroTitle {
@@ -229,7 +229,7 @@
   .heroButton {
     padding: 10px 20px;
     font-size: clamp(0.9em, 4vw, 1em);
-    margin: 50px auto; /* Центруємо кнопку */
+    margin: 50px auto; 
     scroll-behavior: smooth;
   }
 
