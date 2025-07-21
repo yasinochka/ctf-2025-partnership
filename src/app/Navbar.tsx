@@ -7,7 +7,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleNavClick = (id: string) => {
-    setIsMenuOpen(false);
+    console.log(`Navigating to section: ${id}`);
+    setIsMenuOpen(false); // Закриваємо меню одразу
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -16,6 +17,11 @@ export default function Navbar() {
     } else {
       console.log(`Element with id "${id}" not found!`);
     }
+  };
+
+  const toggleMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsMenuOpen((prev) => !prev);
   };
 
   useEffect(() => {
@@ -39,17 +45,22 @@ export default function Navbar() {
         <div className="logo" onClick={() => handleNavClick('top')}>
           <Image src="/images/logocopy.png" alt="CTF" width={150} height={50} className="logo-icon" />
         </div>
-        <div className={`menu-burger ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div
+          className={`menu-burger ${isMenuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+        >
           <span></span>
           <span></span>
         </div>
-        <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#about" onClick={(e) => { e.preventDefault(); handleNavClick('about'); }}>Про нас</a></li>
-          <li><a href="#offers" onClick={(e) => { e.preventDefault(); handleNavClick('offers'); }}>Пропозиції</a></li>
-          <li><a href="#stats" onClick={(e) => { e.preventDefault(); handleNavClick('stats'); }}>Статистика</a></li>
-          <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleNavClick('contact'); }}>Контакти</a></li>
-          <li><a href="#countdown" onClick={(e) => { e.preventDefault(); handleNavClick('countdown'); }} className="partner-button">Стати партнером</a></li>
-        </ul>
+        <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+          <ul className="nav-links">
+            <li><a href="#about" onClick={(e) => { e.preventDefault(); handleNavClick('about'); }}>Про нас</a></li>
+            <li><a href="#offers" onClick={(e) => { e.preventDefault(); handleNavClick('offers'); }}>Пропозиції</a></li>
+            <li><a href="#stats" onClick={(e) => { e.preventDefault(); handleNavClick('stats'); }}>Статистика</a></li>
+            <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleNavClick('contact'); }}>Контакти</a></li>
+            <li><a href="#countdown" onClick={(e) => { e.preventDefault(); handleNavClick('countdown'); }} className="partner-button">Стати партнером</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   );

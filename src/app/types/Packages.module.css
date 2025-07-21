@@ -20,7 +20,7 @@
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 300;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .packagesContainer {
@@ -28,7 +28,7 @@
   flex-wrap: wrap;
   gap: 100px;
   justify-content: center;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .packageCard {
@@ -45,7 +45,7 @@
     #000000 80%
   );
   transition: background 0.3s ease;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .packageCardBase,
@@ -59,7 +59,7 @@
     #c20713b4 100% 
   );
   transition: background 0.5s ease; 
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .packageTitle {
@@ -67,7 +67,7 @@
   margin-bottom: 0.75rem;
   color: #ffffff;
   font-weight: 300;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .packagePrice {
@@ -75,7 +75,7 @@
   font-size: 30px;
   margin-bottom: 20px;
   font-weight: bold;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .remainingText {
@@ -83,21 +83,21 @@
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: 1rem;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .mandatoryText {
   font-size: 14px;
   margin-bottom: 3rem;
   font-weight: 300;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .packageFeatures {
   list-style: none;
   padding: 0;
   margin-bottom: 1rem;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .featureItem {
@@ -108,8 +108,8 @@
   word-spacing: 3px;
   right: 20px;
   font-weight: 200;
-  color:#fff;
-    overflow-x: visible;
+  color: #fff;
+  overflow-x: visible;
 }
 
 .packageCard:not(.packageCardBase):not(.packageCardBrand):not(.packageCardFlow) .packageFeatures {
@@ -123,8 +123,9 @@
   width: 100%;
   position: absolute;
   bottom: 30px;
-  left: -5px;
-    overflow-x: visible;
+  left: 0;
+  z-index: 10; /* Додано для уникнення перекриття */
+  overflow-x: visible;
 }
 
 .addButton {
@@ -137,8 +138,9 @@
   text-align: center;
   font-size: 1.3rem;
   font-weight: 100;
-  transition: background-color 0.3s ease, transform 0.2s ease; 
-    overflow-x: visible;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  touch-action: manipulation; /* Додано для сенсорних подій */
+  overflow-x: visible;
 }
 
 .addButton:hover:not(:disabled) {
@@ -162,7 +164,7 @@
   font-size: 1.1rem;
   font-weight: 300;
   margin-top: 2rem;
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 .additionalInfo p {
@@ -225,23 +227,17 @@
   line-height: 1.6; 
 }
 
-
-.closeButton {
-  background-color: #a80505;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
-  margin-top: 1rem;
+  transition: transform 0.2s ease; 
+  z-index: 20; /* Додано для уникнення перекриття */
 }
 
-.goWithFlowFeature {
-  margin-top: -2px;
-}
-
-.closeButton:hover {
-  background-color: #d90404;
+.closeIcon:hover {
+  transform: scale(1.2); 
 }
 
 .infoBase,
@@ -250,19 +246,13 @@
   cursor: pointer;
   position: absolute;
   bottom: 640px;
-  left: 310px;
+  right: 1rem; /* Змінено для універсальності */
+  z-index: 15; /* Додано для уникнення перекриття */
+  touch-action: manipulation; /* Додано для сенсорних подій */
 }
 
-.unionBase {
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-.unionBrand {
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
+.unionBase,
+.unionBrand,
 .unionFlow {
   margin-right: 5px;
   vertical-align: middle;
@@ -271,6 +261,7 @@
 @media (max-width: 768px) {
   .packageCard {
     width: 100%;
+    position: relative;
   }
   .packageTitle {
     font-size: 1.5rem;
@@ -282,20 +273,25 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
-    position: static;
-    margin-top: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 270px;
+    z-index: 10; /* Додано */
   }
   .addButton {
-    width: 150px;
+    width: 270px;
   }
   .infoBase,
   .infoBrand,
   .infoFlow {
-    position: static;
-    margin-top: 1rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem; /* Універсальне позиціонування */
+    z-index: 15; /* Додано */
+    margin: 0;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -358,27 +354,9 @@
   animation: scaleOut 0.2s ease-in-out forwards;
 }
 
-.infoBase,
-.infoBrand,
-.infoFlow {
-  transition: transform 0.2s ease;
-}
-
 .infoBase:hover,
 .infoBrand:hover,
 .infoFlow:hover {
-  transform: scale(1.2); 
-}
-
-.closeIcon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease; 
-}
-
-.closeIcon:hover {
   transform: scale(1.2); 
 }
 
@@ -415,91 +393,4 @@
   margin-bottom: 2rem; 
   font-weight: 500; 
   color: #ffffff; 
-}
-
-@media (max-width: 768px) {
-  .packageCard {
-    width: 100%;
-    position: relative;
-  }
-  .packageTitle {
-    font-size: 1.5rem;
-  }
-  .packagePrice {
-    font-size: 1.1rem;
-  }
-  .buttonGroup {
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    position: absolute; 
-    bottom: 1rem;
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 270px;
-  }
-  .addButton {
-    width: 270px;
-  }
-  .infoBase,
-  .infoBrand,
-  .infoFlow {
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    margin: 0;
-    display: block;
-  }
-}
-
-@media (max-width: 375px){
-   .infoBase,
-  .infoBrand,
-  .infoFlow {
-    position: absolute;
-    top: 1.9rem;
-    left:16rem;
-    margin: 0;
-    display: block;
-  }
-}
-
-@media (max-width: 390px){
-   .infoBase,
-  .infoBrand,
-  .infoFlow {
-    position: absolute;
-    top: 1.9rem;
-    left:17.4rem;
-    margin: 0;
-    display: block;
-  }
-}
-
-@media (max-width: 360px){
-   .infoBase,
-  .infoBrand,
-  .infoFlow {
-    position: absolute;
-    top: 1.9rem;
-    left:15.5rem;
-    margin: 0;
-    display: block;
-  }
-}
-
-@media (max-width: 430px){
-   .buttonGroup {
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    position: absolute; 
-    bottom: 1rem;
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 270px; 
-  }
-  .addButton {
-    width: 270px;
-  }
 }
