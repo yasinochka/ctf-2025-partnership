@@ -127,7 +127,6 @@
   overflow-x: visible;
 }
 
-
 @media (max-width: 1239px) and (min-width: 769px) {
   .textBlock {
     min-width: 600px;
@@ -255,5 +254,47 @@
     object-fit: contain;
     margin: 0 auto;
     left: 0;
+  }
+}
+
+@media (min-width: 2560px) {
+  .contentWrapper {
+    max-width: 1400px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
+  }
+
+  .container {
+    max-width: 1400px; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .textBlock {
+    min-width: 400px;
+    max-width: 600px; 
+    padding: 2rem;
+    background-image: url('/images/textblock.png');
+    background-size: contain;
+    background-position: center;
+  }
+
+  .imageBlock {
+    min-width: 300px;
+    max-width: 600px; 
+    top: 8px;
+    right: 0; 
+    display: flex;
+    justify-content: center;
+  }
+
+  .eventImage {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    object-fit: cover;
   }
 }
