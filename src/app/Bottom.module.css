@@ -177,7 +177,7 @@
 
 @media (max-width: 768px) {
   .bottomSection {
-    min-height: 300px;
+    min-height: 400px;
     overflow-x: hidden;
   }
 
@@ -248,6 +248,7 @@
     height: 50px;
     padding: 0 20px;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .socialLogos {
