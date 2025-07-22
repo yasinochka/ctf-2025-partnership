@@ -137,7 +137,7 @@
 .stripItem {
   display: flex;
   align-items: center;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 
 .socialLogos {
@@ -179,7 +179,6 @@
   .bottomSection {
     min-height: 300px;
     overflow-x: hidden;
-    overflow-y: hidden;
   }
 
   .content {
@@ -249,13 +248,11 @@
     height: 50px;
     padding: 0 20px;
     overflow-x: hidden;
-    overflow-y: hidden;
   }
 
   .socialLogos {
     margin-left: -10px;
     overflow-x: hidden;
-    overflow-y: hidden;
   }
 
   .bestLogo {
