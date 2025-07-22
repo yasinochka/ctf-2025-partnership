@@ -22,7 +22,7 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
     } else {
       setIsCartUpdated(false);
     }
-    // Ініціалізація emailjs
+
     emailjs.init("_8KlxS0-6bbPQMhDy");
   }, [cart]);
 
@@ -40,12 +40,11 @@ const Cart = ({ cart, setCart, setSelectedPackages, packages }: CartProps) => {
       newSet.delete(item.id);
       return newSet;
     });
-    setCart((prevCart: Package[]) => prevCart.filter((cartItem) => cartItem.id !== cartItem.id));
+    setCart((prevCart: Package[]) => prevCart.filter((cartItem) => cartItem.id !== item.id)); 
   };
 
   const total = calculateTotal();
 
-  // Функція відправки email
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 

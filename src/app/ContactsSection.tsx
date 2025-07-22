@@ -15,7 +15,7 @@ const contacts = [
   {
     name: 'Синичак Юлія',
     role: 'Головний організатор',
-    email: 'name.surname@best-eu.org',
+    email: 'yuliia.synychak@best-eu.org',
     phone: '+380993107224',
     imageSrc: '/images/Yulya.svg',
     imageAlt: 'Yulya',
