@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="uk">
       <head>
-        <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico?" type="image/x-icon" />
       </head>
       <body className="bg-[var(--background)] text-[var(--foreground)]">
         <Navbar />
