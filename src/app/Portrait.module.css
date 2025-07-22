@@ -311,3 +311,106 @@
   z-index: 1; 
 }
 }
+
+/* Стилі для 4K екранів (ширше 2560px) */
+@media (min-width: 2561px) {
+  .portraitSection {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 3840px !important;
+    padding: 150px 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .content {
+    max-width: 1440px !important;
+    width: 100% !important;
+    margin: 50px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    overflow-x: visible !important;
+  }
+
+  .TextContainer {
+    max-width: 1440px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    box-sizing: border-box !important;
+  }
+
+  .title {
+    position: absolute !important;
+    top: -55px !important;
+    left: 0 !important;
+    text-transform: uppercase !important;
+    font-size: 30px !important;
+    text-align: left !important;
+  }
+
+  .underTitleNew {
+    max-width: 525px !important;
+    margin: 0 !important;
+    position: relative !important;
+    background-color: #181818 !important;
+    border: 1.5px solid #363636 !important;
+  }
+
+  .universitiesNew {
+    max-width: 250px !important;
+    margin: 20px 0 0 0 !important;
+    position: relative !important;
+    background-color: #181818 !important;
+    border: 1.5px solid #363636 !important;
+  }
+
+  .universityWrapperNew {
+    max-width: 1440px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
+  }
+
+  .leftDivNew {
+    position: absolute !important;
+    top: -245px !important;
+    left: 400px !important; /* Зберігаємо твій оновлений left: 400px */
+    text-align: left !important;
+  }
+
+  .title3New {
+    position: absolute !important;
+    bottom: 185px !important;
+    left: 80px !important;
+    font-size: 20px !important;
+    max-width: 300px !important;
+    font-weight: 300 !important;
+  }
+
+  .goalList3New {
+    position: absolute !important;
+    bottom: 49px !important;
+    left: 110px !important;
+    list-style-type: none !important;
+    font-weight: 350 !important;
+  }
+
+  .goalList4New {
+    position: absolute !important;
+    bottom: 49px !important;
+    left: 420px !important;
+    list-style-type: none !important;
+    font-weight: 350 !important;
+  }
+}

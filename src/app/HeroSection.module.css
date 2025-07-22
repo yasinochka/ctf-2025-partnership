@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Miniver&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Petrona:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Tektur:wght@400..900&display=swap');
+
 .heroSection {
     display: flex;
     justify-content: center;
@@ -22,7 +23,7 @@
     min-height: calc(100vh - 120px);
     position: relative;
     z-index: 1;
-     overflow-x: visible;
+    overflow-x: visible;
 }
 
 .heroText {
@@ -39,8 +40,8 @@
     align-items: left;
     background-size: 100% 100%;
     margin-top: -30px; 
-    margin-left:70px;
-     overflow-x: visible;
+    margin-left: 70px;
+    overflow-x: visible;
 }
 
 .heroTitle {
@@ -51,7 +52,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.2;
-     overflow-x: visible;
+    overflow-x: visible;
 }
 
 .heroQuote {
@@ -65,7 +66,7 @@
 .heroSubtitleContainer {
     display: flex;
     justify-content: left;
-     overflow-x: visible;
+    overflow-x: visible;
 }
 
 .calendarIcon {
@@ -73,26 +74,26 @@
     width: 30px; 
     height: auto;
     margin-right: 17px; 
-    padding-bottom:15px;
+    padding-bottom: 15px;
     top: 27px;
     overflow-x: visible;
 }
 
 .heroSubtitle {
     position: relative;
-    top:20px;
+    top: 20px;
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 0px;
     line-height: 1.1;
-    font-weight: 200 ;
-    font-family: 'Barlow', sans-serif ;
+    font-weight: 200;
+    font-family: 'Barlow', sans-serif;
     overflow-x: visible;
 }
 
 .heroButton {
     display: inline-block;
-    margin-top:60px;
+    margin-top: 60px;
     padding: 8px 12px;
     background-color: transparent;
     color: var(--foreground);
@@ -136,9 +137,7 @@
     box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.3), 
                 0 0 10px 4px rgba(255, 0, 0, 0.5), 
                 0 0 15px 6px rgba(255, 0, 0, 0.7);
-                overflow-x: visible;
 }
-
 
 .heroMask {
     flex: 1;
@@ -150,12 +149,12 @@
     height: auto;
     width: 100%;
     opacity: 0.55;
-    height:100%;
+    height: 100%;
     overflow-x: visible;
 }
 
 .heroMaskImage {
-    margin-right:100px;
+    margin-right: 100px;
     width: 90%;
     height: 125vh;
     object-fit: cover;
@@ -176,80 +175,174 @@
     z-index: 0;
     top: -150px;
     overflow: visible;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
+/* Адаптивність для 1280x800 */
+@media (max-width: 1280px) {
+    .heroSection {
+        padding-top: 100px;
+    }
 
+    .heroContent {
+        max-width: 1100px;
+    }
+
+    .heroText {
+        max-width: 50%;
+        margin-left: 50px;
+    }
+
+    .heroTitle {
+        font-size: 48px;
+    }
+
+    .heroQuote {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .heroSubtitle {
+        font-size: 35px;
+    }
+
+    .calendarIcon {
+        width: 28px;
+        margin-right: 15px;
+    }
+
+    .heroButton {
+        padding: 7px 10px;
+        max-width: 180px;
+    }
+
+    .heroMaskImage {
+        width: 85%;
+        height: 110vh;
+        top: -550px;
+        right: -15%;
+        margin-right: 80px;
+    }
+}
+
+/* Адаптивність для 1024x600 */
+@media (max-width: 1024px) {
+    .heroSection {
+        padding-top: 90px;
+    }
+
+    .heroContent {
+        max-width: 900px;
+    }
+
+    .heroText {
+        max-width: 55%;
+        margin-left: 40px;
+    }
+
+    .heroTitle {
+        font-size: 42px;
+    }
+
+    .heroQuote {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .heroSubtitle {
+        font-size: 30px;
+    }
+
+    .calendarIcon {
+        width: 25px;
+        margin-right: 12px;
+    }
+
+    .heroButton {
+        padding: 6px 8px;
+        max-width: 160px;
+        font-size: clamp(0.9em, 1.8vw, 1em);
+    }
+
+    .heroMaskImage {
+        width: 80%;
+        height: 100vh;
+        top: -500px;
+        right: -10%;
+        margin-right: 60px;
+    }
+}
+
+/* Мобільна версія */
 @media (max-width: 768px) {
-  .heroSection {
-    min-height: calc(100vh - 50px);
-    padding: 40px 20px; /* Зменшив padding з боків для кращої адаптивності на малих екранах */
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-  }
+    .heroSection {
+        min-height: calc(100vh - 50px);
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .heroContent {
-    flex-direction: column;
-    min-height: auto;
-    text-align: center;
-    align-items: center;
-    justify-content: center; 
-    width: 100%; 
-  }
+    .heroContent {
+        flex-direction: column;
+        min-height: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 
-  .heroText {
-    flex: 1;
-    max-width: 100%;
-    padding: 16px;
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-  }
+    .heroText {
+        flex: 1;
+        max-width: 100%;
+        padding: 16px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .heroTitle {
-    font-size: 40px;
-    text-align: center;
-  }
+    .heroTitle {
+        font-size: 40px;
+        text-align: center;
+    }
 
-  .heroSubtitle {
-    font-size: 25px;
-    text-align: center;
-    margin-top: 10px;
-  }
+    .heroSubtitle {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 10px;
+    }
 
-  .heroQuote {
-    font-size: 16px;
-    text-align: center;
-  }
+    .heroQuote {
+        font-size: 16px;
+        text-align: center;
+    }
 
+    .heroButton {
+        padding: 10px 20px;
+        font-size: clamp(0.9em, 4vw, 1em);
+        margin: 50px auto;
+        scroll-behavior: smooth;
+    }
 
-  .heroButton {
-    padding: 10px 20px;
-    font-size: clamp(0.9em, 4vw, 1em);
-    margin: 50px auto; 
-    scroll-behavior: smooth;
-  }
+    .heroCode {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: url('/images/kod.png') repeat;
+        background-size: cover;
+        z-index: -1;
+        top: -270px;
+    }
 
-  .heroCode {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: url('/images/kod.png') repeat;
-    background-size: cover;
-    z-index: -1;
-    top: -270px;
-  }
+    .heroMask {
+        display: none !important;
+    }
 
-  .heroMask {
-    display: none !important;
-  }
-
-  .heroMaskImage {
-    display: none !important;
-  }
+    .heroMaskImage {
+        display: none !important;
+    }
 }
