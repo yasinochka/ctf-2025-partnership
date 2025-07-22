@@ -32,10 +32,9 @@ section {
 }
 
 .swiper-section {
-  overflow-x: visible !important; /* Перевизначаємо для секції зі Swiper */
+  overflow-x: visible !important;
 }
 
-/* Перевизначаємо overflow-x для всіх дочірніх елементів Swiper */
 .swiper-section * {
-  overflow-x: visible !important; /* Забезпечуємо, що дочірні елементи Swiper не обмежені */
+  overflow-x: visible !important; 
 }

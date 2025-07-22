@@ -249,7 +249,7 @@
   right: 1rem;
   z-index: 15;
   touch-action: manipulation;
-  transition: transform 0.3s ease; /* Додано для плавного масштабування */
+  transition: transform 0.3s ease;
 }
 
 .infoBase:hover,
@@ -292,7 +292,7 @@
     z-index: 15;
     margin: 0;
     display: block;
-    transition: transform 0.3s ease; /* Додано для плавного масштабування */
+    transition: transform 0.3s ease; 
   }
   .infoBase:hover,
   .infoBrand:hover,

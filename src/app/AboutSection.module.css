@@ -127,7 +127,7 @@
   overflow-x: visible;
 }
 
-/* Стилі для екранів від 769px до 1239px */
+
 @media (max-width: 1239px) and (min-width: 769px) {
   .textBlock {
     min-width: 600px;
@@ -174,12 +174,11 @@
 
   .eventImage {
     width: 100%;
-    max-width: 400px; /* Зменшено розмір зображення */
+    max-width: 400px;
     height: auto;
   }
 }
 
-/* Мобільна версія */
 @media (max-width: 768px) {
   .aboutSection {
     padding: 0.5rem 1rem;

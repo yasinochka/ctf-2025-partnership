@@ -101,7 +101,6 @@
     transform: scale(1.1);
 }
 
-/* Стилі для екранів від 769px до 1239px */
 @media (max-width: 1239px) and (min-width: 769px) {
     .formatContainer {
         flex-direction: column;
@@ -140,11 +139,10 @@
     }
 
     .fingerprintFrame {
-        display: none; /* Приховуємо відбиток пальця */
+        display: none; 
     }
 }
 
-/* Мобільні стилі */
 @media (max-width: 768px) {
     .formatSection {
         padding-left: 10px;

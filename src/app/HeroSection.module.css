@@ -39,13 +39,13 @@
     justify-content: left;
     align-items: left;
     background-size: 100% 100%;
-    margin-top: -30px; 
+    margin-top: -30px;
     margin-left: 70px;
     overflow-x: visible;
 }
 
 .heroTitle {
-    font-family: 'Tektur'; 
+    font-family: 'Tektur';
     font-size: 55px;
     font-weight: 300;
     line-height: 1.1;
@@ -71,9 +71,9 @@
 
 .calendarIcon {
     position: relative;
-    width: 30px; 
+    width: 30px;
     height: auto;
-    margin-right: 17px; 
+    margin-right: 17px;
     padding-bottom: 15px;
     top: 27px;
     overflow-x: visible;
@@ -125,8 +125,8 @@
     clip-path: polygon(7% 0%, 92% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 25%);
     border: 2px solid #850202;
     z-index: -1;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform-origin: center;
     overflow-x: visible;
@@ -134,8 +134,8 @@
 
 .heroButton:hover::before {
     background-color: #be0909;
-    box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.3), 
-                0 0 10px 4px rgba(255, 0, 0, 0.5), 
+    box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.3),
+                0 0 10px 4px rgba(255, 0, 0, 0.5),
                 0 0 15px 6px rgba(255, 0, 0, 0.7);
 }
 
@@ -178,7 +178,6 @@
     opacity: 0.8;
 }
 
-/* Адаптивність для 1280x800 */
 @media (max-width: 1280px) {
     .heroSection {
         padding-top: 100px;
@@ -225,7 +224,6 @@
     }
 }
 
-/* Адаптивність для 1024x600 */
 @media (max-width: 1024px) {
     .heroSection {
         padding-top: 90px;
@@ -273,7 +271,6 @@
     }
 }
 
-/* Мобільна версія */
 @media (max-width: 768px) {
     .heroSection {
         min-height: calc(100vh - 50px);
@@ -324,6 +321,7 @@
         font-size: clamp(0.9em, 4vw, 1em);
         margin: 50px auto;
         scroll-behavior: smooth;
+        text-align: center;
     }
 
     .heroCode {
@@ -344,5 +342,73 @@
 
     .heroMaskImage {
         display: none !important;
+    }
+}
+
+@media (min-width: 2560px) {
+    .heroSection {
+        padding: 0 24px;
+        padding-top: 150px;
+        min-height: calc(100vh - 80px);
+    }
+
+    .heroContent {
+        max-width: 1800px;
+        min-height: calc(100vh - 150px);
+    }
+
+    .heroText {
+        max-width: 45%;
+        padding: 2em;
+        margin-left: 100px;
+        margin-top: -40px;
+    }
+
+    .heroTitle {
+        font-size: 70px;
+        letter-spacing: 3px;
+    }
+
+    .heroQuote {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .heroSubtitle {
+        font-size: 50px;
+        top: 25px;
+    }
+
+    .calendarIcon {
+        width: 40px;
+        margin-right: 20px;
+        padding-bottom: 20px;
+        top: 30px;
+    }
+
+    .heroButton {
+        margin-top: 80px;
+        padding: 10px 16px;
+        max-width: 250px;
+        font-size: clamp(1.2em, 2.5vw, 1.5em);
+    }
+
+    .heroCode {
+        width: 57.4%;
+        height: 120%;
+        top: -200px;
+    }
+
+    .heroMask {
+        flex: 1;
+        opacity: 0.55;
+    }
+
+    .heroMaskImage {
+        width: 90%;
+        height: 125vh;
+        top: -1050px;
+        right: -30%;
+        margin-right: 100px;
     }
 }

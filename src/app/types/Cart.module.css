@@ -99,6 +99,7 @@
   text-align: center;
   margin-top: 2rem; 
   margin-bottom: 1.5rem;
+  overflow-y: hidden;
 }
 
 .inputField {
@@ -147,6 +148,10 @@
   max-width: 400px;;
 }
 
+.discountInfoLeft p {
+  overflow-y: hidden;
+}
+
 
 .discountSquare {
   display: inline-block;
@@ -155,6 +160,7 @@
   background-color: #a00707; 
   margin-right: 0.5rem; 
   vertical-align: middle; 
+  overflow-y: hidden;
 }
 
 .discountBullet {

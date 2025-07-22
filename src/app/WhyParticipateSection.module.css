@@ -6,9 +6,10 @@
   text-align: center;
   position: relative;
   overflow: visible;
-  min-height: 80vh;
+  min-height: 30vh;
   background: transparent;
   padding-bottom: 200px;
+  margin-top:90px;
 }
 
 .content {
@@ -118,20 +119,19 @@
   top: -10px;
 }
 
-/* Стилі для екранів від 769px до 1239px */
 @media (max-width: 1239px) and (min-width: 769px) {
   .text {
-    font-size: 18px; /* Зменшено розмір тексту, змінено на рядку 103 */
-    left: 100px; /* Збережено фіксовану позицію як у десктопній версії, щоб запобігти руху, змінено на рядку 104 */
+    font-size: 18px; 
+    left: 100px; 
   }
 
   .redFrame {
-    max-width: 900px; /* Зменшено розмір рамки симетрично до прямокутників */
+    max-width: 900px; 
   }
 
   .rectangles {
     top: 45%;
-    left: 52%; /* Зсув прямокутників вліво */
+    left: 52%; 
     gap: 50px;
     max-width: 800px;
     padding: 20px 0;
@@ -141,8 +141,8 @@
   .rectangle {
     background-color: #2B2B2B;
     border: 3px solid #7d0303ac;
-    width: 350px; /* Зменшено ширину */
-    height: 140px; /* Зменшено висоту */
+    width: 350px; 
+    height: 140px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -153,17 +153,17 @@
   }
 
   .rectangleTitle {
-    font-size: 16px; /* Збережено розмір як у десктопній версії */
+    font-size: 16px; 
     margin-bottom: 8px;
   }
 
   .rectangleText {
-    font-size: 13px; /* Збережено розмір як у десктопній версії */
+    font-size: 13px;
     line-height: 1.4;
   }
 
   .rectangleIcon {
-    width: 20px; /* Збережено розмір як у десктопній версії */
+    width: 20px; 
     height: 20px;
     margin-right: 8px;
   }
@@ -181,7 +181,6 @@
   }
 }
 
-/* Стилі для 4K екранів (ширше 2560px) */
 @media (min-width: 2561px) {
   .content {
     margin: 0 auto;
@@ -192,12 +191,11 @@
   }
 }
 
-/* Мобільна версія */
 @media (max-width: 768px) {
   .whyparticipateSection {
     padding: 10px 5px; 
     min-height: auto;
-    margin-top: -150px; 
+    margin-top: -300px; 
   }
 
   .content {

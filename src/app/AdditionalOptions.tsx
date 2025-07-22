@@ -8,7 +8,7 @@ interface AdditionalOptionsProps {
   cart?: Package[];
   setCart?: (newCart: Package[] | ((prevCart: Package[]) => Package[])) => void;
   selectedPackageServices?: string[];
-  highlightedOptions?: string[]; // Додаємо проп для підсвічених опцій
+  highlightedOptions?: string[]; 
 }
 
 interface AddOption {

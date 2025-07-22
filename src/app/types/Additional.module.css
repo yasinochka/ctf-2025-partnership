@@ -72,14 +72,7 @@
 }
 
 .additionalCard.highlightedCard {
-  background: linear-gradient(
-    to right,
-    #1f4a2d 0%, /* Зелений відтінок для підсвічування */
-    #063c1a37 70%,
-    #000000 100%
-  );
-  border: solid 2px #00cc00; /* Яскраво-зелена рамка */
-  box-shadow: 0 0 10px rgba(0, 204, 0, 0.5); /* Легке сяйво */
+  box-shadow: 0 0 10px rgba(0, 204, 0, 0.5); 
   transition: all 0.3s ease;
   overflow-x: visible;
 }
