@@ -10,9 +10,16 @@
 
 .contentWrapper {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto; /* Центрування через margin */
   width: 100%;
   overflow-x: visible;
+}
+
+.glowingTextWrapper {
+  padding: 1rem;
+  box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; /* Червоне світіння */
+  background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон для контрасту */
+  border-radius: 1rem;
 }
 
 .container {
@@ -20,18 +27,14 @@
   flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
+  max-width: 1400px; /* Фіксована ширина */
   overflow-x: visible;
 }
 
 .textBlock {
   flex: 1;
-  min-width: 400px;
-  max-width: 600px;
+  width: 600px; /* Фіксована ширина */
   padding: 2rem;
-  background-image: url('/images/textblock.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   border-radius: 1rem;
   overflow-x: visible;
   position: relative;
@@ -112,69 +115,36 @@
 .imageBlock {
   position: relative;
   top: 8px;
-  right: 30px;
-  flex: 1;
-  min-width: 300px;
+  width: 600px; /* Фіксована ширина */
   border-radius: 1rem;
   overflow-x: visible;
 }
 
 .eventImage {
   width: 100%;
+  max-width: 600px; /* Фіксована максимальна ширина */
   height: auto;
   object-fit: cover;
   display: block;
   overflow-x: visible;
 }
 
-@media (max-width: 1239px) and (min-width: 769px) {
+@media (max-width: 1280px) {
   .textBlock {
-    min-width: 600px;
-    max-width: 800px;
-    padding: 2rem;
-    background-image: url('/images/textblock.png');
-    background-size: contain;
-    background-position: center;
-  }
-
-  .mainHeading {
-    font-size: 3rem;
-    top: 10px;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .paragraph1 {
-    font-size: 16px;
-    padding: 1rem 0.6rem;
-    max-width: 450px;
-  }
-
-  .paragraph2 {
-    font-size: 16px;
-    padding: 0.5rem;
-    max-width: 500px;
-  }
-
-  .subTitle {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .goalList li {
-    font-size: 16px;
-    max-width: 450px;
-  }
-
-  .imageBlock {
-    top: 8px;
-    right: 30px;
+    width: 650px; /* Збільшуємо ширину блоку з текстом */
   }
 
   .eventImage {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px; 
     height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .textBlock {
+    width: 700px; /* Збільшуємо ширину блоку з текстом */
   }
 }
 
@@ -188,26 +158,34 @@
     justify-content: center;
   }
 
+  .contentWrapper {
+    margin: 0 auto; /* Центрування через margin */
+  }
+
   .container {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     width: 100%;
-    max-width: 320px;
+    max-width: 320px; /* Фіксована ширина для мобільних */
   }
 
   .textBlock {
-    min-width: 300px;
-    max-width: 320px;
+    width: 320px; /* Фіксована ширина */
     padding: 1rem;
-    border: 3px solid #d6170d;
-    box-shadow: 10px 5px 10px #a40b0baf, 0 0 20px #c10303, 0 0 30px #df4646;
+    background-image: none; /* Без фонового зображення */
     margin: 0 auto 1.5rem;
-    background-image: none;
+  }
+
+  .glowingTextWrapper {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000; /* Трохи менше світіння для мобільних */
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .mainHeading {
-    font-size: 1.9rem;
+    font-size: 3rem; /* Фіксований розмір */
     margin-left: 0;
     text-align: center;
   }
@@ -222,7 +200,7 @@
   .paragraph1,
   .paragraph2,
   .goalList li {
-    font-size: 15px;
+    font-size: 16px; /* Фіксований розмір */
     line-height: 1.5;
     max-width: 300px;
     padding: 0.2rem;
@@ -230,14 +208,14 @@
   }
 
   .subTitle {
-    font-size: 1.3rem;
+    font-size: 1.5rem; /* Фіксований розмір */
     margin: 0.5rem;
     font-weight: 600;
     text-align: center;
   }
 
   .imageBlock {
-    min-width: 300px;
+    width: 320px; /* Фіксована ширина */
     max-width: 320px;
     display: flex;
     justify-content: center;
@@ -249,7 +227,7 @@
 
   .eventImage {
     width: 100%;
-    max-width: 320px;
+    max-width: 320px; /* Фіксована максимальна ширина */
     max-height: 450px;
     object-fit: contain;
     margin: 0 auto;
@@ -259,14 +237,14 @@
 
 @media (min-width: 2560px) {
   .contentWrapper {
-    max-width: 1400px; 
-    margin: 0 auto;
+    max-width: 1400px; /* Фіксована ширина */
+    margin: 0 auto; /* Центрування через margin */
     display: flex;
-    justify-content: center; 
+    justify-content: center;
   }
 
   .container {
-    max-width: 1400px; 
+    max-width: 1400px; /* Фіксована ширина */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -274,8 +252,7 @@
   }
 
   .textBlock {
-    min-width: 400px;
-    max-width: 600px; 
+    width: 600px; /* Фіксована ширина */
     padding: 2rem;
     background-image: url('/images/textblock.png');
     background-size: contain;
@@ -283,17 +260,17 @@
   }
 
   .imageBlock {
-    min-width: 300px;
-    max-width: 600px; 
+    width: 600px; /* Фіксована ширина */
+    max-width: 600px;
     top: 8px;
-    right: 0; 
+    right: 0;
     display: flex;
     justify-content: center;
   }
 
   .eventImage {
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px; /* Фіксована максимальна ширина */
     height: auto;
     object-fit: cover;
   }

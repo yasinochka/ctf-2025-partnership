@@ -29,6 +29,7 @@ const AboutSection = () => {
       <div className={styles.contentWrapper}>
         <div className={styles.container}>
           <div className={styles.textBlock}>
+            <div className={styles.glowingTextWrapper}>
             <h1 className={styles.mainHeading} data-aos="fade-up" data-aos-delay="100">Про наш івент</h1>
             <div className={styles.textContent}>
               <p className={styles.paragraph1} data-aos="fade-up" data-aos-delay="200">
@@ -44,12 +45,13 @@ const AboutSection = () => {
                   <li>зростити нове, сильне покоління молодих спеціалістів у цій сфері;</li>
                   <li>стати плацдармом для студентів у їхньому кар’єрному розвитку.</li>
                 </ul>
+                </div>
               </div>
             </div>
           </div>
           <div className={styles.imageBlock}>
             <Image
-              src={isMobile ? '/images/participants.svg' : '/images/AboutSectionPhoto.svg'}
+              src={isMobile ? '/images/participants.svg' : '/images/participants.svg'}
               alt="Event Photo"
               width={1000}
               height={100}

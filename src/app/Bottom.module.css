@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 .content {
@@ -21,6 +21,7 @@
   height: 580px;
   overflow: visible;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .left {
@@ -68,13 +69,12 @@
   color: #fff;
   margin-bottom: 100px;
   font-weight: 150;
-  overflow-x: visible;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 
 
 .textBottom p {
-
   overflow-y: hidden;
 }
 
@@ -83,20 +83,20 @@
   font-weight: 700;
   padding: 0.25rem;
   transition: all 0.3s ease;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 .highlightRed:hover {
   transform: scale(1.1);
   color: #d90404;
-  overflow-x: visible;
+ overflow-x: hidden;
 }
 
 .buttonBottom {
   position: relative;
   bottom: 70px;
   padding: 0;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 .textOnButton {
@@ -111,7 +111,7 @@
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-weight: 600;
-  overflow-x: visible;
+ overflow-x: hidden;
 }
 
 .textOnButton:hover {
@@ -132,13 +132,13 @@
   right: 0;
   padding: 0 70px;
   margin: 0;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 .stripItem {
   display: flex;
   align-items: center;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 .socialLogos {
@@ -184,6 +184,7 @@
 
   .content {
     height: 300px;
+    overflow-x: hidden;
   }
 
   .left {
@@ -217,29 +218,35 @@
     height: 200px;
     padding: 5px 0;
     top: 180px;
+    overflow-x: hidden;
   }
 
   .textBottom {
     font-size: 16px;
     margin-bottom: 50px;
+    overflow-x: hidden;
   }
 
   .textOnButton {
     font-size: 16px;
     padding: 8px 20px;
+    overflow-x: hidden;
   }
 
   .buttonBottom {
     bottom: 40px;
+    overflow-x: hidden;
   }
 
   .strip {
     height: 50px;
     padding: 0 20px;
+    overflow-x: hidden;
   }
 
   .socialLogos {
     margin-left: -10px;
+    overflow-x: hidden;
   }
 
   .bestLogo {
@@ -265,6 +272,7 @@
   .bestLogo {
     width: 50px;
     height: 35px;
+    overflow-x: hidden;
   }
 }
 
@@ -272,11 +280,13 @@
   .bottomSection {
     padding: 0;
     min-height: 800px;
+    overflow-x: hidden;
   }
 
   .content {
     max-width: 1800px;
     height: 700px;
+    overflow-x: hidden;
   }
 
   .left img,
@@ -284,45 +294,54 @@
     width: 700px;
     height: 700px;
     overflow-y: hidden;
+    overflow-x: hidden;
   }
 
   .bottomBlock {
     max-width: 700px;
     height: 400px;
         overflow-y: hidden;
+        overflow-x: hidden;
   }
 
   .textBottom {
     font-size: 30px;
     margin-bottom: 120px;
+    overflow-x: hidden;
   }
 
   .textOnButton {
     font-size: 24px;
     padding: 15px 60px;
+    overflow-x: hidden;
   }
 
   .buttonBottom {
     bottom: 80px;
+    overflow-x: hidden;
   }
 
   .strip {
     height: 100px;
     padding: 0 100px;
+    overflow-x: hidden;
   }
 
   .socialLogos {
     margin-left: -30px;
+    overflow-x: hidden;
   }
 
   .bestLogo {
     margin-left: -60px;
     width: 100px;
     height: 70px;
+    overflow-x: hidden;
   }
 
   .yearText {
     margin-left: -30px;
+    overflow-x: hidden;
   }
 
   .TgIcon,
@@ -330,10 +349,12 @@
     margin: 15px;
     width: 50px;
     height: 50px;
+    overflow-x: hidden;
   }
 
   .year {
     font-size: 28px;
     margin: 60px;
+    overflow-x: hidden;
   }
 }
