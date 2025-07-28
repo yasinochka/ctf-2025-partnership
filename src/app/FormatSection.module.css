@@ -230,3 +230,44 @@
         overflow-x: visible;
     }
 }
+@media (min-width: 1490px){
+     .formatContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frame {
+        background-image: none;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        border: 3px solid #d6170d;
+        box-shadow: 10px 5px 10px #a40b0baf, 0 0 20px #c10303, 0 0 30px #df4646;
+        margin: 0 auto;
+        min-width: 600px;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frame h1 {
+        font-size: 36px;
+        bottom: 0;
+        text-align: center;
+        margin: 0 auto 1rem;
+    }
+
+    .frame p {
+        font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+        left: 0;
+        bottom: 0;
+        max-width: 800px;
+    }
+
+    .fingerprintFrame {
+        display: none; 
+    }
+}

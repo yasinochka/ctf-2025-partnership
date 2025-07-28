@@ -18,37 +18,43 @@ const StatsSection: React.FC = () => {
             <div className={styles.statsItems}>
               <div className={styles.statItem}>
                 <div className={styles.iconWrapper}>
-                  <Image
-                    src="/images/instagram.png"
-                    alt="Instagram Followers"
-                    width={50}
-                    height={50}
-                    className={styles.statIcon}
-                  />
+                   <a href="https://www.instagram.com/best_lviv/" target="_blank" rel="insta">
+              <Image
+                src="/images/instagram.png"
+                alt="Instagram Followers"
+                width={50}
+                height={50}
+                className={styles.statIcon}
+              />
+            </a>
                 </div>
                 <span>3550+ followers</span>
               </div>
               <div className={styles.statItem}>
                 <div className={styles.iconWrapper}>
-                  <Image
-                    src="/images/telegram.png"
-                    alt="Tg Followers"
-                    width={50}
-                    height={50}
-                    className={styles.statIcon}
-                  />
+                   <a href="https://t.me/bestlviv" target="_blank" rel="tg">
+              <Image
+                src="/images/telegram.png"
+                alt="Tg Followers"
+                width={50}
+                height={50}
+                className={styles.TgIcon}
+              />
+            </a>
                 </div>
                 <span>900+ followers</span>
               </div>
               <div className={styles.statItem}>
                 <div className={styles.iconWrapper}>
-                  <Image
-                    src="/images/linkedin.png"
-                    alt="LinkedIn Followers"
-                    width={50}
-                    height={50}
-                    className={styles.statIcon}
-                  />
+                  <a href="https://ua.linkedin.com/company/bestlviv" target="_blank" rel="linkedin">
+              <Image
+                src="/images/linkedin.png"
+                alt="LinkedIn Followers"
+                width={50}
+                height={50}
+                className={styles.statIcon}
+              />
+            </a>
                 </div>
                 <span>750+ followers</span>
               </div>

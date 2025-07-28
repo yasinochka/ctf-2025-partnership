@@ -34,7 +34,7 @@
   z-index: 2;
   position: absolute;
   top: 16%;
-  left: 140px;
+  margin-left:-50px;
   max-width: 500px;
 }
 
@@ -106,17 +106,16 @@
   margin-bottom: 7px;
 }
 
-.rectangleIcon {
-  margin-right: 8px;
-}
-
 .rectangleIcon1,
 .rectangleIcon2,
+.rectangleIcon4{
+  margin-bottom:25px;
+  margin-right: 10px;
+}
 .rectangleIcon3,
-.rectangleIcon4,
-.rectangleIcon5 {
-  position: relative;
-  top: -10px;
+.rectangleIcon5{
+  margin-bottom:5px;
+   margin-right: 10px;
 }
 
 @media (max-width: 1239px) and (min-width: 769px) {
@@ -168,22 +167,19 @@
     margin-right: 8px;
   }
 
-  .rectangleIcon1,
-  .rectangleIcon2,
-  .rectangleIcon3,
-  .rectangleIcon4,
-  .rectangleIcon5 {
-    top: -8px;
-  }
-
   .iconTitleWrapper {
     margin-bottom: 5px;
   }
 }
 
-@media (min-width: 2561px) {
+@media (max-width: 2561px) {
   .content {
     margin: 0 auto;
+  }
+
+  .text {
+    font-size: 18px;
+    left:180px;
   }
 
   .rectangles {
